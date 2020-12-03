@@ -1,0 +1,14 @@
+[
+    {
+        "Job":"Adele",
+        "Skills":["Blade of Will","Magic Dispatch","Skewering","Aether Forge","Impale","Eviscerate","Reign of Destruction","Hunting Decree","Cleave","Aether Bloom"]
+    },
+    {
+        "Job":"Angelic Buster",
+        "Skills":["Soul Buster","Star Bubble","Lovely Sting","Pink Pummel","Soul Seeker","Shining Star","Heavenly Crash","Celestial Roar","Trinity","Finale Ribbon","Soul Resonance","Supreme Supernova"]
+    },
+    {
+        "Job":"Hero",
+        "Skills":["Brandish","Combo Fury","Final Attack","Intrepid Slash","Rush","Panic","Shout","Raging Blow","Puncture","Panic"]
+    }
+]
