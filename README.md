@@ -25,3 +25,54 @@ The web application allows users to find and formulate their trinode sets.
 - Add Saving and Loading feature to save all the created trinodes.
 - Add Support for other languages.
 - Clean Code
+
+## Currently Supported Jobs
+
+- [X] Adele
+- [X] Angelic Buster
+- [ ] Aran
+- [ ] Ark
+- [ ] Battle Mage
+- [ ] Beast Tamer
+- [ ] Bishop
+- [ ] Blaster
+- [ ] Blaze Wizard
+- [ ] Bowmaster
+- [ ] Buccaneer
+- [ ] Cadena
+- [ ] Cannoneer
+- [ ] Corsair
+- [ ] Dark Knight
+- [ ] Dawn Warrior
+- [ ] Demon Avenger
+- [ ] Demon Slayer
+- [ ] Dual Blade
+- [ ] Evan
+- [ ] Fire/Poison Mage
+- [ ] Hayato
+- [X] Hero (Might be missing a skill)
+- [X] Hoyoung
+- [ ] Ice/Lightning Mage
+- [ ] Illium
+- [X] Jett
+- [ ] Kaiser
+- [ ] Kanna
+- [ ] Kinesis
+- [ ] Luminous
+- [ ] Marksman
+- [ ] Mechanic
+- [ ] Mercedes
+- [X] Mihile
+- [ ] Night Lord
+- [ ] Night Walker
+- [ ] Paladin
+- [ ] Pathfinder
+- [ ] Phantom
+- [ ] Shade
+- [ ] Shadower
+- [ ] Thunder Breaker
+- [ ] Wild Hunter
+- [ ] Wind Archer
+- [ ] Xenon
+- [ ] Zero
+
