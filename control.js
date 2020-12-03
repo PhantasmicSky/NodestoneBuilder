@@ -1,4 +1,4 @@
-var skillData = {"Adele":["Blade of Will","Magic Dispatch","Skewering","Aether Forge","Impale","Eviscerate","Reign of Destruction","Hunting Decree","Cleave","Aether Bloom"],"Angelic Buster":["Soul Buster","Star Bubble","Lovely Sting","Pink Pummel","Soul Seeker","Shining Star Burst","Heavenly Crash","Celestial Roar","Trinity","Finale Ribbon","Soul Resonance","Supreme Supernova"],"Hero":["Brandish","Combo Fury","Final Attack","Intrepid Slash","Rush","Panic","Shout","Raging Blow","Puncture","Rising Rage"],"Hoyoung":["Humanity","Earth","Heaven","Evil-Sealing Gourd","Ghost Flame","Degeneration","Butterfly Dream","Star Vortex","Clone"],"Jett":["Starline One","Blaster Barrage","Starline Two","Stellar Impact","Vortex Cross","Falling Stars","Starline Three","Cosmic Upheaval","Starforce Salvo","Backup Beatdown","Planet Buster","Singularity Shock"],"Mihile":["Soul Blade","Royal Guard","Soul Driver","Radiant Driver","Trinity Attack","Four-Point Assault","Radiant Cross","Charging Light","Final Attack"]};
+var skillData = {"Adele":["Blade of Will","Magic Dispatch","Skewering","Impale","Aether Forge","Eviscerate","Reign of Destruction","Cleave","Hunting Decree","Aether Bloom"],"Angelic Buster":["Soul Buster","Star Bubble","Lovely Sting","Pink Pummel","Soul Seeker","Shining Star Burst","Heavenly Crash","Celestial Roar","Trinity","Finale Ribbon","Soul Resonance","Supreme Supernova"],"Hero":["Brandish","Combo Fury","Final Attack","Intrepid Slash","Rush","Panic","Shout","Raging Blow","Puncture","Rising Rage"],"Hoyoung":["Humanity","Earth","Heaven","Evil-Sealing Gourd","Ghost Flame","Degeneration","Butterfly Dream","Star Vortex","Clone"],"Jett":["Starline One","Blaster Barrage","Starline Two","Stellar Impact","Vortex Cross","Falling Stars","Starline Three","Cosmic Upheaval","Starforce Salvo","Backup Beatdown","Planet Buster","Singularity Shock"],"Mihile":["Soul Blade","Royal Guard","Soul Driver","Radiant Driver","Trinity Attack","Four-Point Assault","Radiant Cross","Charging Light","Final Attack"]};
 var selectedJob;
 var nodestones = [];
 var selectedSkills = [];
@@ -67,7 +67,7 @@ function newNode(nodeSet){
         if(!isAlreadyIn(nodeCollection, nodestones[$(this).closest('tr').attr("name")]) && !isAlreadyIn(cannotLead,nodestones[$(this).closest('tr').attr("name")][0])){
             //console.log($(this).closest('td').parent()[0].sectionRowIndex);
             disableDeletion(true);
-            $(this).closest('tr').removeClass();
+            $(this).closest('tr').removeClass("bg-danger bg-warning bg-success");
             $(this).closest('tr').addClass("bg-info");
             updateNodeScore(nodestones[$(this).closest('tr').attr("name")],"ADD");
             nodeCollection.push(nodestones[$(this).closest('tr').attr("name")]);
@@ -92,7 +92,7 @@ function newNode(nodeSet){
         //console.log($(this).closest('td').parent()[0].sectionRowIndex);
         nodestones.splice($(this).closest('tr').attr("name"), 1);
         changeOrder($(this).closest('tr').attr("name"));
-        computeNodeScoreAll();
+        //computeNodeScoreAll();
         $(this).closest('tr').remove();
         //console.log(nodestones);
         return false;
@@ -324,7 +324,7 @@ function copyToCollection(selectName){
     b.textContent = 'Remove';
         b.onclick = function(){
         //console.log($(this).closest('td').parent()[0].sectionRowIndex);
-        $('#nodeList > tbody  > tr[name="'+selectName+'"]').removeClass();
+        $('#nodeList > tbody  > tr[name="'+selectName+'"]').removeClass("bg-info");
         nodeCollection.splice(($(this).closest('td').parent()[0].sectionRowIndex), 1);
         cannotLead.splice(($(this).closest('td').parent()[0].sectionRowIndex), 1);
         updateNodeScore(nodestones[$(this).closest('tr').attr("name")],"REMOVE");
@@ -361,7 +361,7 @@ function computeNodeScoreAll(){
     $('#nodeList > tbody  > tr').each(
         function(index) {
             if(!$(this).hasClass("bg-info")){
-                $(this).removeClass();
+                $(this).removeClass("bg-danger bg-warning bg-success");
             }
             /*var nOne = $("td:nth-child(1)", this).text();
             var nTwo = $("td:nth-child(2)", this).text();
@@ -447,12 +447,22 @@ function updateNodeScore(subtractNode, conditions){
                 newCell.appendChild(newText);
                 var newCell  = newRow.insertCell(2);
                 var newText  = document.createTextNode(2-nodeTally[skillData[selectedJob][k]]);
+                if(2-nodeTally[skillData[selectedJob][k]] == 2){
+                    newRow.classList.add("bg-success");
+                }
+                else if(2-nodeTally[skillData[selectedJob][k]] < 2){
+                    newRow.classList.add("bg-warning");
+                }
+                else{
+                    newRow.classList.add("bg-danger");
+                }
             }
             else {
                 var newText = document.createTextNode("NO");
                 newCell.appendChild(newText);
                 var newCell  = newRow.insertCell(2);
                 var newText  = document.createTextNode(-nodeTally[skillData[selectedJob][k]]);
+                newRow.classList.add("bg-info");
             }
             newCell.appendChild(newText);
         }
