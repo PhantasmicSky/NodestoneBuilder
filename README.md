@@ -70,7 +70,7 @@ The web application allows users to find and formulate their trinode sets.
 - [ ] Phantom
 - [ ] Shade
 - [ ] Shadower
-- [ ] Thunder Breaker
+- [X] Thunder Breaker
 - [ ] Wild Hunter
 - [ ] Wind Archer
 - [ ] Xenon
