@@ -38,28 +38,54 @@ function isAlreadyIn(arr, item){
 function newNode(nodeSet){
     var tableRef = document.getElementById("nodeList").getElementsByTagName("tbody")[0];
     var newRow   = tableRef.insertRow();
+    //Trial
     var newCell  = newRow.insertCell(0);
+    newCell.setAttribute("name","imageName");
+    //var newImg   = document.createElement("img");
+    //newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodeSet[1] + ".png");
+    //newCell.appendChild(newImg);
+    //var newText  = document.createTextNode("\n"+nodeSet[1]);
+    var newLiner = document.createElement("br");
+    var newText  = document.createTextNode(nodeSet[0]+"\n"+nodeSet[1]+"\n"+nodeSet[2]);
+    //var newText1  = document.createTextNode(nodeSet[1]);
+    //var newText2  = document.createTextNode(nodeSet[2]);
+    newCell.appendChild(newText);
+    //trial
+    var newCell  = newRow.insertCell(1);
+    newCell.setAttribute("name","imageCell");
     var newImg   = document.createElement("img");
     newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodeSet[0] + ".png");
+    newImg.setAttribute("name","firstSlice");//trial
     newCell.appendChild(newImg);
-    var newText  = document.createTextNode("\n"+nodeSet[0]);
-    newCell.appendChild(newText);
-    var newCell  = newRow.insertCell(1);
+    //Trial
     var newImg   = document.createElement("img");
     newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodeSet[1] + ".png");
+    newImg.setAttribute("name","secondSlice");
     newCell.appendChild(newImg);
-    var newText  = document.createTextNode("\n"+nodeSet[1]);
-    newCell.appendChild(newText);
-    var newCell  = newRow.insertCell(2);
     var newImg   = document.createElement("img");
+    newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodeSet[2] + ".png");
+    newImg.setAttribute("name","thirdSlice");
+    newCell.appendChild(newImg);
+    //Trial end
+    //var newText  = document.createTextNode("\n"+nodeSet[0]);
+    //newCell.appendChild(newText);
+    //Name trial
+    
+    //newCell.appendChild(newLiner);
+    //newCell.appendChild(newText1);
+    //newCell.appendChild(newLiner);
+    //newCell.appendChild(newText2);
+    var newCell  = newRow.insertCell(2);
+    /*var newImg   = document.createElement("img");
     newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodeSet[2] + ".png");
     newCell.appendChild(newImg);
     var newText  = document.createTextNode("\n"+nodeSet[2]);
     newCell.appendChild(newText);
-    var newCell  = newRow.insertCell(3);
+    var newCell  = newRow.insertCell(3);*/
     var newText  = document.createTextNode("SCORE");
     newCell.appendChild(newText);
-    var newCell  = newRow.insertCell(4);
+    //var newCell  = newRow.insertCell(4);
+    var newCell  = newRow.insertCell(3);
     var b = document.createElement('button');
     b.setAttribute("class","btn btn-primary");
     b.textContent = 'Add';
@@ -83,7 +109,8 @@ function newNode(nodeSet){
         return false;
     };
     newCell.appendChild(b); 
-    var newCell  = newRow.insertCell(5);
+    //var newCell  = newRow.insertCell(5);
+    var newCell  = newRow.insertCell(4);
     var c = document.createElement('button');
     c.setAttribute("class","btn btn-primary");
     c.setAttribute("name","delete");
@@ -301,6 +328,34 @@ function copyToCollection(selectName){
     var tableRef = document.getElementById("nodeCombo").getElementsByTagName("tbody")[0];
     var newRow   = tableRef.insertRow();
     var newCell  = newRow.insertCell(0);
+    newCell.setAttribute("name","imageName");
+    //var newImg   = document.createElement("img");
+    //newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodeSet[1] + ".png");
+    //newCell.appendChild(newImg);
+    //var newText  = document.createTextNode("\n"+nodeSet[1]);
+    var newLiner = document.createElement("br");
+    var newText  = document.createTextNode(nodestones[selectName][0]+"\n"+nodestones[selectName][1]+"\n"+nodestones[selectName][2]);
+    //var newText1  = document.createTextNode(nodeSet[1]);
+    //var newText2  = document.createTextNode(nodeSet[2]);
+    newCell.appendChild(newText);
+    //trial
+    var newCell  = newRow.insertCell(1);
+    newCell.setAttribute("name","imageCell");
+    var newImg   = document.createElement("img");
+    newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodestones[selectName][0] + ".png");
+    newImg.setAttribute("name","firstSlice");//trial
+    newCell.appendChild(newImg);
+    //Trial
+    var newImg   = document.createElement("img");
+    newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodestones[selectName][1] + ".png");
+    newImg.setAttribute("name","secondSlice");
+    newCell.appendChild(newImg);
+    var newImg   = document.createElement("img");
+    newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodestones[selectName][2] + ".png");
+    newImg.setAttribute("name","thirdSlice");
+    newCell.appendChild(newImg);
+    //Trial end
+    /*var newCell  = newRow.insertCell(0);
     var newImg   = document.createElement("img");
     newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodestones[selectName][0] + ".png");
     newCell.appendChild(newImg);
@@ -317,8 +372,8 @@ function copyToCollection(selectName){
     newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodestones[selectName][2] + ".png");
     newCell.appendChild(newImg);
     var newText  = document.createTextNode(" "+nodestones[selectName][2]);
-    newCell.appendChild(newText);
-    var newCell  = newRow.insertCell(3);
+    newCell.appendChild(newText);*/
+    var newCell  = newRow.insertCell(2);
     var b = document.createElement('button');
     b.setAttribute("class","btn btn-primary");
     b.textContent = 'Remove';
@@ -394,7 +449,7 @@ function computeNodeScoreAll(){
                 }
                 
             }
-            $("td:nth-child(4)",this).text(nScore);
+            $("td:nth-last-child(3)",this).text(nScore);
             //if((isAlreadyIn(selectedSkills, nOne) + isAlreadyIn(selectedSkills, nTwo) + isAlreadyIn(selectedSkills, nThree) == 0)  && !$(this).hasClass("bg-info")){
             if(nScore < 1 && !$(this).hasClass("bg-info")){
                 $(this).addClass("bg-danger");

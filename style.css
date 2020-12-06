@@ -1,3 +1,27 @@
 #skillOption1 td:hover{
         background-color:#f5f5f5;
 }
+
+img[name="firstSlice"]{
+        clip-path: polygon(0 0, 50% 50%, 50% 100%, 0% 100%);
+        position:absolute;
+}
+
+img[name="secondSlice"]{
+        clip-path: polygon(50% 50%, 0 0, 100% 0);
+        position:absolute;
+}
+
+img[name="thirdSlice"]{
+        clip-path: polygon(100% 0, 50% 50%, 50% 100%, 100% 100%);
+        position:absolute;
+}
+
+td[name="imageCell"]{
+        position:relative;
+        padding-right: 44px;
+}
+
+td[name="imageName"]{
+        white-space: pre;
+}
