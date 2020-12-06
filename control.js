@@ -513,7 +513,8 @@ $(window).on('resize load', function () {
         $("#rightCreator").addClass('col-12').removeClass('col-8');
         $("#leftCombo").addClass('col-12').removeClass('col-6');
         $("#rightCombo").addClass('col-12').removeClass('col-6');
-    } else {
+    } 
+    else {
         $("#leftCreator").addClass('col-4').removeClass('col-12');
         $("#rightCreator").addClass('col-8').removeClass('col-12');
         $("#leftCombo").addClass('col-6').removeClass('col-12');
@@ -521,15 +522,61 @@ $(window).on('resize load', function () {
     }
  });  
 
- function divcollapse(sectionToCollapse){
-     $("#"+sectionToCollapse+"").collapse("toggle");
+function divcollapse(sectionToCollapse){
+    $("#"+sectionToCollapse+"").collapse("toggle");
+    $("#"+sectionToCollapse+"Arrow").toggleClass("fa-chevron-circle-up");
+    $("#"+sectionToCollapse+"Arrow").toggleClass("fa-chevron-circle-down");
+}
 
-     $("#"+sectionToCollapse+"Arrow").toggleClass("fa-chevron-circle-up");
-     $("#"+sectionToCollapse+"Arrow").toggleClass("fa-chevron-circle-down");
+function genList(){
+    var generated;
+    generated = $("#jobSelect").val() +"|";
+    for(i = 0; i < nodestones.length; i++){
+        generated = generated + skillData[selectedJob].indexOf(nodestones[i][0]) +","+ skillData[selectedJob].indexOf(nodestones[i][1]) +","+ skillData[selectedJob].indexOf(nodestones[i][2])+"|";
+    }
+    generated = generated.slice(0, -1);
+    $("#saveLoadArea").val(generated);
+}
 
-
- }
-
+function loadList(){
+    var listLoader = $("#saveLoadArea").val();
+    listLoader = listLoader.split("|");
+    selectedJob = $("#jobSelect").val(listLoader[0]);
+    initializeTally();
+    selectorChange();
+    clearLeftoverData();
+    for(i = 1; i < listLoader.length; i++){
+        var temp = listLoader[i].split(",");
+        temp[0] = skillData[selectedJob][temp[0]];
+        temp[1] = skillData[selectedJob][temp[1]];
+        temp[2] = skillData[selectedJob][temp[2]];
+        nodestones.push(temp);
+        newNode(temp);
+    }
+    var firstNode = document.getElementById("skillOne");
+    var secondNode = document.getElementById("skillTwo");
+    var thirdNode = document.getElementById("skillThree");
+    firstNode.innerHTML=null;
+    secondNode.innerHTML=null;
+    thirdNode.innerHTML=null;
+    //console.log(selectedJob);
+    if(selectedJob.length > 0)
+    {
+        for (i = 0; i < skillData[selectedJob].length; i++){
+            firstNode.innerHTML = firstNode.innerHTML +
+                    '<option value="' + skillData[selectedJob][i] + '">' + skillData[selectedJob][i] + '</option>';
+                    secondNode.innerHTML = secondNode.innerHTML +
+                    '<option value="' + skillData[selectedJob][i] + '">' + skillData[selectedJob][i] + '</option>';
+                    thirdNode.innerHTML = thirdNode.innerHTML +
+                    '<option value="' + skillData[selectedJob][i] + '">' + skillData[selectedJob][i] + '</option>';
+        }
+        document.getElementById("nodestoneAdd").style.display = "table-cell" 
+    }
+    else{
+        //console.log(document.getElementById("nodestoneAdd"));
+        document.getElementById("nodestoneAdd").style.display = "none";
+    }
+}
 
 function checkVar(){
     console.log(nodestones);

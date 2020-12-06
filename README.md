@@ -22,7 +22,7 @@ The web application allows users to find and formulate their trinode sets.
 - Add A 2 or 3 Swap option (Some players who are starting prefer to build three Lv16/Lv17/Lv17 nodes per skill instead of two Lv25 nodes per skill.
 - Add Support for all jobs.
 - ~~Add Sorting for current trinodes created.~~
-- Add Saving and Loading feature to save all the created trinodes.
+- ~~Add Saving and Loading feature to save all the created trinodes.~~
 - Add Support for other languages.
 - Clean Code
 
