@@ -507,6 +507,30 @@ function comparer(index) {
 function getCellValue(row, index){ return $(row).children('td').eq(index).text() }
 
 
+$(window).on('resize load', function () {
+    if ($(window).width() < 1000) {
+        $("#leftCreator").addClass('col-12').removeClass('col-4');
+        $("#rightCreator").addClass('col-12').removeClass('col-8');
+        $("#leftCombo").addClass('col-12').removeClass('col-6');
+        $("#rightCombo").addClass('col-12').removeClass('col-6');
+    } else {
+        $("#leftCreator").addClass('col-4').removeClass('col-12');
+        $("#rightCreator").addClass('col-8').removeClass('col-12');
+        $("#leftCombo").addClass('col-6').removeClass('col-12');
+        $("#rightCombo").addClass('col-6').removeClass('col-12');
+    }
+ });  
+
+ function divcollapse(sectionToCollapse){
+     $("#"+sectionToCollapse+"").collapse("toggle");
+
+     $("#"+sectionToCollapse+"Arrow").toggleClass("fa-chevron-circle-up");
+     $("#"+sectionToCollapse+"Arrow").toggleClass("fa-chevron-circle-down");
+
+
+ }
+
+
 function checkVar(){
     console.log(nodestones);
     console.log(selectedSkills);
