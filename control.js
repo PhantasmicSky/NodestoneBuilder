@@ -6,13 +6,15 @@ var cannotLead = [];
 var nodeTally = [];
 var nodeCollection = [];
 
+/**
+ * Adds a new nodestone (created by the user)
+ */
 function addNodestone(){
   var firstSkill = $("#skillOne").val();
   var secondSkill = $("#skillTwo").val();
   var thirdSkill = $("#skillThree").val();
   if ((firstSkill != secondSkill) && (firstSkill != thirdSkill) && (secondSkill != thirdSkill)){
       var currentNodestone = [firstSkill,secondSkill,thirdSkill];
-     // console.log(isAlreadyIn(nodestones,currentNodestone));
       if(isAlreadyIn(nodestones,currentNodestone)){
           alert("Node Combination Already Exists");
       }
@@ -27,6 +29,10 @@ function addNodestone(){
   }
 };
 
+/**
+ * Checks whether "item" is already inside "arr" (an array)
+ */
+
 function isAlreadyIn(arr, item){
     var itemString = JSON.stringify(item);
     var contain = arr.some(function(ele){
@@ -35,29 +41,23 @@ function isAlreadyIn(arr, item){
     return contain;
 }
 
+/**
+ * Creates a new entry in the nodestone collection panel based on data from nodeSet(an array of size 3) 
+ */
 function newNode(nodeSet){
     var tableRef = document.getElementById("nodeList").getElementsByTagName("tbody")[0];
     var newRow   = tableRef.insertRow();
-    //Trial
     var newCell  = newRow.insertCell(0);
     newCell.setAttribute("name","imageName");
-    //var newImg   = document.createElement("img");
-    //newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodeSet[1] + ".png");
-    //newCell.appendChild(newImg);
-    //var newText  = document.createTextNode("\n"+nodeSet[1]);
     var newLiner = document.createElement("br");
     var newText  = document.createTextNode(nodeSet[0]+"\n"+nodeSet[1]+"\n"+nodeSet[2]);
-    //var newText1  = document.createTextNode(nodeSet[1]);
-    //var newText2  = document.createTextNode(nodeSet[2]);
     newCell.appendChild(newText);
-    //trial
     var newCell  = newRow.insertCell(1);
     newCell.setAttribute("name","imageCell");
     var newImg   = document.createElement("img");
     newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodeSet[0] + ".png");
     newImg.setAttribute("name","firstSlice");//trial
     newCell.appendChild(newImg);
-    //Trial
     var newImg   = document.createElement("img");
     newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodeSet[1] + ".png");
     newImg.setAttribute("name","secondSlice");
@@ -66,32 +66,15 @@ function newNode(nodeSet){
     newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodeSet[2] + ".png");
     newImg.setAttribute("name","thirdSlice");
     newCell.appendChild(newImg);
-    //Trial end
-    //var newText  = document.createTextNode("\n"+nodeSet[0]);
-    //newCell.appendChild(newText);
-    //Name trial
-    
-    //newCell.appendChild(newLiner);
-    //newCell.appendChild(newText1);
-    //newCell.appendChild(newLiner);
-    //newCell.appendChild(newText2);
     var newCell  = newRow.insertCell(2);
-    /*var newImg   = document.createElement("img");
-    newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodeSet[2] + ".png");
-    newCell.appendChild(newImg);
-    var newText  = document.createTextNode("\n"+nodeSet[2]);
-    newCell.appendChild(newText);
-    var newCell  = newRow.insertCell(3);*/
     var newText  = document.createTextNode("SCORE");
     newCell.appendChild(newText);
-    //var newCell  = newRow.insertCell(4);
     var newCell  = newRow.insertCell(3);
     var b = document.createElement('button');
     b.setAttribute("class","btn btn-primary");
     b.textContent = 'Add';
     b.onclick = function(){
         if(!isAlreadyIn(nodeCollection, nodestones[$(this).closest('tr').attr("name")]) && !isAlreadyIn(cannotLead,nodestones[$(this).closest('tr').attr("name")][0])){
-            //console.log($(this).closest('td').parent()[0].sectionRowIndex);
             disableDeletion(true);
             $(this).closest('tr').removeClass("bg-danger bg-warning bg-success");
             $(this).closest('tr').addClass("bg-info");
@@ -109,19 +92,15 @@ function newNode(nodeSet){
         return false;
     };
     newCell.appendChild(b); 
-    //var newCell  = newRow.insertCell(5);
     var newCell  = newRow.insertCell(4);
     var c = document.createElement('button');
     c.setAttribute("class","btn btn-primary");
     c.setAttribute("name","delete");
     c.textContent = 'Remove';
     c.onclick = function(){
-        //console.log($(this).closest('td').parent()[0].sectionRowIndex);
         nodestones.splice($(this).closest('tr').attr("name"), 1);
         changeOrder($(this).closest('tr').attr("name"));
-        //computeNodeScoreAll();
         $(this).closest('tr').remove();
-        //console.log(nodestones);
         return false;
     };
     newCell.appendChild(c);
@@ -130,11 +109,13 @@ function newNode(nodeSet){
         disableDeletion(true);
     }
     computeNodeScoreAll();
-    //changeRowColor();
 }
 
+/**
+ * Originally was supposed to load all skill data from a JSON file.
+ * Current use is to load all supported jobs in the "Select Job:" dropdown
+ */
 function loadJSON(){
-    //console.log(skillData);
     for (jobs in skillData){
         var jobSelection = document.getElementById("jobSelect");
             jobSelection.innerHTML = jobSelection.innerHTML +
@@ -142,6 +123,10 @@ function loadJSON(){
     }
 }
 
+/**
+ * Changes the list of skills a user can pick to rebuild their tri-nodes.
+ * Also in charge of hiding certain div's based on selectedJob's value (should be moved to a separate function)
+ */
 function skillChange(){
     selectedJob = $("#jobSelect").val();
     initializeTally();
@@ -153,7 +138,6 @@ function skillChange(){
     firstNode.innerHTML=null;
     secondNode.innerHTML=null;
     thirdNode.innerHTML=null;
-    //console.log(selectedJob);
     if(selectedJob.length > 0)
     {
         $("#normalOperation").attr("name","noOp");
@@ -169,13 +153,15 @@ function skillChange(){
         document.getElementById("nodestoneAdd").style.display = "table-cell" 
     }
     else{
-        //console.log(document.getElementById("nodestoneAdd"));
         $("#normalOperation").attr("name","hiddenObj");
         $("#helpOperation").attr("name","noOp");
         document.getElementById("nodestoneAdd").style.display = "none";
     }
 }
 
+/**
+ * Changes the selectable skills in the first div which users pick to select which skills they would like their perfect trios to have
+ */
 function selectorChange(){
     var tableNode = document.getElementById("skillOption1");
     tableNode.innerHTML = "";
@@ -201,24 +187,16 @@ function selectorChange(){
             newCell.appendChild(newText);
             newCell.setAttribute("name", skillData[selectedJob][i]);
             newCell.setAttribute("onclick", "formulateTrios('"+skillData[selectedJob][i]+"')");
-            /*newCell.onclick = function(){
-                formulateTrios("'"+skillData[selectedJob][i]+"'");
-            }
-            newCell.addEventListener('click', function(){
-                formulateTrios("'"+skillData[selectedJob][i]+"'");
-            });*/
-            //tableNode.innerHTML = tableNode.innerHTML + 
-            //    '<tr onclick="formulateTrios(\''+skillData[selectedJob][i]+'\')" name="'+skillData[selectedJob][i]+'"><td><input type="checkbox" name="skillToCreate" value="'+ skillData[selectedJob][i] +'"></td><td><img src="Images/'+selectedJob+'/'+skillData[selectedJob][i]+'.png"/> '+ skillData[selectedJob][i]+'</td></tr>';
         }
-        //tableNode.innerHTML = tableNode.innerHTML + 
-        //    '<button type="button" class="btn btn-primary" onclick="formulateTrios()">Formula Trios</button>';
     }
 }
 
+/**
+ * UI Logic for the 1st div.
+ * Also in charge of computing for a node statistic (Best Outcome)
+ */
 function formulateTrios(selectedOption){
     var nodeSlotData = 0;
-    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
-    //selectedSkills = [];
     if(isAlreadyIn(selectedSkills,selectedOption)){
         selectedSkills = selectedSkills.filter(function(value, index, arr){ 
             return value != selectedOption;
@@ -229,25 +207,11 @@ function formulateTrios(selectedOption){
         selectedSkills.push(selectedOption);
         $("#skillOption1 td[name='"+selectedOption+"']").addClass("bg-primary");
     }
-    /*for (var i = 0; i < checkboxes.length; i++) {
-        if(checkboxes[i].name=="skillToCreate"){
-            selectedSkills.push(checkboxes[i].value)
-            selectedFormulation++;
-        }
-    }*/
-    //changeRowColor();
     var selectedFormulation = selectedSkills.length;
     nodeSlotData = 3-(selectedFormulation*2%3);
     if(nodeSlotData == 3){
         nodeSlotData = 0;
     }
-
-    /*if(selectedFormulation >= 3){
-       // alert(selectedFormulation +" skills selected. Resulting in " + Math.ceil(selectedFormulation*2/3) + " node(s) and " + nodeSlotData + " non-essential skill(s) in the last Trio.");
-    }
-    else{
-        alert("Insufficient number of skills selected. Select at least three(3) skills.");
-    }*/
     var nodePositive = (Math.ceil(selectedFormulation*2/3)*3)-nodeSlotData;
     console.log(nodePositive);
     document.getElementsByName("skillCounter")[0].innerHTML = selectedSkills.length;
@@ -265,36 +229,11 @@ function formulateTrios(selectedOption){
 
 }
 
-function changeRowColor(){
-    $("#nodeList > tbody  > tr").removeClass("bg-danger");
-    $("#nodeList > tbody  > tr").removeClass("bg-success");
-    //$("#nodeList > tbody  > tr").removeClass("bg-info");
-    $("#nodeList > tbody  > tr").removeClass("bg-warning");
-    $('#nodeList > tbody  > tr').each(
-        function(index) {
-            var nOne = $("td:nth-child(1)", this).text();
-            var nTwo = $("td:nth-child(2)", this).text();
-            var nThree = $("td:nth-child(3)", this).text();
-            if((isAlreadyIn(selectedSkills, nOne) + isAlreadyIn(selectedSkills, nTwo) + isAlreadyIn(selectedSkills, nThree) == 0)  && !$(this).hasClass("bg-info")){
-                $(this).addClass("bg-danger");
-                //console.log($("td:nth-child(1)", this).text());
-            }
-            else if(isAlreadyIn(selectedSkills, nOne) + isAlreadyIn(selectedSkills, nTwo) + isAlreadyIn(selectedSkills, nThree) == 1  && !$(this).hasClass("bg-info")){
-                $(this).addClass("bg-warning");
-                //console.log($("td:nth-child(1)", this).text());
-            }
-            else if(isAlreadyIn(selectedSkills, nOne) + isAlreadyIn(selectedSkills, nTwo) + isAlreadyIn(selectedSkills, nThree) == 2  && !$(this).hasClass("bg-info")){
-                $(this).addClass("bg-warning");
-                //console.log($("td:nth-child(1)", this).text());
-            }
-            else if(isAlreadyIn(selectedSkills, nOne) + isAlreadyIn(selectedSkills, nTwo) + isAlreadyIn(selectedSkills, nThree) == 3  && !$(this).hasClass("bg-info")){
-                $(this).addClass("bg-success");
-                //console.log($("td:nth-child(1)", this).text());
-            }
-        }
-    )  
-}
-
+/**
+ * Changes the name (ID #) of every node affected when a node is deleted.
+ * Ex. removing node ID # 34 would result in 34 being empty. Nodes with ID 35 onwards would shift down to ensure ID 34 is used
+ * This is the reason why deleting nodes is not allowed while ANY tri-node is equipped 
+ */
 function changeOrder(deletedNode){
     $('#nodeList > tbody  > tr').each(
         function(index) {
@@ -312,6 +251,10 @@ function changeOrder(deletedNode){
     )
 }
 
+/**
+ * Initializes the tally/count if a skill is already present in the equipped tri-node twice.
+ * A count of 2 means that said skill can still be equipped 2 more time, etc.
+ */
 function initializeTally(){
     selectedJob = $("#jobSelect").val();
     nodeTally=[];
@@ -328,28 +271,23 @@ function initializeTally(){
     }
 }
 
+/**
+ * Copies the selected node to equip to the Equipped nodes list (inside div 3)
+ */
 function copyToCollection(selectName){
     var tableRef = document.getElementById("nodeCombo").getElementsByTagName("tbody")[0];
     var newRow   = tableRef.insertRow();
     var newCell  = newRow.insertCell(0);
     newCell.setAttribute("name","imageName");
-    //var newImg   = document.createElement("img");
-    //newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodeSet[1] + ".png");
-    //newCell.appendChild(newImg);
-    //var newText  = document.createTextNode("\n"+nodeSet[1]);
     var newLiner = document.createElement("br");
     var newText  = document.createTextNode(nodestones[selectName][0]+"\n"+nodestones[selectName][1]+"\n"+nodestones[selectName][2]);
-    //var newText1  = document.createTextNode(nodeSet[1]);
-    //var newText2  = document.createTextNode(nodeSet[2]);
     newCell.appendChild(newText);
-    //trial
     var newCell  = newRow.insertCell(1);
     newCell.setAttribute("name","imageCell");
     var newImg   = document.createElement("img");
     newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodestones[selectName][0] + ".png");
-    newImg.setAttribute("name","firstSlice");//trial
+    newImg.setAttribute("name","firstSlice");
     newCell.appendChild(newImg);
-    //Trial
     var newImg   = document.createElement("img");
     newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodestones[selectName][1] + ".png");
     newImg.setAttribute("name","secondSlice");
@@ -358,38 +296,16 @@ function copyToCollection(selectName){
     newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodestones[selectName][2] + ".png");
     newImg.setAttribute("name","thirdSlice");
     newCell.appendChild(newImg);
-    //Trial end
-    /*var newCell  = newRow.insertCell(0);
-    var newImg   = document.createElement("img");
-    newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodestones[selectName][0] + ".png");
-    newCell.appendChild(newImg);
-    var newText  = document.createTextNode(" "+nodestones[selectName][0]);
-    newCell.appendChild(newText);
-    var newCell  = newRow.insertCell(1);
-    var newImg   = document.createElement("img");
-    newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodestones[selectName][1] + ".png");
-    newCell.appendChild(newImg);
-    var newText  = document.createTextNode(" "+nodestones[selectName][1]);
-    newCell.appendChild(newText);
-    var newCell  = newRow.insertCell(2);
-    var newImg   = document.createElement("img");
-    newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodestones[selectName][2] + ".png");
-    newCell.appendChild(newImg);
-    var newText  = document.createTextNode(" "+nodestones[selectName][2]);
-    newCell.appendChild(newText);*/
     var newCell  = newRow.insertCell(2);
     var b = document.createElement('button');
     b.setAttribute("class","btn btn-primary");
     b.textContent = 'Remove';
         b.onclick = function(){
-        //console.log($(this).closest('td').parent()[0].sectionRowIndex);
         $('#nodeList > tbody  > tr[name="'+selectName+'"]').removeClass("bg-info");
         nodeCollection.splice(($(this).closest('td').parent()[0].sectionRowIndex), 1);
         cannotLead.splice(($(this).closest('td').parent()[0].sectionRowIndex), 1);
         updateNodeScore(nodestones[$(this).closest('tr').attr("name")],"REMOVE");
         computeNodeScoreAll();
-        //changeRowColor();
-        //changeOrder($(this).closest('tr').attr("name"));
         $(this).closest('tr').remove();
         disableDeletion(false);
         computeAuxData();
@@ -399,6 +315,9 @@ function copyToCollection(selectName){
     $("#nodeCombo  tr:last").attr("name", selectName);
 }
 
+/**
+ * Enables or disables deletion in nodestone list
+ */
 function disableDeletion(statusLock){
     if(statusLock == true){
         $("#nodeList").find("button[name='delete']").attr("disabled", true);
@@ -408,6 +327,9 @@ function disableDeletion(statusLock){
     }
 }
 
+/**
+ * Deducts 1 to every skill currently equipped in the tally.
+ */
 function computeNodeScore(){
     for(i = 0; i < nodeCollection.length; i++){
         nodeTally[nodeCollection[i][0]] = nodeTally[nodeCollection[i][0]]-1;
@@ -416,15 +338,16 @@ function computeNodeScore(){
     }
 }
 
+/**
+ * Recomputes the nodescore for every skill inside the nodelist (div 2)
+ * Fires off everytime a node is equipped, unequipped, or a skill is added or removed from the desired skills list
+ */
 function computeNodeScoreAll(){
     $('#nodeList > tbody  > tr').each(
         function(index) {
             if(!$(this).hasClass("bg-info")){
                 $(this).removeClass("bg-danger bg-warning bg-success");
             }
-            /*var nOne = $("td:nth-child(1)", this).text();
-            var nTwo = $("td:nth-child(2)", this).text();
-            var nThree = $("td:nth-child(3)", this).text();*/
             var nOne = nodestones[$(this).attr("name")][0];
             var nTwo = nodestones[$(this).attr("name")][1];
             var nThree = nodestones[$(this).attr("name")][2];
@@ -454,30 +377,24 @@ function computeNodeScoreAll(){
                 
             }
             $("td:nth-last-child(3)",this).text(nScore);
-            //if((isAlreadyIn(selectedSkills, nOne) + isAlreadyIn(selectedSkills, nTwo) + isAlreadyIn(selectedSkills, nThree) == 0)  && !$(this).hasClass("bg-info")){
             if(nScore < 1 && !$(this).hasClass("bg-info")){
                 $(this).addClass("bg-danger");
-                //console.log($("td:nth-child(1)", this).text());
             }
             else if(nScore < 6 && !$(this).hasClass("bg-info")){
-            //else if(isAlreadyIn(selectedSkills, nOne) + isAlreadyIn(selectedSkills, nTwo) + isAlreadyIn(selectedSkills, nThree) == 1  && !$(this).hasClass("bg-info")){
                 $(this).addClass("bg-warning");
-                //console.log($("td:nth-child(1)", this).text());
             }
-            /*else if(isAlreadyIn(selectedSkills, nOne) + isAlreadyIn(selectedSkills, nTwo) + isAlreadyIn(selectedSkills, nThree) == 2  && !$(this).hasClass("bg-info")){
-                $(this).addClass("bg-warning");
-                //console.log($("td:nth-child(1)", this).text());
-            }*/
             else if(nScore > 5 && !$(this).hasClass("bg-info")){
-            //else if(isAlreadyIn(selectedSkills, nOne) + isAlreadyIn(selectedSkills, nTwo) + isAlreadyIn(selectedSkills, nThree) == 3  && !$(this).hasClass("bg-info")){
                 $(this).addClass("bg-success");
-                //console.log($("td:nth-child(1)", this).text());
             }
         }
     )
 
 }
 
+/**
+ * Updates nodescores in tally based on if a node is equipped or unequipped.
+ * Also is responsible for updating the lower right table in div 3 which is responsible for keeping track of how many times a skill appears in the equipped nodes (might want to move this function)
+ */
 function updateNodeScore(subtractNode, conditions){
     if(conditions == "ADD"){
         nodeTally[subtractNode[0]]= nodeTally[subtractNode[0]]-1;
@@ -528,6 +445,9 @@ function updateNodeScore(subtractNode, conditions){
     }
 }
 
+/**
+ * Computes other data in the Nodestatistics tab (# of nodes used, efficiency)
+ */
 function computeAuxData(){
     document.getElementsByName("nodeUsage")[0].innerHTML = nodeCollection.length;
     var tally = 0;
@@ -538,11 +458,13 @@ function computeAuxData(){
         else if (nodeTally[selectedSkills[j]] < 1){
             tally = tally +2;
         }
-        //console.log(selectedSkills[i] + "->"+tally);
     }
     document.getElementsByName("nodeEfficiency")[0].innerHTML = tally + "/" + (nodeCollection.length)*3 + "(" + Math.round((tally/(nodeCollection.length*3)*100 + Number.EPSILON) * 100) / 100 + "% Efficiency)";
 }
 
+/**
+ * Clears skill appearance tracker and best outcome if job is suddenly switched
+ */
 function clearLeftoverData(){
     document.getElementsByName("skillCounter")[0].innerHTML = selectedSkills.length;
     document.getElementsByName("bestOutcome")[0].innerHTML = "0(0 slots for selected and 0 slots for any skill)" ;
@@ -550,6 +472,9 @@ function clearLeftoverData(){
 
 }
 
+/**
+ * Sort function for headers
+ */
 $('table[name="sortable"] th').click(function(){
     var table = $(this).parents('table').eq(0)
     var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()))
@@ -565,7 +490,9 @@ function comparer(index) {
 }
 function getCellValue(row, index){ return $(row).children('td').eq(index).text() }
 
-
+/**
+ * Some minor Web responsive additions
+ */
 $(window).on('resize load', function () {
     if ($(window).width() < 1000) {
         $("#leftCreator").addClass('col-12').removeClass('col-4');
@@ -581,12 +508,18 @@ $(window).on('resize load', function () {
     }
  });  
 
+/**
+ * Allows sections of the page to collapse
+ */
 function divcollapse(sectionToCollapse){
     $("#"+sectionToCollapse+"").collapse("toggle");
     $("#"+sectionToCollapse+"Arrow").toggleClass("fa-chevron-circle-up");
     $("#"+sectionToCollapse+"Arrow").toggleClass("fa-chevron-circle-down");
 }
 
+/**
+ * Generates the save string
+ */
 function genList(){
     var generated;
     generated = $("#jobSelect").val() +"|";
@@ -597,6 +530,10 @@ function genList(){
     $("#saveLoadArea").val(generated);
 }
 
+/**
+ * Loads the pasted save string
+ * TODO: Check validity
+ */
 function loadList(){
     var listLoader = $("#saveLoadArea").val();
     listLoader = listLoader.split("|");
@@ -618,7 +555,6 @@ function loadList(){
     firstNode.innerHTML=null;
     secondNode.innerHTML=null;
     thirdNode.innerHTML=null;
-    //console.log(selectedJob);
     if(selectedJob.length > 0)
     {
         for (i = 0; i < skillData[selectedJob].length; i++){
@@ -632,11 +568,13 @@ function loadList(){
         document.getElementById("nodestoneAdd").style.display = "table-cell" 
     }
     else{
-        //console.log(document.getElementById("nodestoneAdd"));
         document.getElementById("nodestoneAdd").style.display = "none";
     }
 }
 
+/**
+ * Debug function just to check values of variables
+ */
 function checkVar(){
     console.log(nodestones);
     console.log(selectedSkills);
