@@ -25,3 +25,7 @@ td[name="imageCell"]{
 td[name="imageName"]{
         white-space: pre;
 }
+
+[name="hiddenObj"]{
+        display: none;
+}

@@ -156,6 +156,8 @@ function skillChange(){
     //console.log(selectedJob);
     if(selectedJob.length > 0)
     {
+        $("#normalOperation").attr("name","noOp");
+        $("#helpOperation").attr("name","hiddenObj");
         for (i = 0; i < skillData[selectedJob].length; i++){
             firstNode.innerHTML = firstNode.innerHTML +
                     '<option value="' + skillData[selectedJob][i] + '">' + skillData[selectedJob][i] + '</option>';
@@ -168,6 +170,8 @@ function skillChange(){
     }
     else{
         //console.log(document.getElementById("nodestoneAdd"));
+        $("#normalOperation").attr("name","hiddenObj");
+        $("#helpOperation").attr("name","noOp");
         document.getElementById("nodestoneAdd").style.display = "none";
     }
 }

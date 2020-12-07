@@ -30,196 +30,286 @@
               </div>
             </div>
             <br/>
-            <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section1')">
-              <ul class="navbar-nav nav-fill w-100">
-                <li class="nav-item active">
-                  <h3 style="text-align:left">Tri-Node Skill Select</h3>
-                </li>
-                <li class="nav-item" style="text-align:right">
-                  <i class="fas fa-chevron-circle-up fa-lg" style="line-height: inherit;" id="section1Arrow"></i>
-                </li>
-              </ul>
-            </nav>
-            <div class="container-fluid border collapse show" id="section1">
-              <div class="row" id="skillPicker">
-                <div class="col-12 mt-2">
-                  </select>
-                  <table class="table table-bordered" id="pickerNode">
-                    <thead>
-                      <tr>
-                        <th scope="col" colspan="5">Select Skills</th>
-                        <!--<th scope="col">Skill</th> -->
-                      </tr>
-                    </thead>
-                    <tbody id="skillOption1">
-
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <br/>
-            <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section2')">
-              <ul class="navbar-nav nav-fill w-100">
-                <li class="nav-item active">
-                  <h3 style="text-align:left">Nodestone Collection</h3>
-                </li>
-                <li class="nav-item" style="text-align:right">
-                  <i class="fas fa-chevron-circle-up fa-lg" style="line-height: inherit;" id="section2Arrow"></i>
-                </li>
-              </ul>
-            </nav>
-            <div class="container-fluid border collapse show" id="section2">
-              <div class="row">
-                <div class="col-4" id="leftCreator">
-                  <table class="table table">
+            <div class="container" id="normalOperation" name="hiddenObj">
+              <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section1')">
+                <ul class="navbar-nav nav-fill w-100">
+                  <li class="nav-item active">
+                    <h3 style="text-align:left">Tri-Node Skill Select</h3>
+                  </li>
+                  <li class="nav-item" style="text-align:right">
+                    <i class="fas fa-chevron-circle-up fa-lg" style="line-height: inherit;" id="section1Arrow"></i>
+                  </li>
+                </ul>
+              </nav>
+              <div class="container-fluid border collapse show" id="section1">
+                <div class="row" id="skillPicker">
+                  <div class="col-12 mt-2">
+                    </select>
+                    <table class="table table-bordered" id="pickerNode">
                       <thead>
                         <tr>
-                          <th scope="col" colspan="2">Create Nodestone</th>
+                          <th scope="col" colspan="5">Select Skills</th>
+                          <!--<th scope="col">Skill</th> -->
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <strong>First Skill</strong>
-                          </td>
-                          <td>                       
-                              <select name="skillOne" id="skillOne">
-                              </select>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <strong>Second Skill</strong>
-                          </td>
-                          <td>                       
-                              <select name="skillTwo" id="skillTwo">
-                              </select>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <strong>Third Skill</strong>
-                          </td>
-                          <td>                       
-                              <select name="skillThree" id="skillThree">
-                              </select>
-                          </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" id="nodestoneAdd" style="display:none;">
-                              <button type="button" class="btn btn-primary" onclick="addNodestone()">Add Nodestone</button>
-                            </td>
-                        </tr>
+                      <tbody id="skillOption1">
+
                       </tbody>
                     </table>
+                  </div>
                 </div>
-                <div class="col-8" id="rightCreator">
-                  <table class="table" id="nodeList" name="sortable">
+              </div>
+              <br/>
+              <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section2')">
+                <ul class="navbar-nav nav-fill w-100">
+                  <li class="nav-item active">
+                    <h3 style="text-align:left">Nodestone Collection</h3>
+                  </li>
+                  <li class="nav-item" style="text-align:right">
+                    <i class="fas fa-chevron-circle-up fa-lg" style="line-height: inherit;" id="section2Arrow"></i>
+                  </li>
+                </ul>
+              </nav>
+              <div class="container-fluid border collapse show" id="section2">
+                <div class="row">
+                  <div class="col-4" id="leftCreator">
+                    <table class="table table">
+                        <thead>
+                          <tr>
+                            <th scope="col" colspan="2">Create Nodestone</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <strong>First Skill</strong>
+                            </td>
+                            <td>                       
+                                <select name="skillOne" id="skillOne">
+                                </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <strong>Second Skill</strong>
+                            </td>
+                            <td>                       
+                                <select name="skillTwo" id="skillTwo">
+                                </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <strong>Third Skill</strong>
+                            </td>
+                            <td>                       
+                                <select name="skillThree" id="skillThree">
+                                </select>
+                            </td>
+                          </tr>
+                          <tr>
+                              <td colspan="2" id="nodestoneAdd" style="display:none;">
+                                <button type="button" class="btn btn-primary" onclick="addNodestone()">Add Nodestone</button>
+                              </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>
+                  <div class="col-8" id="rightCreator">
+                    <table class="table" id="nodeList" name="sortable">
+                        <thead>
+                            <tr>
+                              <!--<th scope="col">First</th>
+                              <th scope="col">Middle</th>
+                              <th scope="col">Last</th>-->
+                              <th scope="col" colspan="2">Trinode Skills</th>
+                              <th scope="col">Node Score</th>
+                              <th scope="col">Add</th>
+                              <th scope="col">Delete</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <br/>
+              <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section3')">
+                <ul class="navbar-nav nav-fill w-100">
+                  <li class="nav-item active">
+                    <h3 style="text-align:left">Current Trinode Setup</h3>
+                  </li>
+                  <li class="nav-item" style="text-align:right">
+                    <i class="fas fa-chevron-circle-up fa-lg" style="line-height: inherit;" id="section3Arrow"></i>
+                  </li>
+                </ul>
+              </nav>
+              <div class="container-fluid border collapse show" id="section3">
+                <div class="row">
+                  <div class="col-6" id="leftCombo">
+                    <table class="table" id="nodeCombo" name="sortable">
                       <thead>
                           <tr>
                             <!--<th scope="col">First</th>
                             <th scope="col">Middle</th>
                             <th scope="col">Last</th>-->
                             <th scope="col" colspan="2">Trinode Skills</th>
-                            <th scope="col">Node Score</th>
-                            <th scope="col">Add</th>
                             <th scope="col">Delete</th>
                           </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                  </table>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-6" id="rightCombo">
+                    <table class="table" id="nodeStatistics1">
+                      <thead>
+                          <tr>
+                            <th scope="col" colspan="2">Node Combination Statistics</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                            <td scope="col"><strong>Total Skills Selected</strong></td>
+                            <td scope="col" name="skillCounter"></td>
+                          </tr>
+                          <tr>
+                            <td scope="col"><strong># of Slots(If All Perfect Trios)</strong></td>
+                            <td scope="col" name="bestOutcome"></td>
+                          </tr>
+                          <tr>
+                            <td scope="col"><strong>Node Slots Used</strong></td>
+                            <td scope="col" name="nodeUsage"></td>
+                          </tr>
+                          <tr>
+                            <td scope="col"><strong>Node Efficiency</strong></td>
+                            <td scope="col" name="nodeEfficiency"></td>
+                          </tr>
+                      </tbody>
+                    </table>
+                    <table class="table" id="nodeStatistics2" name="sortable">
+                      <thead>
+                          <tr>
+                            <th scope="col">Skill</th>
+                            <th scope="col">Selected</th>
+                            <th scope="col">Occupied Slots</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
-            <br/>
-            <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section3')">
-              <ul class="navbar-nav nav-fill w-100">
-                <li class="nav-item active">
-                  <h3 style="text-align:left">Current Trinode Setup</h3>
-                </li>
-                <li class="nav-item" style="text-align:right">
-                  <i class="fas fa-chevron-circle-up fa-lg" style="line-height: inherit;" id="section3Arrow"></i>
-                </li>
-              </ul>
-            </nav>
-            <div class="container-fluid border collapse show" id="section3">
-              <div class="row">
-                <div class="col-6" id="leftCombo">
-                  <table class="table" id="nodeCombo" name="sortable">
-                    <thead>
-                        <tr>
-                          <!--<th scope="col">First</th>
-                          <th scope="col">Middle</th>
-                          <th scope="col">Last</th>-->
-                          <th scope="col" colspan="2">Trinode Skills</th>
-                          <th scope="col">Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="col-6" id="rightCombo">
-                  <table class="table" id="nodeStatistics1">
-                    <thead>
-                        <tr>
-                          <th scope="col" colspan="2">Node Combination Statistics</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                          <td scope="col"><strong>Total Skills Selected</strong></td>
-                          <td scope="col" name="skillCounter"></td>
-                        </tr>
-                        <tr>
-                          <td scope="col"><strong># of Slots(If All Perfect Trios)</strong></td>
-                          <td scope="col" name="bestOutcome"></td>
-                        </tr>
-                        <tr>
-                          <td scope="col"><strong>Node Slots Used</strong></td>
-                          <td scope="col" name="nodeUsage"></td>
-                        </tr>
-                        <tr>
-                          <td scope="col"><strong>Node Efficiency</strong></td>
-                          <td scope="col" name="nodeEfficiency"></td>
-                        </tr>
-                    </tbody>
-                  </table>
-                  <table class="table" id="nodeStatistics2" name="sortable">
-                    <thead>
-                        <tr>
-                          <th scope="col">Skill</th>
-                          <th scope="col">Selected</th>
-                          <th scope="col">Occupied Slots</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                  </table>
-                </div>
+            <div class="container" id="helpOperation" name="noOp">
+              <h3>How to use</h3>
+              <hr/>
+              <h5>1. Select the job you want to build your tri-nodes</h5>
+              <p>Click the dropdown box and select your class.</p>
+              <div class="container mx-auto text-center">
+                <img src="Images/step1.PNG" alt="Select your class">
               </div>
+              <h5>2. Select the skills you need to build your tri-nodes around</h5>
+              <p>Click on the skills you want to select. Those highlighted in blue are currently selected.</p>
+              <div class="container mx-auto text-center">
+                <img src="Images/step2.PNG" alt="Select your desired skills">
+              </div>
+              <h5>3. Create the tri-nodes you currently have.</h5>
+              <p>Create your tri-nodes by using the drop down boxes to the left. Upon clicking "Add Nodestone", the created nodestone will be added to the list on the right.</p>
+              <div class="container mx-auto text-center">
+                <img src="Images/step31.PNG" alt="Recreate the tri-nodes you own">
+              </div>
+              <h6>Created Nodestone Collection Legend</h6>
+              <div class="container mx-auto text-center">
+                <img src="Images/step32.PNG" alt="Nodestone Collection UI">
+              </div>
+              <ol>
+                <li>Shows the skills enhanced by the tri-node</li>
+                <li>Shows the tri-node skill image</li>
+                <li>Shows the Node Score</li>
+                <li>Adds the tri-node to the "equipped" tri-nodes list</li>
+                <li>Deletes the tri-node from the list (Available only when there are no tri-nodes equipped)</li>
+              </ol>
+              <h6>Node Score</h6>
+              <p>To facilitate the user in building their tri-node set, Each tri-node is given a score that updates based on the current nodestones equipped.</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Score</th>
+                    <th scope="col">Meaning</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="col">6</td>
+                    <td scope="col">A Perfect Tri-Node</td>
+                  </tr>
+                  <tr>
+                    <td scope="col">1-5</td>
+                    <td scope="col">The Tri-Node will not fully contribute to your desired tri-node set (Some skills may not be part of your desired list of skills or two copies of some of the skill are already present in your currently equipped tri-nodes)</td>
+                  </tr>
+                  <tr>
+                    <td scope="col">0</td>
+                    <td scope="col">The Tri-Node contains no skill that is part of your desired skills to enhance</td>
+                  </tr>
+                  <tr>
+                    <td scope="col">-1 (Blue Background)</td>
+                    <td scope="col">The Tri-Node Is Currently Equipped</td>
+                  </tr>
+                  <tr>
+                    <td scope="col">-1 (Red Background)</td>
+                    <td scope="col">The Tri-Node's Leading Skill is already present in your currently equipped tri-nodes</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>Tip: You can click the header (Trinode Skills, and Node Score) to sort the nodes in alphabetical order (A->Z or Z->A) or to sort the nodes based on their current node score (ascending or descending)</p>
+              <h5>4. Check the Statistics</h5>
+              <p>You may unequip nodes by clicking the "Remove" button beside the currently equipped nodes</p>
+              <div class="container mx-auto text-center">
+                <img src="Images/step41.PNG" alt="Check and Unequip your tri-nodes">
+              </div>
+              <h6>Node Statistics</h6>
+              <div class="container mx-auto text-center">
+                <img src="Images/step42.PNG" alt="Node Statistics UI">
+              </div>
+              <ol>
+                <li>Shows how many skills were selected.</li>
+                <li>Gives an estimate of how many nodes it would take to most efficiently get 2 copies of each skill selected</li>
+                <li>Shows how many node slots are currently used</li>
+                <li>Shows how many node "skill slots"(3 per node) is used efficiently (ie. The skill is selected and has 2 or less total copies in the equipped node slots) </li>
+                <li>Gives a breakdown of each skill and how many times it has already appeared in the equipped nodes.</li>
+              </ol>
+              <p>Tip: You can click the header (Skill, Selected, Occupied Slots) to sort them in order</p>
+              <h5>5. Saving and Loading</h5>
+              <div class="container mx-auto text-center">
+                <img src="Images/step5.PNG" alt="Save and Load Nodelist">
+              </div>
+              <p>By clicking the "Generate Nodelist" button, you can generate a list of the nodestones you currently have. Be sure to save it somewhere.</p>
+              <p>By pasting the generated text and clicking the "Load List" button, your nodes will automatically be loaded in.</p>
             </div>
             <br/>
-            <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section4')">
-              <ul class="navbar-nav nav-fill w-100">
-                <li class="nav-item active">
-                  <h3 style="text-align:left">Save or Load Nodelist</h3>
-                </li>
-                <li class="nav-item" style="text-align:right">
-                  <i class="fas fa-chevron-circle-up fa-lg" style="line-height: inherit;" id="section4Arrow"></i>
-                </li>
-              </ul>
-            </nav>
-            <div class="container-fluid border collapse show" id="section4">
-              <div class="row">
-                <div class="col-12" id="saveLoad">
-                  <textarea id="saveLoadArea" rows="8" cols="100"></textarea>
-                  <br/>
-                  <button type="button" class="btn btn-primary" onclick="genList()">Generate Nodelist</button>
-                  <button type="button" class="btn btn-primary" onclick="loadList()">Load Nodelist</button>
-                  <p> </p>
+            <div class="container" id="saveLoadContainer" name="noOp">
+              <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section4')">
+                <ul class="navbar-nav nav-fill w-100">
+                  <li class="nav-item active">
+                    <h3 style="text-align:left">Save or Load Nodelist</h3>
+                  </li>
+                  <li class="nav-item" style="text-align:right">
+                    <i class="fas fa-chevron-circle-up fa-lg" style="line-height: inherit;" id="section4Arrow"></i>
+                  </li>
+                </ul>
+              </nav>
+              <div class="container-fluid border collapse show" id="section4">
+                <div class="row">
+                  <div class="col-12" id="saveLoad">
+                    <textarea id="saveLoadArea" rows="8" cols="100"></textarea>
+                    <br/>
+                    <button type="button" class="btn btn-primary" onclick="genList()">Generate Nodelist</button>
+                    <button type="button" class="btn btn-primary" onclick="loadList()">Load Nodelist</button>
+                    <p> </p>
+                  </div>
                 </div>
               </div>
             </div>

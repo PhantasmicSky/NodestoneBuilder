@@ -15,16 +15,16 @@ The web application allows users to find and formulate their trinode sets.
 
 ## Things to do
 
-- Add a help section to explain how to use the application.
+- ~~Add a help section to explain how to use the application.~~
 - ~~Add better Section Labels.~~
 - ~~Add Show/Hide for Various Sections~~
 - ~~Add Better Indicators for When a Skill is already in the pool more than twice.~~
-- Add A 2 or 3 Swap option (Some players who are starting prefer to build three Lv16/Lv17/Lv17 nodes per skill instead of two Lv25 nodes per skill.
-- Add Support for all jobs.
 - ~~Add Sorting for current trinodes created.~~
 - ~~Add Saving and Loading feature to save all the created trinodes.~~
+- Add Support for all jobs.
+- Code Cleanup
 - Add Support for other languages.
-- Clean Code
+- Add A 2 or 3 Swap option (Some players who are starting prefer to build three Lv16/Lv17/Lv17 nodes per skill instead of two Lv25 nodes per skill.
 
 ## Currently Supported Jobs
 
