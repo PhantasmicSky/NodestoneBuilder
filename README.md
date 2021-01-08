@@ -30,7 +30,7 @@ The web application allows users to find and formulate their trinode sets.
 
 - [X] Adele
 - [X] Angelic Buster
-- [ ] Aran
+- [X] Aran
 - [ ] Ark
 - [ ] Battle Mage
 - [ ] Beast Tamer
@@ -50,7 +50,7 @@ The web application allows users to find and formulate their trinode sets.
 - [ ] Evan
 - [ ] Fire/Poison Mage
 - [ ] Hayato
-- [X] Hero (Might be missing a skill)
+- [X] Hero
 - [X] Hoyoung
 - [ ] Ice/Lightning Mage
 - [ ] Illium
