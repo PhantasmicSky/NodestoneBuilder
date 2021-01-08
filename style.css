@@ -29,3 +29,7 @@ td[name="imageName"]{
 [name="hiddenObj"]{
         display: none;
 }
+
+textarea{
+        width: 100%;
+}

@@ -213,7 +213,7 @@ function formulateTrios(selectedOption){
         nodeSlotData = 0;
     }
     var nodePositive = (Math.ceil(selectedFormulation*2/3)*3)-nodeSlotData;
-    console.log(nodePositive);
+    //console.log(nodePositive);
     document.getElementsByName("skillCounter")[0].innerHTML = selectedSkills.length;
     if(selectedFormulation == 1){
         document.getElementsByName("bestOutcome")[0].innerHTML = "2(2 slots for selected and 4 slots for any skill)" ;
@@ -513,8 +513,8 @@ $(window).on('resize load', function () {
  */
 function divcollapse(sectionToCollapse){
     $("#"+sectionToCollapse+"").collapse("toggle");
-    $("#"+sectionToCollapse+"Arrow").toggleClass("fa-chevron-circle-up");
-    $("#"+sectionToCollapse+"Arrow").toggleClass("fa-chevron-circle-down");
+    $("#"+sectionToCollapse+"Arrow").toggleClass("bi bi-caret-down-square-fill");
+    $("#"+sectionToCollapse+"Arrow").toggleClass("bi bi-caret-up-square-fill");
 }
 
 /**
@@ -537,7 +537,10 @@ function genList(){
 function loadList(){
     var listLoader = $("#saveLoadArea").val();
     listLoader = listLoader.split("|");
-    selectedJob = $("#jobSelect").val(listLoader[0]);
+    $("#jobSelect").val(listLoader[0]);
+    selectedJob = listLoader[0];
+    $("#normalOperation").attr('name', 'noOp');
+    $("#helpOperation").attr('name', 'hiddenObj');
     initializeTally();
     selectorChange();
     clearLeftoverData();
