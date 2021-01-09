@@ -40,8 +40,8 @@ The web application allows users to find and formulate their trinode sets.
 - [X] Bowmaster
 - [X] Buccaneer
 - [X] Cadena
-- [ ] Cannoneer
-- [ ] Corsair
+- [X] Cannoneer
+- [X] Corsair
 - [ ] Dark Knight
 - [ ] Dawn Warrior
 - [ ] Demon Avenger
@@ -52,7 +52,7 @@ The web application allows users to find and formulate their trinode sets.
 - [ ] Hayato
 - [X] Hero
 - [X] Hoyoung
-- [ ] Ice/Lightning Mage
+- [X] Ice/Lightning Mage
 - [X] Illium
 - [X] Jett
 - [ ] Kaiser

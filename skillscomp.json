@@ -23,9 +23,15 @@
 
         "Cadena":["Reign of Chains","Summon Scimitar","Summon Daggers","Summon Shotgun","Summon Brick","Beatdown","Summon Spiked Bat","Veteran Shadowdealer"],        
 
+        "Cannoneer":["Cannon Blaster","Cannon Strike","Blast Back","Scatter Shot","Barrel Bomb","Cannon Spike","Monkey Wave","Cannon Jump","Barrel Roulette","Monkey Fury","Cannon Bazooka","Nautilus Strike","Anchors Away","Monkey Militia","Cannon Barrage","Rolling Rainbow"],
+
+        "Corsair":["Somersault Kick","Double Shot","Rapid Blast","Recoil Shot","Scurvy Summons","Blunderbuster","Blackboot Bill","Octo-Cannon","Rapid Fire","Nautilus Strike","Brain Scrambler","Eight-Legs Easton","Majestic Presence","Broadside","Parrotargetting","Ugly Bomb"],
+
         "Hero":["Slash Blast","Brandish","Combo Fury","Final Attack","Intrepid Slash","Rush","Panic","Shout","Raging Blow","Puncture","Rising Rage"],
 
         "Hoyoung":["Humanity","Earth","Heaven","Evil-Sealing Gourd","Ghost Flame","Degeneration","Butterfly Dream","Star Vortex","Clone"],
+
+        "Ice Lightning Mage":["Thunder Bolt","Cold Beam","Chilling Step","Ice Strike","Glacier Chain","Thunderstorm","Elquines","Chain Lightning","Blizzard","Frozen Orb","Lightning Orb"],
 
         "Illium":["Radiant Javelin II","Umbral Brand III","Reaction - Destruction II","Machina","Vortex Wings","Longinus Spear","Longinus Zone","Deus"],
 
@@ -37,5 +43,5 @@
 
         "Thunder Breaker":["Lightning Punch","Flash","Shark Sweep","Tidal Crash","Ascension","Thunder","Gale","Annihilate","Thunderbolt","Deep Rising"],
 
-        "Wild Hunter":["Double Shot","Summon Jaguar","Swipe","Final Attack","Dash 'n Slash","White Heat Rush","Enduring Fire","Hunting Assistant Unit","Sonic Roar","Wild Arrow","Drill Salvo","Exploding Arrows"]
+        "Wild Hunter":["Double Shot","Summon Jaguar","Swipe","Final Attack","Dash 'n Slash","White Heat Rush","Enduring Fire","Hunting Assistant Unit","Sonic Roar","Wild Arrow Blast","Drill Salvo","Exploding Arrows"]
 }
