@@ -39,7 +39,7 @@ The web application allows users to find and formulate their trinode sets.
 - [ ] Blaze Wizard
 - [ ] Bowmaster
 - [ ] Buccaneer
-- [ ] Cadena
+- [X] Cadena
 - [ ] Cannoneer
 - [ ] Corsair
 - [ ] Dark Knight
@@ -53,7 +53,7 @@ The web application allows users to find and formulate their trinode sets.
 - [X] Hero
 - [X] Hoyoung
 - [ ] Ice/Lightning Mage
-- [ ] Illium
+- [X] Illium
 - [X] Jett
 - [ ] Kaiser
 - [ ] Kanna
@@ -61,7 +61,7 @@ The web application allows users to find and formulate their trinode sets.
 - [ ] Luminous
 - [ ] Marksman
 - [ ] Mechanic
-- [ ] Mercedes
+- [X] Mercedes
 - [X] Mihile
 - [ ] Night Lord
 - [ ] Night Walker
@@ -71,7 +71,7 @@ The web application allows users to find and formulate their trinode sets.
 - [ ] Shade
 - [ ] Shadower
 - [X] Thunder Breaker
-- [ ] Wild Hunter
+- [X] Wild Hunter
 - [ ] Wind Archer
 - [ ] Xenon
 - [ ] Zero

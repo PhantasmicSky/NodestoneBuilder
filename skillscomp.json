@@ -23,7 +23,11 @@
 
         "Jett":["Starline One","Blaster Barrage","Starline Two","Stellar Impact","Vortex Cross","Falling Stars","Starline Three","Cosmic Upheaval","Starforce Salvo","Backup Beatdown","Planet Buster","Singularity Shock"],
 
+        "Mercedes":["Swift Dual Shot","Rising Rush","Stunning Strikes","Leaf Tornado","Unicorn Spike","Elemental Knights","Ishtar's Ring","Spikes Royale","Lightning Edge","Wrath of Enil"],
+
         "Mihile":["Soul Blade","Royal Guard","Soul Driver","Radiant Driver","Trinity Attack","Four-Point Assault","Radiant Cross","Charging Light","Final Attack"],
 
-        "Thunder Breaker":["Lightning Punch","Flash","Shark Sweep","Tidal Crash","Ascension","Thunder","Gale","Annihilate","Thunderbolt","Deep Rising"]
+        "Thunder Breaker":["Lightning Punch","Flash","Shark Sweep","Tidal Crash","Ascension","Thunder","Gale","Annihilate","Thunderbolt","Deep Rising"],
+
+        "Wild Hunter":["Double Shot","Summon Jaguar","Swipe","Final Attack","Dash 'n Slash","White Heat Rush","Enduring Fire","Hunting Assistant Unit","Sonic Roar","Wild Arrow","Drill Salvo","Exploding Arrows"]
 }
