@@ -13,6 +13,14 @@
 
         "Bishop":["Heal","Holy Arrow","Shining Ray","Big Bang","Bahamut","Angel Ray","Genesis","Heaven's Door"],
 
+        "Blaster":["Magnum Punch","Revolving Cannon","Bunker Buster Explosion","Detonate","Double Blast","Hammer Smash","Magnum Launch","Shotgun Punch","Muzzle Flash","Ballistic Hurricane","Revolving Blast","Hyper Magnum"],
+
+        "Blaze Wizard":["Orbital Flame","Flame Bite","Flame Vortex","Ignition","Flame Tempest","Cinder Maelstrom","Blazing Extinction","Towering Inferno","Cataclysm","Dragon Blaze"],
+
+        "Bowmaster":["Arrow Blow","Final Attack","Arrow Bomb","Flame Surge","Phoenix","Hookshot","Arrow Blaster","Hurricane","Binding Shot","Arrow Stream","Quiver Cartridge","Gritty Gust"],
+
+        "Buccaneer":["Somersault Kick","Double Shot","Corkscrew Blow","Tornado Uppercut","Energy Burst","Spiral Assault","Static Thumper","Dragon Strike","Octopunch","Nautilus Strike","Buccaneer Blast","Power Unity"],
+
         "Cadena":["Reign of Chains","Summon Scimitar","Summon Daggers","Summon Shotgun","Summon Brick","Beatdown","Summon Spiked Bat","Veteran Shadowdealer"],        
 
         "Hero":["Slash Blast","Brandish","Combo Fury","Final Attack","Intrepid Slash","Rush","Panic","Shout","Raging Blow","Puncture","Rising Rage"],

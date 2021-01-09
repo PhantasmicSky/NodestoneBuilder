@@ -35,10 +35,10 @@ The web application allows users to find and formulate their trinode sets.
 - [X] Battle Mage
 - [X] Beast Tamer
 - [X] Bishop
-- [ ] Blaster
-- [ ] Blaze Wizard
-- [ ] Bowmaster
-- [ ] Buccaneer
+- [X] Blaster
+- [X] Blaze Wizard
+- [X] Bowmaster
+- [X] Buccaneer
 - [X] Cadena
 - [ ] Cannoneer
 - [ ] Corsair
