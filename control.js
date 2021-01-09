@@ -1,4 +1,4 @@
-var skillData = {"Adele":["Blade of Will","Magic Dispatch","Skewering","Impale","Aether Forge","Eviscerate","Reign of Destruction","Cleave","Hunting Decree","Aether Bloom"],"Angelic Buster":["Soul Buster","Star Bubble","Lovely Sting","Pink Pummel","Soul Seeker","Shining Star Burst","Heavenly Crash","Celestial Roar","Trinity","Finale Ribbon","Soul Resonance","Supreme Supernova"],"Aran":["Smash Wave","Smash Swing","Final Charge","Final Attack","Final Toss","Rolling Spin","Judgement Draw","Gathering Hook","Final Blow","Beyond Blade","Finisher - Storm of Fear","Finisher - Hunter's Prey","Maha's Domain"],"Hero":["Slash Blast","Brandish","Combo Fury","Final Attack","Intrepid Slash","Rush","Panic","Shout","Raging Blow","Puncture","Rising Rage"],"Hoyoung":["Humanity","Earth","Heaven","Evil-Sealing Gourd","Ghost Flame","Degeneration","Butterfly Dream","Star Vortex","Clone"],"Jett":["Starline One","Blaster Barrage","Starline Two","Stellar Impact","Vortex Cross","Falling Stars","Starline Three","Cosmic Upheaval","Starforce Salvo","Backup Beatdown","Planet Buster","Singularity Shock"],"Mihile":["Soul Blade","Royal Guard","Soul Driver","Radiant Driver","Trinity Attack","Four-Point Assault","Radiant Cross","Charging Light","Final Attack"],"Thunder Breaker":["Lightning Punch","Flash","Shark Sweep","Tidal Crash","Ascension","Thunder","Gale","Annihilate","Thunderbolt","Deep Rising"]};
+var skillData = {"Adele":["Blade of Will","Magic Dispatch","Skewering","Impale","Aether Forge","Eviscerate","Reign of Destruction","Cleave","Hunting Decree","Aether Bloom"],"Angelic Buster":["Soul Buster","Star Bubble","Lovely Sting","Pink Pummel","Soul Seeker","Shining Star Burst","Heavenly Crash","Celestial Roar","Trinity","Finale Ribbon","Soul Resonance","Supreme Supernova"],"Aran":["Smash Wave","Smash Swing","Final Charge","Final Attack","Final Toss","Rolling Spin","Judgement Draw","Gathering Hook","Final Blow","Beyond Blade","Finisher - Storm of Fear","Finisher - Hunter's Prey","Maha's Domain"],"Ark":["Overcharge Drive","Ominous Nightmare","Scarlet Charge Drive","Unstoppable Impulse","Impending Death","Gust Charge Drive","Abyssal Charge Drive","Endless Agony"],"Battle Mage":["Triple Blow","Condemnation","Quad Blow","Dark Chain","Quintuple Blow","Battle Burst","Dark Shock","Finishing Blow","Dark Genesis","Sweeping Staff"],"Beast Tamer":["Paw Swipe","Deep Breath","Really Deep Breath","Li'l Fort","Fishy Slap","Table Flip","Leopard's Paw","Macho Dance","Thunder Dash","Three-Point Pounce","Party Time","Formation Attack","Tornado Flight","Friend Launcher","Fire Kitty!","Group Bear Blaster"],"Bishop":["Heal","Holy Arrow","Shining Ray","Big Bang","Bahamut","Angel Ray","Genesis","Heaven's Door"],"Hero":["Slash Blast","Brandish","Combo Fury","Final Attack","Intrepid Slash","Rush","Panic","Shout","Raging Blow","Puncture","Rising Rage"],"Hoyoung":["Humanity","Earth","Heaven","Evil-Sealing Gourd","Ghost Flame","Degeneration","Butterfly Dream","Star Vortex","Clone"],"Jett":["Starline One","Blaster Barrage","Starline Two","Stellar Impact","Vortex Cross","Falling Stars","Starline Three","Cosmic Upheaval","Starforce Salvo","Backup Beatdown","Planet Buster","Singularity Shock"],"Mihile":["Soul Blade","Royal Guard","Soul Driver","Radiant Driver","Trinity Attack","Four-Point Assault","Radiant Cross","Charging Light","Final Attack"],"Thunder Breaker":["Lightning Punch","Flash","Shark Sweep","Tidal Crash","Ascension","Thunder","Gale","Annihilate","Thunderbolt","Deep Rising"]};
 var selectedJob;
 var nodestones = [];
 var selectedSkills = [];
@@ -65,6 +65,10 @@ function newNode(nodeSet){
     var newImg   = document.createElement("img");
     newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodeSet[2] + ".png");
     newImg.setAttribute("name","thirdSlice");
+    newCell.appendChild(newImg);
+    var newImg   = document.createElement("img");
+    newImg.setAttribute("src","Images/Divider.png");
+    newImg.setAttribute("name","divider");
     newCell.appendChild(newImg);
     var newCell  = newRow.insertCell(2);
     var newText  = document.createTextNode("SCORE");
@@ -295,6 +299,10 @@ function copyToCollection(selectName){
     var newImg   = document.createElement("img");
     newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodestones[selectName][2] + ".png");
     newImg.setAttribute("name","thirdSlice");
+    newCell.appendChild(newImg);
+    var newImg   = document.createElement("img");
+    newImg.setAttribute("src","Images/Divider.png");
+    newImg.setAttribute("name","divider");
     newCell.appendChild(newImg);
     var newCell  = newRow.insertCell(2);
     var b = document.createElement('button');

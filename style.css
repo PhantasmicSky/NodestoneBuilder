@@ -17,6 +17,10 @@ img[name="thirdSlice"]{
         position:absolute;
 }
 
+img[name="divider"]{
+        position:absolute;
+}
+
 td[name="imageCell"]{
         position:relative;
         padding-right: 44px;

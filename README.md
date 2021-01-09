@@ -24,17 +24,17 @@ The web application allows users to find and formulate their trinode sets.
 - Add Support for all jobs.
 - Code Cleanup
 - Add Support for other languages.
-- Add A 2 or 3 Swap option (Some players who are starting prefer to build three Lv16/Lv17/Lv17 nodes per skill instead of two Lv25 nodes per skill.
+- Add A 2 or 3 Swap option (Some players who are starting prefer to build three (Lv16, Lv17, Lv17) nodes per skill instead of two (Lv25, Lv25) nodes per skill.
 
 ## Currently Supported Jobs
 
 - [X] Adele
 - [X] Angelic Buster
 - [X] Aran
-- [ ] Ark
-- [ ] Battle Mage
-- [ ] Beast Tamer
-- [ ] Bishop
+- [X] Ark
+- [X] Battle Mage
+- [X] Beast Tamer
+- [X] Bishop
 - [ ] Blaster
 - [ ] Blaze Wizard
 - [ ] Bowmaster
@@ -75,4 +75,5 @@ The web application allows users to find and formulate their trinode sets.
 - [ ] Wind Archer
 - [ ] Xenon
 - [ ] Zero
+- [ ] 카인
 
