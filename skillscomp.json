@@ -27,6 +27,12 @@
 
         "Corsair":["Somersault Kick","Double Shot","Rapid Blast","Recoil Shot","Scurvy Summons","Blunderbuster","Blackboot Bill","Octo-Cannon","Rapid Fire","Nautilus Strike","Brain Scrambler","Eight-Legs Easton","Majestic Presence","Broadside","Parrotargetting","Ugly Bomb"],
 
+        "Dark Knight":["Slash Blast","Final Attack","Piercing Drive","Spear Sweep","La Mancha Spear","Rush","Evil Eye","Dark Impale","Gungnir's Descent","Nightshade Explosion"],
+
+        "Dual Blade":["Bandit Slash","Tornado Spin","Fatal Blow","Slash Storm","Flashbang","Upper Stab","Blade Ascension","Flying Assaulter","Bloody Storm","Chains of Hell","Final Cut","Blade Fury","Phantom Blow","Sudden Raid","Asura's Anger","Blade Clone"],
+
+        "Fire Poison Mage":["Energy Bolt","Flame Orb","Poison Breath","Ignite","Explosion","Poison Mist","Teleport Mastery","Flame Haze","Mist Eruption","Ifrit","Paralyze","Meteor Shower","Inferno Aura","Megiddo Flame"],
+
         "Hero":["Slash Blast","Brandish","Combo Fury","Final Attack","Intrepid Slash","Rush","Panic","Shout","Raging Blow","Puncture","Rising Rage"],
 
         "Hoyoung":["Humanity","Earth","Heaven","Evil-Sealing Gourd","Ghost Flame","Degeneration","Butterfly Dream","Star Vortex","Clone"],
@@ -37,11 +43,33 @@
 
         "Jett":["Starline One","Blaster Barrage","Starline Two","Stellar Impact","Vortex Cross","Falling Stars","Starline Three","Cosmic Upheaval","Starforce Salvo","Backup Beatdown","Planet Buster","Singularity Shock"],
 
+        "Marksman":["Arrow Blow","Final Attack","Iron Arrow","Net Toss","Frostprey","Dragon's Breath","Explosive Bolt","Hookshot","Piercing Arrow","Snipe","High Speed Shot"],
+
         "Mercedes":["Swift Dual Shot","Rising Rush","Stunning Strikes","Leaf Tornado","Unicorn Spike","Elemental Knights","Ishtar's Ring","Spikes Royale","Lightning Edge","Wrath of Enil"],
 
         "Mihile":["Soul Blade","Royal Guard","Soul Driver","Radiant Driver","Trinity Attack","Four-Point Assault","Radiant Cross","Charging Light","Final Attack"],
 
+        "Night Lord":["Double Stab","Lucky Seven","Shuriken Burst","Gust Charm","Assassin's Mark","Shadow Web","Dark Flare","Triple Throw","Shade Splitter","Quad Star","Sudden Raid","Showdown","Death Star"],
+
+        "Night Walker":["Lucky Seven","Shadow Bat","Triple Throw","Quad Star","Shadow Spark","Quintuple Star","Dark Omen","Shadow Stitch","Dominion"],
+
+        "Paladin":["Slash Blast","Final Attack","Flame Charge","Blizzard Charge","Close Combat","Lightning Charge","Rush","Divine Charge","Blast","Heaven's Hammer","Smite Shield"],
+
+        "Pathfinder":["Cardinal Deluge","Cardinal Burst","Cardinal Torrent","Shadow Raven","Swarm Shot","Triple Impact","Glyph of Impalement","Combo Assault","Ancient Astra"],
+
+        "Phantom":["Double Entendre","Calling Card","Carte Mille","Carte Blanc","Blason Fantome","Rapier Wit","Mille Aiguilles","Penombre","Tempest","Rose Carte Finale","Impeccable Memory I","Impeccable Memory II","Impeccable Memory III","Impeccable Memory IV"],
+
+        "Shade":["Flash Fist","Ground Pound","Blade Imp - Downward Slash","Blade Imp - Forward Slash","Fox Spirits","Shockwave Punch","Blade Imp - Spin Slash","Spirit Frenzy","Spirit Trap","Spirit Redemption","Bomb Punch","Spirit Claw","Death Mark","Soul Splitter","Spirit Incarnation"],
+
+        "Shadower":["Double Stab","Lucky Seven","Steal","Savage Blow","Phase Dash","Meso Explosion","Midnight Carnival","Dark Flare","Assassinate","Boomerang Stab","Sudden Raid","Shadow Veil"],
+
         "Thunder Breaker":["Lightning Punch","Flash","Shark Sweep","Tidal Crash","Ascension","Thunder","Gale","Annihilate","Thunderbolt","Deep Rising"],
 
-        "Wild Hunter":["Double Shot","Summon Jaguar","Swipe","Final Attack","Dash 'n Slash","White Heat Rush","Enduring Fire","Hunting Assistant Unit","Sonic Roar","Wild Arrow Blast","Drill Salvo","Exploding Arrows"]
+        "Wild Hunter":["Double Shot","Summon Jaguar","Swipe","Final Attack","Dash 'n Slash","White Heat Rush","Enduring Fire","Hunting Assistant Unit","Sonic Roar","Wild Arrow Blast","Drill Salvo","Exploding Arrows"],
+
+        "Wind Archer":["Breeze Arrow","Fairy Spiral","Gust Shot","Trifling Wind","Sentient Arrow","Pinpoint Pierce","Song of Heaven","Spiraling Vortex","Monsoon","Storm Bringer"],
+
+        "Xenon":["Beam Spline", "Pinpoint Salvo","Quicksilver","Ion Thrust","Combat Switch","Diagonal Chase","Gravity Pillar","Aegis System","Triangulation Boost","Beam Dance","Mecha Purge","Hypogram Field","Entangling Lash","Orbital Cataclysm"],
+
+        "Zero":["Moon Strike","Piercing Thrust","Flash Assault","Spin Cutter","Rolling Cross","Rolling Assault","Wind Cutter","Wind Striker","Storm Break","Shadow Rain"]
 }

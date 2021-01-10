@@ -42,13 +42,13 @@ The web application allows users to find and formulate their trinode sets.
 - [X] Cadena
 - [X] Cannoneer
 - [X] Corsair
-- [ ] Dark Knight
+- [X] Dark Knight
 - [ ] Dawn Warrior
 - [ ] Demon Avenger
 - [ ] Demon Slayer
-- [ ] Dual Blade
+- [X] Dual Blade
 - [ ] Evan
-- [ ] Fire/Poison Mage
+- [X] Fire/Poison Mage
 - [ ] Hayato
 - [X] Hero
 - [X] Hoyoung
@@ -59,21 +59,21 @@ The web application allows users to find and formulate their trinode sets.
 - [ ] Kanna
 - [ ] Kinesis
 - [ ] Luminous
-- [ ] Marksman
+- [X] Marksman
 - [ ] Mechanic
 - [X] Mercedes
 - [X] Mihile
-- [ ] Night Lord
-- [ ] Night Walker
-- [ ] Paladin
-- [ ] Pathfinder
-- [ ] Phantom
-- [ ] Shade
-- [ ] Shadower
+- [X] Night Lord
+- [X] Night Walker
+- [X] Paladin
+- [X] Pathfinder
+- [X] Phantom
+- [X] Shade
+- [X] Shadower
 - [X] Thunder Breaker
 - [X] Wild Hunter
-- [ ] Wind Archer
-- [ ] Xenon
-- [ ] Zero
+- [X] Wind Archer
+- [X] Xenon
+- [X] Zero
 - [ ] 카인
 
