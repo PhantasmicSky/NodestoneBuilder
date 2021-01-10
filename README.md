@@ -21,59 +21,13 @@ The web application allows users to find and formulate their trinode sets.
 - ~~Add Better Indicators for When a Skill is already in the pool more than twice.~~
 - ~~Add Sorting for current trinodes created.~~
 - ~~Add Saving and Loading feature to save all the created trinodes.~~
-- Add Support for all jobs.
+- ~~Add Support for all jobs.
 - Code Cleanup
 - Add Support for other languages.
 - Add A 2 or 3 Swap option (Some players who are starting prefer to build three (Lv16, Lv17, Lv17) nodes per skill instead of two (Lv25, Lv25) nodes per skill.
 
 ## Currently Supported Jobs
 
-- [X] Adele
-- [X] Angelic Buster
-- [X] Aran
-- [X] Ark
-- [X] Battle Mage
-- [X] Beast Tamer
-- [X] Bishop
-- [X] Blaster
-- [X] Blaze Wizard
-- [X] Bowmaster
-- [X] Buccaneer
-- [X] Cadena
-- [X] Cannoneer
-- [X] Corsair
-- [X] Dark Knight
-- [ ] Dawn Warrior
-- [ ] Demon Avenger
-- [ ] Demon Slayer
-- [X] Dual Blade
-- [ ] Evan
-- [X] Fire/Poison Mage
-- [ ] Hayato
-- [X] Hero
-- [X] Hoyoung
-- [X] Ice/Lightning Mage
-- [X] Illium
-- [X] Jett
-- [ ] Kaiser
-- [ ] Kanna
-- [ ] Kinesis
-- [ ] Luminous
-- [X] Marksman
-- [ ] Mechanic
-- [X] Mercedes
-- [X] Mihile
-- [X] Night Lord
-- [X] Night Walker
-- [X] Paladin
-- [X] Pathfinder
-- [X] Phantom
-- [X] Shade
-- [X] Shadower
-- [X] Thunder Breaker
-- [X] Wild Hunter
-- [X] Wind Archer
-- [X] Xenon
-- [X] Zero
-- [ ] 카인
+- All jobs that are currently out in GMS (47 Jobs) is supported.
+- Kain is Currently in Korean until it comes out to GMS.
 

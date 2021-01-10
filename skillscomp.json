@@ -3,7 +3,7 @@
 
         "Angelic Buster":["Soul Buster","Star Bubble","Lovely Sting","Pink Pummel","Soul Seeker","Shining Star Burst","Heavenly Crash","Celestial Roar","Trinity","Finale Ribbon","Soul Resonance","Supreme Supernova"],
 
-        "Aran":["Smash Wave","Smash Swing","Final Charge","Final Attack","Final Toss","Rolling Spin","Judgement Draw","Gathering Hook","Final Blow","Beyond Blade","Finisher - Storm of Fear","Finisher - Hunter's Prey","Maha's Domain"],
+        "Aran":["Smash Wave","Smash Swing","Final Charge","Final Attack","Final Toss","Rolling Spin","Judgment Draw","Gathering Hook","Final Blow","Beyond Blade","Finisher - Storm of Fear","Finisher - Hunter's Prey","Maha's Domain"],
 
         "Ark":["Overcharge Drive","Ominous Nightmare","Scarlet Charge Drive","Unstoppable Impulse","Impending Death","Gust Charge Drive","Abyssal Charge Drive","Endless Agony"],
 
@@ -29,11 +29,21 @@
 
         "Dark Knight":["Slash Blast","Final Attack","Piercing Drive","Spear Sweep","La Mancha Spear","Rush","Evil Eye","Dark Impale","Gungnir's Descent","Nightshade Explosion"],
 
+        "Dawn Warrior":["Triple Slash","Bluster","Shadow Tackle","Light Merger","Moon Cross","Speeding Sunset","Solar Pierce","Impaling Rays","Styx Crossing","Equinox Slash"],
+
+        "Demon Avenger":["Exceed Double Slash","Exceed Demon Strike","Bat Swarm","Exceed Lunar Slash","Vitality Veil","Shield Charge","Exceed Execution","Nether Shield","Nether Slice","Blood Prison","Thousand Swords","Infernal Exceed"],
+
+        "Demon Slayer":["Grim Scythe","Demon Lash","Soul Eater","Dark Thrust","Chaos Lock","Vengeance","Judgment","Vortex of Doom","Raven Storm","Carrion Breath","Infernal Concussion","Demon Impact","Demon Cry","Dark Metamorphosis","Binding Darkness","Cerberus Chomp"],
+
         "Dual Blade":["Bandit Slash","Tornado Spin","Fatal Blow","Slash Storm","Flashbang","Upper Stab","Blade Ascension","Flying Assaulter","Bloody Storm","Chains of Hell","Final Cut","Blade Fury","Phantom Blow","Sudden Raid","Asura's Anger","Blade Clone"],
+
+        "Evan":["Mana Burst","Dragon Spark","Wind Circle","Dragon Flash","Thunder Circle","Dragon Dive","Magic Debris","Earth Circle","Dragon Breath","Dark Fog","Dragon Master","Summon Onyx Dragon"],
 
         "Fire Poison Mage":["Energy Bolt","Flame Orb","Poison Breath","Ignite","Explosion","Poison Mist","Teleport Mastery","Flame Haze","Mist Eruption","Ifrit","Paralyze","Meteor Shower","Inferno Aura","Megiddo Flame"],
 
-        "Hero":["Slash Blast","Brandish","Combo Fury","Final Attack","Intrepid Slash","Rush","Panic","Shout","Raging Blow","Puncture","Rising Rage"],
+        "Hayato":["Summer Rain","Hitokiri Hundred Strike","Sanrenzan","Blade Flash","Surging Blade","Shouryuusen","Jin Sanrenzan","Vapor Blade","Jin Blade Flash","Rising Slash","Falcon Dive","Fuu Sanrenzan","Fuu Blade Flash","Sweeping Sword","Whirlwind Cut","Dankuusen","Rai Sanrenzan","Rai Blade Flash","Tornado Blade","Sudden Strike","Shinsoku","Hitokiri Strike","Falcon's Honor"],
+
+        "Hero":["Slash Blast","Final Attack","Brandish","Combo Fury","Intrepid Slash","Rush","Panic","Shout","Raging Blow","Puncture","Rising Rage"],
 
         "Hoyoung":["Humanity","Earth","Heaven","Evil-Sealing Gourd","Ghost Flame","Degeneration","Butterfly Dream","Star Vortex","Clone"],
 
@@ -43,7 +53,17 @@
 
         "Jett":["Starline One","Blaster Barrage","Starline Two","Stellar Impact","Vortex Cross","Falling Stars","Starline Three","Cosmic Upheaval","Starforce Salvo","Backup Beatdown","Planet Buster","Singularity Shock"],
 
+        "Kaiser":["Dragon Slash","Flame Surge","Impact Wave","Piercing Blaze","Tempest Blades","Wing Beat","Pressure Chain","Stone Dragon","Gigas Wave","Dragon Barrage","Blade Burst","Inferno Breath","Ancestral Prominence"],
+        
+        "Kanna":["Shikigami Haunting","Ghost Yaksha Boss","Kishin Shoukan","Nightghost Guide","Shikigami Charm","Exorcist's Charm","Tengu Strike","Yosuzume","Vanquisher's Charm","Orochi Unbound","Falling Sakura","Binding Tempest","Nine-Tailed Fury","Shikigami Doppelganger","Veritable Pandemonium"],
+
+        "Kinesis":["Psychic Force","Kinetic Crash","Kinetic Piledriver","Ultimate - Deep Impact","Psychic Drain","Psychic Grab","Ultimate - Trainwreck","Kinetic Combo","Mind Break","Ultimate - B.P.M.","Mental Tempest","Mental Shock","Ultimate - Metal Press"],
+
+        "Luminous":["Flash Shower","Abyssal Drop","Sylvan Lance","Pressure Void","Spectral Light","Ray of Redemption","Moonlight Spear","Death Scythe","Reflection","Morning Star","Apocalypse","Ender","Armageddon"],
+
         "Marksman":["Arrow Blow","Final Attack","Iron Arrow","Net Toss","Frostprey","Dragon's Breath","Explosive Bolt","Hookshot","Piercing Arrow","Snipe","High Speed Shot"],
+
+        "Mechanic":["ME-07 Drillhands","Gatling Gun","Rocket Booster","Heavy Gatling Gun","Homing Beacon","Robo Launcher RM7","Punch Launcher","Rock 'n Shock","Heavy Salvo","Support Unit H-EX","Giant Robot SG-88","Bots 'n Tots","Heavy Salvo Plus","Distortion Bomb"],
 
         "Mercedes":["Swift Dual Shot","Rising Rush","Stunning Strikes","Leaf Tornado","Unicorn Spike","Elemental Knights","Ishtar's Ring","Spikes Royale","Lightning Edge","Wrath of Enil"],
 
@@ -71,5 +91,7 @@
 
         "Xenon":["Beam Spline", "Pinpoint Salvo","Quicksilver","Ion Thrust","Combat Switch","Diagonal Chase","Gravity Pillar","Aegis System","Triangulation Boost","Beam Dance","Mecha Purge","Hypogram Field","Entangling Lash","Orbital Cataclysm"],
 
-        "Zero":["Moon Strike","Piercing Thrust","Flash Assault","Spin Cutter","Rolling Cross","Rolling Assault","Wind Cutter","Wind Striker","Storm Break","Shadow Rain"]
+        "Zero":["Moon Strike","Piercing Thrust","Flash Assault","Spin Cutter","Rolling Cross","Rolling Assault","Wind Cutter","Wind Striker","Storm Break","Shadow Rain"],
+
+        "카인":["스트라이크 애로우","스캐터링 샷","드래곤 팡","샤프트 브레이크","팬텀 블레이드","데스 블레싱","풀링 더스트","체인 시클"]
 }
