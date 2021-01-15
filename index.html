@@ -198,90 +198,102 @@
               </div>
             </div>
             <div class="container" id="helpOperation" name="noOp">
-              <h3>How to use</h3>
-              <hr/>
-              <h5>1. Select the job you want to build your tri-nodes</h5>
-              <p>Click the dropdown box and select your class.</p>
-              <div class="container mx-auto text-center">
-                <img src="Images/step1.PNG" alt="Select your class">
+              <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section35')">
+                <ul class="navbar-nav nav-fill w-100">
+                  <li class="nav-item active">
+                    <h3 style="text-align:left">Help</h3>
+                  </li>
+                  <li class="nav-item" style="text-align:right">
+                    <i class="bi bi-caret-up-square-fill" style="line-height: inherit;" id="section35Arrow"></i>
+                  </li>
+                </ul>
+              </nav>
+              <div class="container-fluid border collapse show" id="section35">
+                <h3>How to use</h3>
+                <hr/>
+                <h5>1. Select the job you want to build your tri-nodes</h5>
+                <p>Click the dropdown box and select your class.</p>
+                <div class="container mx-auto text-center">
+                  <img src="Images/step1.PNG" alt="Select your class">
+                </div>
+                <h5>2. Select the skills you need to build your tri-nodes around</h5>
+                <p>Click on the skills you want to select. Those highlighted in blue are currently selected.</p>
+                <div class="container mx-auto text-center">
+                  <img src="Images/step2.PNG" alt="Select your desired skills">
+                </div>
+                <h5>3. Create the tri-nodes you currently have.</h5>
+                <p>Create your tri-nodes by using the drop down boxes to the left. Upon clicking "Add Nodestone", the created nodestone will be added to the list on the right.</p>
+                <div class="container mx-auto text-center">
+                  <img src="Images/step3p1.PNG" alt="Recreate the tri-nodes you own">
+                </div>
+                <h6>Created Nodestone Collection Legend</h6>
+                <div class="container mx-auto text-center">
+                  <img src="Images/step32.PNG" alt="Nodestone Collection UI">
+                </div>
+                <ol>
+                  <li>Shows the skills enhanced by the tri-node</li>
+                  <li>Shows the tri-node skill image</li>
+                  <li>Shows the Node Score</li>
+                  <li>Adds the tri-node to the "equipped" tri-nodes list</li>
+                  <li>Deletes the tri-node from the list (Available only when there are no tri-nodes equipped)</li>
+                </ol>
+                <h6>Node Score</h6>
+                <p>To facilitate the user in building their tri-node set, Each tri-node is given a score that updates based on the current nodestones equipped.</p>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Score</th>
+                      <th scope="col">Meaning</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="col">6</td>
+                      <td scope="col">A Perfect Tri-Node</td>
+                    </tr>
+                    <tr>
+                      <td scope="col">1-5</td>
+                      <td scope="col">The Tri-Node will not fully contribute to your desired tri-node set (Some skills may not be part of your desired list of skills or two copies of some of the skill are already present in your currently equipped tri-nodes)</td>
+                    </tr>
+                    <tr>
+                      <td scope="col">0</td>
+                      <td scope="col">The Tri-Node contains no skill that is part of your desired skills to enhance</td>
+                    </tr>
+                    <tr>
+                      <td scope="col">-1 (Blue Background)</td>
+                      <td scope="col">The Tri-Node Is Currently Equipped</td>
+                    </tr>
+                    <tr>
+                      <td scope="col">-1 (Red Background)</td>
+                      <td scope="col">The Tri-Node's Leading Skill is already present in your currently equipped tri-nodes</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>Tip: You can click the header (Trinode Skills, and Node Score) to sort the nodes in alphabetical order (A->Z or Z->A) or to sort the nodes based on their current node score (ascending or descending)</p>
+                <h5>4. Check the Statistics</h5>
+                <p>You may unequip nodes by clicking the "Remove" button beside the currently equipped nodes</p>
+                <div class="container mx-auto text-center">
+                  <img src="Images/step41.PNG" alt="Check and Unequip your tri-nodes">
+                </div>
+                <h6>Node Statistics</h6>
+                <div class="container mx-auto text-center">
+                  <img src="Images/step42.PNG" alt="Node Statistics UI">
+                </div>
+                <ol>
+                  <li>Shows how many skills were selected.</li>
+                  <li>Gives an estimate of how many nodes it would take to most efficiently get 2 copies of each skill selected</li>
+                  <li>Shows how many node slots are currently used</li>
+                  <li>Shows how many node "skill slots"(3 per node) is used efficiently (ie. The skill is selected and has 2 or less total copies in the equipped node slots)[Note: Only jobs that need "multiples of 3" amounts of boosted skills expect a 100% Node efficiency]</li>
+                  <li>Gives a breakdown of each skill and how many times it has already appeared in the equipped nodes.</li>
+                </ol>
+                <p>Tip: You can click the header (Skill, Selected, Occupied Slots) to sort them in order</p>
+                <h5>5. Saving and Loading</h5>
+                <div class="container mx-auto text-center">
+                  <img src="Images/step5.PNG" alt="Save and Load Nodelist">
+                </div>
+                <p>By clicking the "Generate Nodelist" button, you can generate a list of the nodestones you currently have. Be sure to save it somewhere.</p>
+                <p>By pasting the generated text and clicking the "Load List" button, your nodes will automatically be loaded in.</p>
               </div>
-              <h5>2. Select the skills you need to build your tri-nodes around</h5>
-              <p>Click on the skills you want to select. Those highlighted in blue are currently selected.</p>
-              <div class="container mx-auto text-center">
-                <img src="Images/step2.PNG" alt="Select your desired skills">
-              </div>
-              <h5>3. Create the tri-nodes you currently have.</h5>
-              <p>Create your tri-nodes by using the drop down boxes to the left. Upon clicking "Add Nodestone", the created nodestone will be added to the list on the right.</p>
-              <div class="container mx-auto text-center">
-                <img src="Images/step3p1.PNG" alt="Recreate the tri-nodes you own">
-              </div>
-              <h6>Created Nodestone Collection Legend</h6>
-              <div class="container mx-auto text-center">
-                <img src="Images/step32.PNG" alt="Nodestone Collection UI">
-              </div>
-              <ol>
-                <li>Shows the skills enhanced by the tri-node</li>
-                <li>Shows the tri-node skill image</li>
-                <li>Shows the Node Score</li>
-                <li>Adds the tri-node to the "equipped" tri-nodes list</li>
-                <li>Deletes the tri-node from the list (Available only when there are no tri-nodes equipped)</li>
-              </ol>
-              <h6>Node Score</h6>
-              <p>To facilitate the user in building their tri-node set, Each tri-node is given a score that updates based on the current nodestones equipped.</p>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Score</th>
-                    <th scope="col">Meaning</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td scope="col">6</td>
-                    <td scope="col">A Perfect Tri-Node</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">1-5</td>
-                    <td scope="col">The Tri-Node will not fully contribute to your desired tri-node set (Some skills may not be part of your desired list of skills or two copies of some of the skill are already present in your currently equipped tri-nodes)</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">0</td>
-                    <td scope="col">The Tri-Node contains no skill that is part of your desired skills to enhance</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">-1 (Blue Background)</td>
-                    <td scope="col">The Tri-Node Is Currently Equipped</td>
-                  </tr>
-                  <tr>
-                    <td scope="col">-1 (Red Background)</td>
-                    <td scope="col">The Tri-Node's Leading Skill is already present in your currently equipped tri-nodes</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p>Tip: You can click the header (Trinode Skills, and Node Score) to sort the nodes in alphabetical order (A->Z or Z->A) or to sort the nodes based on their current node score (ascending or descending)</p>
-              <h5>4. Check the Statistics</h5>
-              <p>You may unequip nodes by clicking the "Remove" button beside the currently equipped nodes</p>
-              <div class="container mx-auto text-center">
-                <img src="Images/step41.PNG" alt="Check and Unequip your tri-nodes">
-              </div>
-              <h6>Node Statistics</h6>
-              <div class="container mx-auto text-center">
-                <img src="Images/step42.PNG" alt="Node Statistics UI">
-              </div>
-              <ol>
-                <li>Shows how many skills were selected.</li>
-                <li>Gives an estimate of how many nodes it would take to most efficiently get 2 copies of each skill selected</li>
-                <li>Shows how many node slots are currently used</li>
-                <li>Shows how many node "skill slots"(3 per node) is used efficiently (ie. The skill is selected and has 2 or less total copies in the equipped node slots)[Note: Only jobs that need "multiples of 3" amounts of boosted skills expect a 100% Node efficiency]</li>
-                <li>Gives a breakdown of each skill and how many times it has already appeared in the equipped nodes.</li>
-              </ol>
-              <p>Tip: You can click the header (Skill, Selected, Occupied Slots) to sort them in order</p>
-              <h5>5. Saving and Loading</h5>
-              <div class="container mx-auto text-center">
-                <img src="Images/step5.PNG" alt="Save and Load Nodelist">
-              </div>
-              <p>By clicking the "Generate Nodelist" button, you can generate a list of the nodestones you currently have. Be sure to save it somewhere.</p>
-              <p>By pasting the generated text and clicking the "Load List" button, your nodes will automatically be loaded in.</p>
             </div>
             <br/>
             <div class="container" id="saveLoadContainer" name="noOp">
@@ -308,6 +320,40 @@
               </div>
             </div>
             <br/>
+            <div class="container" id="optionOperation" name="noOp">
+              <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section5')">
+                <ul class="navbar-nav nav-fill w-100">
+                  <li class="nav-item active">
+                    <h3 style="text-align:left">Options</h3>
+                  </li>
+                  <li class="nav-item" style="text-align:right">
+                    <i class="bi bi-caret-up-square-fill" style="line-height: inherit;" id="section5Arrow"></i>
+                  </li>
+                </ul>
+              </nav>
+              <div class="container-fluid border collapse show" id="section5">
+                <div class="row">
+                  <div class="col-12" id="saveLoad">
+                    <table class="table table">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <strong>Region/Language</strong>
+                          </td>
+                          <td>                       
+                              <select name="skillOne" id="skillOne">
+                                <option value="EN1">[GMS] English</option>
+                                <option value="KR">[KMS] Korean</option>
+                              </select>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </br>
             <button type="button" class="btn btn-primary" onclick="checkVar()">Check Variables</button>
         </div>
     </body>

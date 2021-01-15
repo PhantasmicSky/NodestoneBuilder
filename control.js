@@ -147,6 +147,7 @@ function skillChange(){
     {
         $("#normalOperation").attr("name","noOp");
         $("#helpOperation").attr("name","hiddenObj");
+        $("#optionOperation").attr("name","hiddenObj");
         for (i = 0; i < skillData[selectedJob].length; i++){
             firstNode.innerHTML = firstNode.innerHTML +
                     '<option value="' + skillData[selectedJob][i] + '">' + skillData[selectedJob][i] + '</option>';
@@ -160,6 +161,7 @@ function skillChange(){
     else{
         $("#normalOperation").attr("name","hiddenObj");
         $("#helpOperation").attr("name","noOp");
+        $("#optionOperation").attr("name","noOp");
         document.getElementById("nodestoneAdd").style.display = "none";
     }
 }
@@ -551,6 +553,7 @@ function loadList(){
         selectedJob = listLoader[1];
         $("#normalOperation").attr('name', 'noOp');
         $("#helpOperation").attr('name', 'hiddenObj');
+        $("#optionOperation").attr('name', 'hiddenObj');
         initializeTally();
         selectorChange();
         clearLeftoverData();
