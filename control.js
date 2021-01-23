@@ -68,7 +68,7 @@ function newNode(nodeSet){
     newImg.setAttribute("name","thirdSlice");
     newCell.appendChild(newImg);
     var newImg   = document.createElement("img");
-    newImg.setAttribute("src","Images/Divider.png");
+    newImg.setAttribute("src","Images/MapleDivider.png");
     newImg.setAttribute("name","divider");
     newCell.appendChild(newImg);
     var newCell  = newRow.insertCell(2);
@@ -304,7 +304,7 @@ function copyToCollection(selectName){
     newImg.setAttribute("name","thirdSlice");
     newCell.appendChild(newImg);
     var newImg   = document.createElement("img");
-    newImg.setAttribute("src","Images/Divider.png");
+    newImg.setAttribute("src","Images/MapleDivider.png");
     newImg.setAttribute("name","divider");
     newCell.appendChild(newImg);
     var newCell  = newRow.insertCell(2);
@@ -387,15 +387,23 @@ function computeNodeScoreAll(){
                 }
                 
             }
+            console.log(nScore)
             $("td:nth-last-child(3)",this).text(nScore);
-            if(nScore < 1 && !$(this).hasClass("bg-info")){
+            if(nScore == 0 && !$(this).hasClass("bg-info")){
                 $(this).addClass("bg-danger");
             }
-            else if(nScore < 6 && !$(this).hasClass("bg-info")){
+            else if(nScore < 6 && !$(this).hasClass("bg-info") && nScore > 0){
                 $(this).addClass("bg-warning");
             }
             else if(nScore > 5 && !$(this).hasClass("bg-info")){
                 $(this).addClass("bg-success");
+            }
+            else if(nScore < 1 && !$(this).hasClass("bg-info")){
+                $(this).addClass("bg-danger");
+                $("td:nth-last-child(3)",this).text("Conflict");
+            }
+            else if(nScore < 0 && $(this).hasClass("bg-info")){
+                $("td:nth-last-child(3)",this).text("In Use");
             }
         }
     )
