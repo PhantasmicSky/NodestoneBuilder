@@ -400,10 +400,10 @@ function computeNodeScoreAll(){
             }
             else if(nScore < 1 && !$(this).hasClass("bg-info")){
                 $(this).addClass("bg-danger");
-                $("td:nth-last-child(3)",this).text("Conflict");
+                $("td:nth-last-child(3)",this).text("-1 (Leading Skill)");
             }
             else if(nScore < 0 && $(this).hasClass("bg-info")){
-                $("td:nth-last-child(3)",this).text("In Use");
+                $("td:nth-last-child(3)",this).text("-1 (In Use)");
             }
         }
     )
