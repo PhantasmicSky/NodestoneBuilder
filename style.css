@@ -37,3 +37,7 @@ td[name="imageName"]{
 textarea{
         width: 100%;
 }
+
+.widthCreate{
+        width:  50px;
+}

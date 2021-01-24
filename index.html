@@ -24,6 +24,7 @@
                       <th>Select Job: </th>
                       <th><select name="jobSelect" id="jobSelect" onchange="skillChange()">
                         <option value="">Select Job</option></th>
+                      </select>
                     </tr>
                   </thead>
                 </table>
@@ -71,11 +72,11 @@
               </nav>
               <div class="container-fluid border collapse show" id="section2">
                 <div class="row">
-                  <div class="col-4" id="leftCreator">
-                    <table class="table table">
+                  <div id="leftCreator">
+                    <table class="table">
                         <thead>
                           <tr>
-                            <th scope="col" colspan="2">Create Nodestone</th>
+                            <th scope="col" colspan="3">Create Nodestone</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -84,17 +85,24 @@
                               <strong>First Skill</strong>
                             </td>
                             <td>                       
-                                <select name="skillOne" id="skillOne">
+                                <select name="skillOne" id="skillOne" onchange=previewChange(1)>
                                 </select>
                             </td>
+                            <td></td>
                           </tr>
                           <tr>
                             <td>
                               <strong>Second Skill</strong>
                             </td>
                             <td>                       
-                                <select name="skillTwo" id="skillTwo">
+                                <select name="skillTwo" id="skillTwo" onchange=previewChange(2)>
                                 </select>
+                                <td class="widthCreate">                       
+                                  <img src="Images/MapleDivider.png" name="firstSlice" id="prev1"/>
+                                  <img src="Images/MapleDivider.png" name="secondSlice" id="prev2"/>
+                                  <img src="Images/MapleDivider.png" name="thirdSlice" id="prev3"/>
+                                  <img src="Images/MapleDivider.png" name="divider"/>
+                                </td>
                             </td>
                           </tr>
                           <tr>
@@ -102,19 +110,20 @@
                               <strong>Third Skill</strong>
                             </td>
                             <td>                       
-                                <select name="skillThree" id="skillThree">
+                                <select name="skillThree" id="skillThree" onchange=previewChange(3)>
                                 </select>
                             </td>
+                            <td></td>
                           </tr>
                           <tr>
-                              <td colspan="2" id="nodestoneAdd" style="display:none;">
+                              <td colspan="3" id="nodestoneAdd" style="display:none;">
                                 <button type="button" class="btn btn-primary" onclick="addNodestone()">Add Nodestone</button>
                               </td>
                           </tr>
                         </tbody>
                       </table>
                   </div>
-                  <div class="col-8" id="rightCreator">
+                  <div id="rightCreator">
                     <table class="table" id="nodeList" name="sortable">
                         <thead>
                             <tr>
@@ -309,7 +318,7 @@
               </nav>
               <div class="container-fluid border collapse show" id="section4">
                 <div class="row">
-                  <div class="col-12" id="saveLoad">
+                  <div class="col-6" id="saveLoad">
                     <textarea id="saveLoadArea" rows="8"></textarea>
                     <br/>
                     <button type="button" class="btn btn-primary" onclick="genList()">Generate Nodelist</button>
@@ -341,9 +350,20 @@
                             <strong>Region/Language (Placeholder - Not Working)</strong>
                           </td>
                           <td>                       
-                              <select name="skillOne" id="skillOne">
+                              <select name="language" id="language">
                                 <option value="EN1">[GMS] English</option>
                                 <option value="KR">[KMS] Korean</option>
+                              </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <strong>Number of Copies Per Skill (Beta - Computations not Confirmed)</strong>
+                          </td>
+                          <td>                       
+                              <select name="copyNumber" id="copyNumber" onchange="numberChange()">
+                                <option value="2">2 (Lv. 25 / Lv. 25)</option>
+                                <option value="3">3 (Lv. 16 / Lv. 17 / Lv. 17)</option>
                               </select>
                           </td>
                         </tr>
