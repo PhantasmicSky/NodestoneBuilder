@@ -30,4 +30,5 @@ The web application allows users to find and formulate their trinode sets.
 
 - All jobs that are currently out in GMS (47 Jobs) is supported.
 - Kain is Currently in Korean until it comes out to GMS.
+- Mo Xuan is Currently in Trad. Chinese until it comes out to GMS (If it will even release outside TMS/CMS).
 
