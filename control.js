@@ -408,7 +408,7 @@ function computeNodeScoreAll(){
                 }
                 
             }
-            console.log(nScore)
+            //console.log(nScore)
             $("td:nth-last-child(3)",this).text(nScore);
             if(nScore == 0 && !$(this).hasClass("bg-info")){
                 $(this).addClass("bg-danger");
@@ -631,3 +631,131 @@ function checkVar(){
     console.log(nodeTally);
     console.log(nodeCollection);
 }
+
+/**
+ * Auto Build Function[Starts Here](Do not expect this to work)
+ * Based on https://gist.github.com/axelpale/3118596
+ */
+
+function printCombination(){
+    var set = nodestones;
+    var k = Math.ceil(selectedSkills.length*skillCopy/3);
+    var axe = k_combinations(set, k);
+    var baseScoring = constructScore();
+    axe = legalLeading(axe);
+    axe = legalScoring(axe, baseScoring);
+    alert(axe);
+}
+
+function k_combinations(set, k) {
+	var i, j, combs, head, tailcombs;
+	
+	// There is no way to take e.g. sets of 5 elements from
+	// a set of 4.
+	if (k > set.length || k <= 0) {
+		return [];
+	}
+	
+	// K-sized set has only one K-sized subset.
+	if (k == set.length) {
+		return [set];
+	}
+	
+	// There is N 1-sized subsets in a N-sized set.
+	if (k == 1) {
+		combs = [];
+		for (i = 0; i < set.length; i++) {
+			combs.push([set[i]]);
+		}
+		return combs;
+	}
+	
+	// Assert {1 < k < set.length}
+	
+	// Algorithm description:
+	// To get k-combinations of a set, we want to join each element
+	// with all (k-1)-combinations of the other elements. The set of
+	// these k-sized sets would be the desired result. However, as we
+	// represent sets with lists, we need to take duplicates into
+	// account. To avoid producing duplicates and also unnecessary
+	// computing, we use the following approach: each element i
+	// divides the list into three: the preceding elements, the
+	// current element i, and the subsequent elements. For the first
+	// element, the list of preceding elements is empty. For element i,
+	// we compute the (k-1)-computations of the subsequent elements,
+	// join each with the element i, and store the joined to the set of
+	// computed k-combinations. We do not need to take the preceding
+	// elements into account, because they have already been the i:th
+	// element so they are already computed and stored. When the length
+	// of the subsequent list drops below (k-1), we cannot find any
+	// (k-1)-combs, hence the upper limit for the iteration:
+	combs = [];
+	for (i = 0; i < set.length - k + 1; i++) {
+		// head is a list that includes only our current element.
+		head = set.slice(i, i + 1);
+		// We take smaller combinations from the subsequent elements
+		tailcombs = k_combinations(set.slice(i + 1), k - 1);
+		// For each (k-1)-combination we join it with the current
+		// and store it to the set of k-combinations.
+		for (j = 0; j < tailcombs.length; j++) {
+			combs.push(head.concat(tailcombs[j]));
+		}
+	}
+	return combs;
+}
+
+function legalLeading(data){
+    var heaven = [];
+    for(var k = 0; k < data.length; k++){
+        var leads = [];
+        var flag = 0;
+        for(var i = 0; i < data[k].length; i++){
+            if(isAlreadyIn(leads, data[k][i][0])){
+                flag = 1;
+                break;
+            }
+            else{
+                leads.push(data[k][i][0]);
+            }
+        }
+        if(flag == 0){
+            heaven.push(data[k]);
+        }
+    }
+    return heaven;
+};
+
+function constructScore(){
+    var scoringCard = {};
+    for(var i = 0; i < skillData[selectedJob].length; i++){
+        if(isAlreadyIn(selectedSkills,skillData[selectedJob][i])){
+            scoringCard[skillData[selectedJob][i]] = -skillCopy;
+        }
+        else{
+            scoringCard[skillData[selectedJob][i]] = 0;
+        }
+    }
+    return scoringCard;
+};
+
+function legalScoring(testNodeSet, scoringSystem){
+    var currPotential = 0;
+    for(var i = 0; i < testNodeSet.length; i++){
+        var currScoreBreak = Object.assign({},scoringSystem);
+        currPotential = 0;
+        for(var j = 0; j < testNodeSet[i].length; j++){
+            for(var k = 0; k < 3; k++){
+                currScoreBreak[testNodeSet[i][j][k]]++;
+            }
+        }
+        for(const skillP in currScoreBreak){
+            if(currScoreBreak[skillP] < 0){
+                currPotential = -1;
+            }
+        }
+        if(currPotential == 0){
+            return(testNodeSet[i]);
+        }
+    }
+    return("None Found");
+};
