@@ -1,4 +1,5 @@
-Test: 1|Adele|0,2,5|6,7,5|5,7,6|7,5,6|6,5,7|4,5,7|4,0,3
+Test: 
+1|Adele|0,2,5|6,7,5|5,7,6|7,5,6|6,5,7|4,5,7|4,0,3
 Eviscerate , Reign, Cleave
     void printCombination(/*arr[], int n, int r*/)  
     {  

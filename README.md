@@ -12,6 +12,7 @@ The web application allows users to find and formulate their trinode sets.
   - A score of 1 is added for each skill in the trinode that is deemed a useful(selected by user). 
   - Another score is added for each useful skill to the current pool of trinodes as long as adding the selected trinode would result in the skill appearing a total of 2 times or less in the current pool.
 - Compute for number of Ideal nodes and current node efficiency
+- **[BETA]** Auto Build Function allows users to let the program try and build a perfect nodestone loadout using selected skills. (Function is only available if no node is currently in the collection).
 
 ## Things to do
 

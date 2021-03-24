@@ -7,7 +7,7 @@ var selectedJob;
 var nodestones = [];
 var selectedSkills = [];
 var cannotLead = [];
-var nodeTally = [];
+var nodeTally = {};
 var nodeCollection = [];
 
 /**
@@ -353,9 +353,11 @@ function copyToCollection(selectName){
 function disableDeletion(statusLock){
     if(statusLock == true){
         $("#nodeList").find("button[name='delete']").attr("disabled", true);
+        $("#autoBuild").attr("disabled", true);
     }
     else if($("#nodeCombo tbody tr").length == 0){
         $("#nodeList").find("button[name='delete']").attr("disabled", false);
+        $("#autoBuild").attr("disabled", false);
     }
 }
 
@@ -644,7 +646,12 @@ function printCombination(){
     var baseScoring = constructScore();
     axe = legalLeading(axe);
     axe = legalScoring(axe, baseScoring);
-    alert(axe);
+    if(axe == 'None Found'){
+        alert("No Optimal Combination Found.")
+    }
+    else{
+        autoButtonClick(axe);
+    }
 }
 
 function k_combinations(set, k) {
@@ -758,4 +765,12 @@ function legalScoring(testNodeSet, scoringSystem){
         }
     }
     return("None Found");
+};
+
+function autoButtonClick(nodeToPick){
+    for(var f = 0; f < nodeToPick.length; f++){
+        var pressThisButton = nodestones.indexOf(nodeToPick[f]);
+        $("#nodeList tr[name='"+pressThisButton+"'] td:nth-child(4)").find('button').click();
+    }
+    alert("Nodestone Combination Found! The Nodes have been equipped for you.");
 };
