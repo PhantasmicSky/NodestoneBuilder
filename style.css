@@ -2,6 +2,10 @@
         background-color:#f5f5f5;
 }
 
+#skillOption1p5 td.slot_1:hover, td.slot_2:hover, td.slot_3:hover{
+        background-color:#f5f5f5;
+}
+
 img[name="firstSlice"]{
         clip-path: polygon(0 0, 53.125% 53.125%, 53.125% 100%, 0% 100%);
         position:absolute;
@@ -40,4 +44,20 @@ textarea{
 
 .widthCreate{
         width:  50px;
+}
+
+.widthCreate2{
+        width: 100px;
+}
+
+#previewPhoto{
+        vertical-align: top;
+}
+
+#pickerTriNode td:nth-of-type(4n), #pickerTriNode th:nth-of-type(4n){
+        border-right: 1px solid #000;
+}
+
+#pickerTriNode td:first-child, #pickerTriNode th:last-child, #pickerTriNode td:last-child{
+        border-right: 1px solid #dee2e6;
 }

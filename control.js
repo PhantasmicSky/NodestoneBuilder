@@ -2,6 +2,7 @@ var skillData = {"Adele":["Blade of Will","Magic Dispatch","Skewering","Impale",
 var logicNumber = 1;
 var skillCopy = 2;
 var selectorChangeId = ["#skillOne","#skillTwo","#skillThree"];
+var formTrio = ["SKILL1","SKILL2","SKILL3"];
 var previewChangeId = ["#prev1","#prev2","#prev3"];
 var selectedJob;
 var nodestones = [];
@@ -32,6 +33,30 @@ function addNodestone(){
       alert("A Skill Cannot Appear in a node more than once.");
   }
 };
+
+/**
+ * Adds a new nodestone (created by the user)
+ * Function for the new UI
+ */
+ function addNodestone2(){
+    var firstSkill = formTrio[0];
+    var secondSkill = formTrio[1];
+    var thirdSkill = formTrio[2];
+    if ((formTrio[0] != formTrio[1]) && (formTrio[1] != formTrio[2]) && (formTrio[2] != formTrio[0])){
+        var currentNodestone = [firstSkill,secondSkill,thirdSkill];
+        if(isAlreadyIn(nodestones,formTrio)){
+            alert("Node Combination Already Exists");
+        }
+        else {
+          nodestones.push(currentNodestone);
+          newNode(formTrio);
+        }
+        
+    }
+    else {
+        alert("A Skill Cannot Appear in a node more than once.");
+    }
+  };
 
 /**
  * Checks whether "item" is already inside "arr" (an array)
@@ -217,6 +242,60 @@ function selectorChange(){
             newCell.setAttribute("onclick", 'formulateTrios("'+skillData[selectedJob][i]+'")');
         }
     }
+    selectorChangeTri();
+}
+
+/**
+ * Changes the selectable skills in the first div which users pick to select which skills they would like their perfect trios to have
+ */
+ function selectorChangeTri(){
+    var tableNode = document.getElementById("skillOption1p5");
+    tableNode.innerHTML = "";
+    selectedJob = $("#jobSelect").val();
+    if(selectedJob.length > 0){
+        $('#prev1a').attr("src","Images/MapleDivider.png");
+        $('#prev2a').attr("src","Images/MapleDivider.png");
+        $('#prev3a').attr("src","Images/MapleDivider.png");
+        $('#textSel1').text("");
+        $('#textSel2').text("");
+        $('#textSel3').text("");
+        var tableRef = document.getElementById("skillOption1p5");
+        for (var i = 0; i < skillData[selectedJob].length; i++){
+            if(i%5 == 0){
+                var newRow = tableRef.insertRow();
+            }
+            var newCell  = newRow.insertCell(-1);
+            var newImg   = document.createElement("img");
+            newImg.setAttribute("src","Images/"+ selectedJob + "/"+ skillData[selectedJob][i] + ".png");
+            newCell.appendChild(newImg);
+            //var newText  = document.createTextNode(" "+ skillData[selectedJob][i]);
+            //newCell.appendChild(newText);
+            newCell.setAttribute("name", skillData[selectedJob][i]);
+            //newCell.setAttribute("onclick", 'formulateTrios("'+skillData[selectedJob][i]+'")');
+            for(var j = 0; j < 3; j++){
+                var newText = document.createTextNode("");
+                var newCell = newRow.insertCell(-1);
+                newCell.appendChild(newText);
+                newCell.setAttribute("name", skillData[selectedJob][i] +"_slot_"+(j+1));
+                newCell.setAttribute("class", "slot_"+(j+1));
+                //newCell.addClass("segmentSelect"+(j+1));
+                newCell.setAttribute("onclick", 'selectSegment("'+skillData[selectedJob][i]+'",'+j+')');
+            }
+        }
+    }
+}
+
+/**
+ * 
+ * New Logic for creation of Trios 
+ */
+function selectSegment(skillName, segment){
+    formTrio[segment]=skillName;
+    $('td.slot_'+(segment+1)+'[name="'+skillName+'_slot_'+ (segment+1)+'"]').addClass("bg-primary");
+    $('td.slot_'+ (segment+1) +':not(td[name="'+skillName+'_slot_'+ (segment+1)+'"])').removeClass("bg-primary");
+    $('#prev'+(segment+1)+'a').attr("src","Images/"+ selectedJob + "/"+ skillName + ".png");
+    $('#textSel'+(segment+1)).text(skillName);
+
 }
 
 /**
@@ -321,7 +400,7 @@ function copyToCollection(selectName){
     newImg.setAttribute("name","secondSlice");
     newCell.appendChild(newImg);
     var newImg   = document.createElement("img");
-    newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodestones[selectName][2] + ".png");
+    newImg.setAttribute("src","Images/"+ sonelectedJob + "/"+ nodestones[selectName][2] + ".png");
     newImg.setAttribute("name","thirdSlice");
     newCell.appendChild(newImg);
     var newImg   = document.createElement("img");
@@ -627,11 +706,12 @@ function loadList(){
  * Debug function just to check values of variables
  */
 function checkVar(){
+    console.log(formTrio);
     console.log(nodestones);
-    console.log(selectedSkills);
+    /*console.log(selectedSkills);
     console.log(cannotLead);
     console.log(nodeTally);
-    console.log(nodeCollection);
+    console.log(nodeCollection);*/
 }
 
 /**
