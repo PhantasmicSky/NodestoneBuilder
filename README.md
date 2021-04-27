@@ -12,7 +12,7 @@ The web application allows users to find and formulate their trinode sets.
   - A score of 1 is added for each skill in the trinode that is deemed a useful(selected by user). 
   - Another score is added for each useful skill to the current pool of trinodes as long as adding the selected trinode would result in the skill appearing a total of 2 times or less in the current pool.
 - Compute for number of Ideal nodes and current node efficiency
-- **[BETA]** Auto Build Function allows users to let the program try and build a perfect nodestone loadout using selected skills. (Function is only available if no node is currently in the collection).
+- **[BETA]** Auto Build Function allows users to let the program try and build a perfect nodestone loadout using selected skills. (Function is only available if no node is currently equipped.).
 
 ## Things to do
 
@@ -25,6 +25,7 @@ The web application allows users to find and formulate their trinode sets.
 - ~~Add Support for all jobs.~~
 - ~~Add A 2 or 3 Swap option (Some players who are starting up prefer to build three (Lv16, Lv17, Lv17) nodes per skill instead of two (Lv25, Lv25) nodes per skill.~~
 - Code Cleanup
+- **[NOT_SURE]**Remove Image Path Dependency on Names (Switch to SkillIDs for easier porting to other languages)
 - Add Support for other languages.
 
 ## Currently Supported Jobs
