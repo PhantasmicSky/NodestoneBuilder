@@ -400,7 +400,7 @@ function copyToCollection(selectName){
     newImg.setAttribute("name","secondSlice");
     newCell.appendChild(newImg);
     var newImg   = document.createElement("img");
-    newImg.setAttribute("src","Images/"+ sonelectedJob + "/"+ nodestones[selectName][2] + ".png");
+    newImg.setAttribute("src","Images/"+ selectedJob + "/"+ nodestones[selectName][2] + ".png");
     newImg.setAttribute("name","thirdSlice");
     newCell.appendChild(newImg);
     var newImg   = document.createElement("img");
