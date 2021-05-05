@@ -13,8 +13,9 @@ var nodeCollection = [];
 
 /**
  * Adds a new nodestone (created by the user)
+ * Not in use since the UI update
  */
-function addNodestone(){
+/*function addNodestone(){
   var firstSkill = $("#skillOne").val();
   var secondSkill = $("#skillTwo").val();
   var thirdSkill = $("#skillThree").val();
@@ -32,7 +33,7 @@ function addNodestone(){
   else {
       alert("A Skill Cannot Appear in a node more than once.");
   }
-};
+};*/
 
 /**
  * Adds a new nodestone (created by the user)
@@ -168,15 +169,15 @@ function skillChange(){
     var firstNode = document.getElementById("skillOne");
     var secondNode = document.getElementById("skillTwo");
     var thirdNode = document.getElementById("skillThree");
-    firstNode.innerHTML=null;
-    secondNode.innerHTML=null;
-    thirdNode.innerHTML=null;
+    //firstNode.innerHTML=null;
+    //secondNode.innerHTML=null;
+    //thirdNode.innerHTML=null;
     if(selectedJob.length > 0)
     {
         $("#normalOperation").attr("name","noOp");
         $("#helpOperation").attr("name","hiddenObj");
         $("#optionOperation").attr("name","hiddenObj");
-        for (i = 0; i < skillData[selectedJob].length; i++){
+        /*for (i = 0; i < skillData[selectedJob].length; i++){
             firstNode.innerHTML = firstNode.innerHTML +
                     '<option value="' + skillData[selectedJob][i] + '">' + skillData[selectedJob][i] + '</option>';
                     secondNode.innerHTML = secondNode.innerHTML +
@@ -187,7 +188,7 @@ function skillChange(){
         document.getElementById("nodestoneAdd").style.display = "table-cell" 
         $("#prev1").attr("src","Images/"+ selectedJob + "/"+ skillData[selectedJob][0] + ".png");
         $("#prev2").attr("src","Images/"+ selectedJob + "/"+ skillData[selectedJob][0] + ".png");
-        $("#prev3").attr("src","Images/"+ selectedJob + "/"+ skillData[selectedJob][0] + ".png");
+        $("#prev3").attr("src","Images/"+ selectedJob + "/"+ skillData[selectedJob][0] + ".png");*/
     }
     else{
         $("#normalOperation").attr("name","hiddenObj");
