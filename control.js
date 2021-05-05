@@ -308,7 +308,7 @@ function formulateTrios(selectedOption){
         selectedSkills = selectedSkills.filter(function(value, index, arr){ 
             return value != selectedOption;
         });
-        $("#skillOption1 td[name='"+selectedOption+"']").removeClass("bg-primary");
+        $("#skillOption1 td[name=\""+selectedOption+"\"]").removeClass("bg-primary");
     }
     else{
         selectedSkills.push(selectedOption);
@@ -791,6 +791,11 @@ function k_combinations(set, k) {
 	return combs;
 }
 
+/**
+ * 
+ * Checks if all the Leading Skill of a nodestone set does not repeat itself
+ * 
+ */
 function legalLeading(data){
     var heaven = [];
     for(var k = 0; k < data.length; k++){
@@ -812,6 +817,11 @@ function legalLeading(data){
     return heaven;
 };
 
+/**
+ * 
+ * Constructs the basis or comparison to compare whether a nodeset is optimal.
+ * 
+ */
 function constructScore(){
     var scoringCard = {};
     for(var i = 0; i < skillData[selectedJob].length; i++){
@@ -825,6 +835,11 @@ function constructScore(){
     return scoringCard;
 };
 
+/**
+ * 
+ * Compares a nodeset to the basis
+ * 
+ */
 function legalScoring(testNodeSet, scoringSystem){
     var currPotential = 0;
     for(var i = 0; i < testNodeSet.length; i++){
@@ -841,8 +856,12 @@ function legalScoring(testNodeSet, scoringSystem){
             }
         }
         if(currPotential == 0){
+        /*    console.log(testNodeSet[i]);
+        console.log(currPotential);*/
             return(testNodeSet[i]);
         }
+        /*console.log(testNodeSet[i]);
+        console.log(currPotential);*/
     }
     return("None Found");
 };

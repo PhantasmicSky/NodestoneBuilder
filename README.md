@@ -35,4 +35,4 @@ The web application allows users to find and formulate their trinode sets.
 - Mo Xuan is Currently in Trad. Chinese until it comes out in GMS (If it will even release outside TMS/CMS).
 
 ## Notes
-- ~~* = Auto-Build doesn't work properly if the number of selected skills is not a multiple of three.~~ 
+- ~~* = Function not tested fully and might sometimes return "No Optimal Combination" even though there should be one.~~ 
