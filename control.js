@@ -120,7 +120,7 @@ function newNode(nodeSet){
             copyToCollection($(this).closest('tr').attr("name"));
         }
         else{
-            alert("The trio you are trying to add is either already in or the leading skill conflicts with items inside the list.");
+            alert("The trio you are trying to add is either already in or the leading skill conflicts with items inside the list. \n If you are using the Auto-Build function, just press OK to continue the process.");
         }
 
         return false;
@@ -194,7 +194,7 @@ function skillChange(){
         $("#normalOperation").attr("name","hiddenObj");
         $("#helpOperation").attr("name","noOp");
         $("#optionOperation").attr("name","noOp");
-        document.getElementById("nodestoneAdd").style.display = "none";
+        //document.getElementById("nodestoneAdd").style.display = "none";
     }
 }
 
@@ -411,7 +411,7 @@ function copyToCollection(selectName){
     var newCell  = newRow.insertCell(2);
     var b = document.createElement('button');
     b.setAttribute("class","btn btn-primary");
-    b.textContent = 'Remove';
+    b.textContent = 'Unequip';
         b.onclick = function(){
         $('#nodeList > tbody  > tr[name="'+selectName+'"]').removeClass("bg-info");
         nodeCollection.splice(($(this).closest('td').parent()[0].sectionRowIndex), 1);
@@ -433,7 +433,7 @@ function copyToCollection(selectName){
 function disableDeletion(statusLock){
     if(statusLock == true){
         $("#nodeList").find("button[name='delete']").attr("disabled", true);
-        $("#autoBuild").attr("disabled", true);
+       // $("#autoBuild").attr("disabled", true);
     }
     else if($("#nodeCombo tbody tr").length == 0){
         $("#nodeList").find("button[name='delete']").attr("disabled", false);
@@ -676,27 +676,6 @@ function loadList(){
             nodestones.push(temp);
             newNode(temp);
         }
-        var firstNode = document.getElementById("skillOne");
-        var secondNode = document.getElementById("skillTwo");
-        var thirdNode = document.getElementById("skillThree");
-        firstNode.innerHTML=null;
-        secondNode.innerHTML=null;
-        thirdNode.innerHTML=null;
-        if(selectedJob.length > 0)
-        {
-            for (i = 0; i < skillData[selectedJob].length; i++){
-                firstNode.innerHTML = firstNode.innerHTML +
-                        '<option value="' + skillData[selectedJob][i] + '">' + skillData[selectedJob][i] + '</option>';
-                        secondNode.innerHTML = secondNode.innerHTML +
-                        '<option value="' + skillData[selectedJob][i] + '">' + skillData[selectedJob][i] + '</option>';
-                        thirdNode.innerHTML = thirdNode.innerHTML +
-                        '<option value="' + skillData[selectedJob][i] + '">' + skillData[selectedJob][i] + '</option>';
-            }
-            document.getElementById("nodestoneAdd").style.display = "table-cell" 
-        }
-        else{
-            document.getElementById("nodestoneAdd").style.display = "none";
-        }
     }
     else{
         alert("Your save file is from another version of the Builder. If you think your job was not updated in subsequent revisions, change the first digit in your savefile to " +logicNumber+" and try loading again.");
@@ -707,89 +686,70 @@ function loadList(){
  * Debug function just to check values of variables
  */
 function checkVar(){
+    console.log("formTrio");
     console.log(formTrio);
+    console.log("nodestones");
     console.log(nodestones);
-    /*console.log(selectedSkills);
+    console.log("selectedSkills");
+    console.log(selectedSkills);
+    console.log("cannotLead");
     console.log(cannotLead);
+    console.log("nodeTally");
     console.log(nodeTally);
-    console.log(nodeCollection);*/
+    console.log("nodeCollection");
+    console.log(nodeCollection);
 }
 
 /**
  * Auto Build Function[Starts Here](Do not expect this to work)
- * Based on https://gist.github.com/axelpale/3118596
  */
+ var setholder = [];
+ var bigSetHolder = [];
 
 function printCombination(){
-    var set = nodestones;
+    var set = nodestones.slice();
+    for(var i = 0; i < nodeCollection.length; i++){
+        set = set.filter(function(e) { return e !== nodeCollection[i]});
+    }
     var k = Math.ceil(selectedSkills.length*skillCopy/3);
-    var axe = k_combinations(set, k);
-    var baseScoring = constructScore();
-    axe = legalLeading(axe);
-    axe = legalScoring(axe, baseScoring);
-    if(axe == 'None Found'){
-        alert("No Optimal Combination Found.")
+    var results = [];
+    bigSetHolder = [];
+    setholder = [];
+    setholder = nodeCollection.slice();
+    if(setholder.length < k){
+        results = comboMaker(1+setholder.length, 1+setholder.length, k, set, -1);
+    }
+    if(results.length > 0 && setholder.length < k){
+        autoButtonClick(results[0]);
+    }
+    else if(setholder.length >= k){
+        alert("You already have a complete nodestone set equipped or you are currently equipped with more nodestones than the optimal.");
     }
     else{
-        autoButtonClick(axe);
+        alert("No Optimal Nodestone Combination Found.");
     }
+    //console.log(results);
 }
 
-function k_combinations(set, k) {
-	var i, j, combs, head, tailcombs;
-	
-	// There is no way to take e.g. sets of 5 elements from
-	// a set of 4.
-	if (k > set.length || k <= 0) {
-		return [];
-	}
-	
-	// K-sized set has only one K-sized subset.
-	if (k == set.length) {
-		return [set];
-	}
-	
-	// There is N 1-sized subsets in a N-sized set.
-	if (k == 1) {
-		combs = [];
-		for (i = 0; i < set.length; i++) {
-			combs.push([set[i]]);
-		}
-		return combs;
-	}
-	
-	// Assert {1 < k < set.length}
-	
-	// Algorithm description:
-	// To get k-combinations of a set, we want to join each element
-	// with all (k-1)-combinations of the other elements. The set of
-	// these k-sized sets would be the desired result. However, as we
-	// represent sets with lists, we need to take duplicates into
-	// account. To avoid producing duplicates and also unnecessary
-	// computing, we use the following approach: each element i
-	// divides the list into three: the preceding elements, the
-	// current element i, and the subsequent elements. For the first
-	// element, the list of preceding elements is empty. For element i,
-	// we compute the (k-1)-computations of the subsequent elements,
-	// join each with the element i, and store the joined to the set of
-	// computed k-combinations. We do not need to take the preceding
-	// elements into account, because they have already been the i:th
-	// element so they are already computed and stored. When the length
-	// of the subsequent list drops below (k-1), we cannot find any
-	// (k-1)-combs, hence the upper limit for the iteration:
-	combs = [];
-	for (i = 0; i < set.length - k + 1; i++) {
-		// head is a list that includes only our current element.
-		head = set.slice(i, i + 1);
-		// We take smaller combinations from the subsequent elements
-		tailcombs = k_combinations(set.slice(i + 1), k - 1);
-		// For each (k-1)-combination we join it with the current
-		// and store it to the set of k-combinations.
-		for (j = 0; j < tailcombs.length; j++) {
-			combs.push(head.concat(tailcombs[j]));
-		}
-	}
-	return combs;
+function comboMaker(currLev, startLev, maxLev, nodePool, basis){
+    for(var i = basis+1; i < nodePool.length-maxLev+currLev; i++){
+        setholder.push(nodePool[i]);
+        if(currLev == maxLev){
+            var baseScore = constructScore();
+            if(legalLeading(setholder) && legalScoring(setholder, baseScore)){
+                console.log(setholder.toString());
+                bigSetHolder.push(setholder.slice());
+            }
+        }
+        else{
+            comboMaker(currLev+1, startLev, maxLev, nodePool, i);
+        }
+        setholder.pop();
+    }
+    if(currLev == startLev){
+        //console.log(bigSetHolder);
+        return bigSetHolder;
+    }
 }
 
 /**
@@ -797,25 +757,23 @@ function k_combinations(set, k) {
  * Checks if all the Leading Skill of a nodestone set does not repeat itself
  * 
  */
-function legalLeading(data){
-    var heaven = [];
-    for(var k = 0; k < data.length; k++){
+ function legalLeading(data){
         var leads = [];
         var flag = 0;
-        for(var i = 0; i < data[k].length; i++){
-            if(isAlreadyIn(leads, data[k][i][0])){
+        for(var i = 0; i < data.length; i++){
+            if(isAlreadyIn(leads, data[i][0])){
                 flag = 1;
                 break;
             }
             else{
-                leads.push(data[k][i][0]);
+                leads.push(data[i][0]);
             }
         }
         if(flag == 0){
-            heaven.push(data[k]);
+           // console.log(data);
+            return true;
         }
-    }
-    return heaven;
+        return false;
 };
 
 /**
@@ -841,14 +799,12 @@ function constructScore(){
  * Compares a nodeset to the basis
  * 
  */
-function legalScoring(testNodeSet, scoringSystem){
-    var currPotential = 0;
-    for(var i = 0; i < testNodeSet.length; i++){
+ function legalScoring(testNodeSet, scoringSystem){
         var currScoreBreak = Object.assign({},scoringSystem);
-        currPotential = 0;
-        for(var j = 0; j < testNodeSet[i].length; j++){
+        var currPotential = 0;
+        for(var j = 0; j < testNodeSet.length; j++){
             for(var k = 0; k < 3; k++){
-                currScoreBreak[testNodeSet[i][j][k]]++;
+                currScoreBreak[testNodeSet[j][k]]++;
             }
         }
         for(const skillP in currScoreBreak){
@@ -859,12 +815,13 @@ function legalScoring(testNodeSet, scoringSystem){
         if(currPotential == 0){
         /*    console.log(testNodeSet[i]);
         console.log(currPotential);*/
-            return(testNodeSet[i]);
+            //return(testNodeSet[i]);
+            return true;
         }
         /*console.log(testNodeSet[i]);
         console.log(currPotential);*/
-    }
-    return("None Found");
+    return false;
+    //return("None Found");
 };
 
 function autoButtonClick(nodeToPick){
