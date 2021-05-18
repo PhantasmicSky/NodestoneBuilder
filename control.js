@@ -718,12 +718,13 @@ function printCombination(){
     setholder = nodeCollection.slice();
     if(setholder.length < k){
         results = comboMaker(1+setholder.length, 1+setholder.length, k, set, -1);
+
     }
-    if(results.length > 0 && setholder.length < k){
+    if(results.length > 0){
         autoButtonClick(results[0]);
     }
-    else if(setholder.length >= k){
-        alert("You already have a complete nodestone set equipped or you are currently equipped with more nodestones than the optimal.");
+    else if(setholder.length > k){
+        alert("You are currently equipped with more nodestones than the optimal.");
     }
     else{
         alert("No Optimal Nodestone Combination Found.");
@@ -737,9 +738,14 @@ function comboMaker(currLev, startLev, maxLev, nodePool, basis){
         if(currLev == maxLev){
             var baseScore = constructScore();
             if(legalLeading(setholder) && legalScoring(setholder, baseScore)){
-                console.log(setholder.toString());
+                //console.log(setholder.toString());
                 bigSetHolder.push(setholder.slice());
+                return bigSetHolder;
             }
+        }
+        else if(bigSetHolder.length > 0){
+            console.log(bigSetHolder);
+            return bigSetHolder;
         }
         else{
             comboMaker(currLev+1, startLev, maxLev, nodePool, i);
