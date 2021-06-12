@@ -53,6 +53,8 @@
 
         "Jett":["Starline One","Blaster Barrage","Starline Two","Stellar Impact","Vortex Cross","Falling Stars","Starline Three","Cosmic Upheaval","Starforce Salvo","Backup Beatdown","Planet Buster","Singularity Shock"],
 
+        "Kain":["Strike Arrow","Scattering Shot","Dragon Fang","Shaft Break","Phantom Blade","Death's Blessing","Falling Dust","Chain Sickle"],
+
         "Kaiser":["Dragon Slash","Flame Surge","Impact Wave","Piercing Blaze","Tempest Blades","Wing Beat","Pressure Chain","Stone Dragon","Gigas Wave","Dragon Barrage","Blade Burst","Inferno Breath","Ancestral Prominence"],
         
         "Kanna":["Shikigami Haunting","Ghost Yaksha Boss","Kishin Shoukan","Nightghost Guide","Shikigami Charm","Exorcist's Charm","Tengu Strike","Yosuzume","Vanquisher's Charm","Orochi Unbound","Falling Sakura","Binding Tempest","Nine-Tailed Fury","Shikigami Doppelganger","Veritable Pandemonium"],
@@ -92,8 +94,6 @@
         "Xenon":["Beam Spline", "Pinpoint Salvo","Quicksilver","Ion Thrust","Combat Switch","Diagonal Chase","Gravity Pillar","Aegis System","Triangulation Boost","Beam Dance","Mecha Purge","Hypogram Field","Entangling Lash","Orbital Cataclysm"],
 
         "Zero":["Moon Strike","Piercing Thrust","Flash Assault","Spin Cutter","Rolling Cross","Rolling Assault","Wind Cutter","Wind Striker","Storm Break","Shadow Rain"],
-
-        "카인":["스트라이크 애로우","스캐터링 샷","드래곤 팡","샤프트 브레이크","팬텀 블레이드","데스 블레싱","풀링 더스트","체인 시클"],
 
         "墨玄":["玄山 招式全開","神功 破碎拳","神功 旋風脚","神功 鐵山靠","神功 亂拳連激","神功 无影脚","密技 千斤錘","神功 大地崩裂","神功 移形換位","眞氣 焦熱破神擊"]
 }
