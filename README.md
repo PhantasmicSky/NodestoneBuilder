@@ -37,3 +37,6 @@ The web application allows users to find and formulate their trinode sets.
 
 ## Notes
 - ~~* = Function not tested fully and might sometimes return "No Optimal Combination" even though there should be one.~~ 
+
+## Version Changes
+- [1 -> 2] Kain Skills have been translated. If switching from ver 1 -> 2 , Change logic number to 2 and translate Kain's name (if the selected job of the save string is Kain)
