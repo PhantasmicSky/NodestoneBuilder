@@ -61,6 +61,8 @@
 
         "Kinesis":["Psychic Force","Kinetic Crash","Kinetic Piledriver","Ultimate - Deep Impact","Psychic Drain","Psychic Grab","Ultimate - Trainwreck","Kinetic Combo","Mind Break","Ultimate - B.P.M.","Mental Tempest","Mental Shock","Ultimate - Metal Press"],
 
+        "Lara":["Essence Sprinkle","Wakeup Call","Mountain Kid","Mountain Seeds","Dragon Vein Eruption","Dragon Vein Absorption","Vine Coil","Dragon Vein Traces"],
+
         "Luminous":["Flash Shower","Abyssal Drop","Sylvan Lance","Pressure Void","Spectral Light","Ray of Redemption","Moonlight Spear","Death Scythe","Reflection","Morning Star","Apocalypse","Ender","Armageddon"],
 
         "Marksman":["Arrow Blow","Final Attack","Iron Arrow","Net Toss","Frostprey","Dragon's Breath","Explosive Bolt","Hookshot","Piercing Arrow","Snipe","High Speed Shot"],
@@ -94,8 +96,6 @@
         "Xenon":["Beam Spline", "Pinpoint Salvo","Quicksilver","Ion Thrust","Combat Switch","Diagonal Chase","Gravity Pillar","Aegis System","Triangulation Boost","Beam Dance","Mecha Purge","Hypogram Field","Entangling Lash","Orbital Cataclysm"],
 
         "Zero":["Moon Strike","Piercing Thrust","Flash Assault","Spin Cutter","Rolling Cross","Rolling Assault","Wind Cutter","Wind Striker","Storm Break","Shadow Rain"],
-
-        "라라":["정기 뿌리기","잠 깨우기","산 꼬마","산의 씨앗","용맥 분출","용맥 흡수","넝쿨 타래","용맥의 자취"],
 
         "墨玄":["玄山 招式全開","神功 破碎拳","神功 旋風脚","神功 鐵山靠","神功 亂拳連激","神功 无影脚","密技 千斤錘","神功 大地崩裂","神功 移形換位","眞氣 焦熱破神擊"]
 }

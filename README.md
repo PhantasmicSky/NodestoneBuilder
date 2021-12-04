@@ -40,4 +40,5 @@ The web application allows users to find and formulate their trinode sets.
 - ~~* = Function not tested fully and might sometimes return "No Optimal Combination" even though there should be one.~~ 
 
 ## Version Changes
-- [1 -> 2] Kain Skills have been translated. If switching from ver 1 -> 2 , Change logic number to 2 and translate Kain's name (if the selected job of the save string is Kain)
+- [2 -> 3] Lara Skills have been translated. If switching from ver 2 -> 3, Change logic number to 3 and translate Lara's name (if the selected job of the save string is Lara[라라])
+- [1 -> 2] Kain Skills have been translated. If switching from ver 1 -> 2 , Change logic number to 2 and translate Kain's name (if the selected job of the save string is Kain [카인])
