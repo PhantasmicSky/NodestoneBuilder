@@ -1,4 +1,4 @@
-# Maplestory Tri-Node Builder (Beta v1.03)
+# Maplestory Tri-Node Builder (Beta v1.04)
 
 ## Purpose
 The web application allows users to find and formulate their trinode sets.
@@ -32,13 +32,16 @@ The web application allows users to find and formulate their trinode sets.
 
 ## Currently Supported Jobs
 
-- All jobs that are currently out in GMS (48 Jobs **[Includes Kain]**) is supported.
-- 라라(Lara) will be in Korean until it is released in GMS.
-- Mo Xuan is Currently in Trad. Chinese until it comes out in GMS (If it will even release outside TMS/CMS).
+- All jobs that are currently out in GMS (every Job except MoXuan) is supported.
+- MoXuan is Currently in Trad. Chinese until it comes out in GMS (If it will even release outside TMS/CMS).
 
 ## Notes
-- ~~* = Function not tested fully and might sometimes return "No Optimal Combination" even though there should be one.~~ 
+- * = Function not tested fully and might sometimes return "No Optimal Combination" even though there should be one. Nodes are also built using brute force and might take minutes if there are a lot of nodes to build prefect tri's from. Might also cause browser to lock-up.
 
 ## Version Changes
+- [3 -> 4] Adventurer Revamp is still underway. Current updated jobs are **Bishop**, **Bowmaster**, **Buccaneer**
+  - No Changes done to Bishop aside from Skill Images, Node Inventories from Version 1 should still be okay to use.
+  - Bowmasters would need to rebuild Node inventory as some skills have been removed.
+  - Buccaneers would need to rebuild Node inventory as some skills have been removed / merged in terms of boost nodes.
 - [2 -> 3] Lara Skills have been translated. If switching from ver 2 -> 3, Change logic number to 3 and translate Lara's name (if the selected job of the save string is Lara[라라])
 - [1 -> 2] Kain Skills have been translated. If switching from ver 1 -> 2 , Change logic number to 2 and translate Kain's name (if the selected job of the save string is Kain [카인])
