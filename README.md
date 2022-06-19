@@ -40,7 +40,8 @@ The web application allows users to find and formulate their trinode sets.
 
 ## Version Changes
 - [3 -> 4] Explorer Revamp have been implemented. Aside from Bishop, Ice Lightning Mage, Jett, and Pathfinders, other explorers are advised to rebuild their Node Inventories.
-  - No Changes done to Bishop and Ice Lightning Mage aside from Skill Images and Skill Names(when applicable). Node Inventories from Version 1 should still be okay to use.
+  - All jobs should change logic number to 4
+  - No Changes done to Bishop and Ice Lightning Mage aside from Skill Images and Skill Names(when applicable). Node Inventories from Version 1 should still be okay to use as long as logic number is adjusted.
   - Bowmasters would need to rebuild Node inventory as some skills have been removed.
   - Buccaneers would need to rebuild Node inventory as some skills have been removed / merged in terms of boost nodes.
   - Cannoneers would have to subtract 1 to any skill value above 6 as Monkey Wave was removed. (ex. A trinode saved as 2,7,12 it should be changed to become 2,6,11)
