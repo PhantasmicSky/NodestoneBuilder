@@ -34,13 +34,10 @@ function printCombination(){
    }
    if(results.length > 0){
         this.postMessage(JSON.stringify(results));
-       //autoButtonClick(results[0]);
    }
    else{
         this.postMessage('["NONE FOUND"]');
-       //alert("No Optimal Nodestone Combination Found.");
    }
-   //console.log(results);
 }
 
 function comboMaker(currLev, startLev, maxLev, nodePool, basis){
@@ -49,7 +46,6 @@ function comboMaker(currLev, startLev, maxLev, nodePool, basis){
        if(currLev == maxLev){
            var baseScore = constructScore();
            if(legalLeading(setholder) && legalScoring(setholder, baseScore)){
-               //console.log(setholder.toString());
                bigSetHolder.push(setholder.slice());
                return bigSetHolder;
            }
@@ -64,7 +60,6 @@ function comboMaker(currLev, startLev, maxLev, nodePool, basis){
        setholder.pop();
    }
    if(currLev == startLev){
-       //console.log(bigSetHolder);
        return bigSetHolder;
    }
 }
@@ -87,7 +82,6 @@ function legalLeading(data){
            }
        }
        if(flag == 0){
-          // console.log(data);
            return true;
        }
        return false;
@@ -130,15 +124,9 @@ function legalScoring(testNodeSet, scoringSystem){
            }
        }
        if(currPotential == 0){
-       /*    console.log(testNodeSet[i]);
-       console.log(currPotential);*/
-           //return(testNodeSet[i]);
            return true;
        }
-       /*console.log(testNodeSet[i]);
-       console.log(currPotential);*/
    return false;
-   //return("None Found");
 };
 
 function isAlreadyIn(arr, item) {

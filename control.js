@@ -13,30 +13,6 @@ var nodeCollection = [];
 
 /**
  * Adds a new nodestone (created by the user)
- * Not in use since the UI update
- */
-/*function addNodestone(){
-  var firstSkill = $("#skillOne").val();
-  var secondSkill = $("#skillTwo").val();
-  var thirdSkill = $("#skillThree").val();
-  if ((firstSkill != secondSkill) && (firstSkill != thirdSkill) && (secondSkill != thirdSkill)){
-      var currentNodestone = [firstSkill,secondSkill,thirdSkill];
-      if(isAlreadyIn(nodestones,currentNodestone)){
-          alert("Node Combination Already Exists");
-      }
-      else {
-        nodestones.push(currentNodestone);
-        newNode(currentNodestone);
-      }
-      
-  }
-  else {
-      alert("A Skill Cannot Appear in a node more than once.");
-  }
-};*/
-
-/**
- * Adds a new nodestone (created by the user)
  * Function for the new UI
  */
 function addNodestone2() {
@@ -166,34 +142,15 @@ function skillChange() {
     initializeTally();
     selectorChange();
     clearLeftoverData();
-    var firstNode = document.getElementById("skillOne");
-    var secondNode = document.getElementById("skillTwo");
-    var thirdNode = document.getElementById("skillThree");
-    //firstNode.innerHTML=null;
-    //secondNode.innerHTML=null;
-    //thirdNode.innerHTML=null;
     if (selectedJob.length > 0) {
         $("#normalOperation").attr("name", "noOp");
         $("#helpOperation").attr("name", "hiddenObj");
         $("#optionOperation").attr("name", "hiddenObj");
-        /*for (i = 0; i < skillData[selectedJob].length; i++){
-            firstNode.innerHTML = firstNode.innerHTML +
-                    '<option value="' + skillData[selectedJob][i] + '">' + skillData[selectedJob][i] + '</option>';
-                    secondNode.innerHTML = secondNode.innerHTML +
-                    '<option value="' + skillData[selectedJob][i] + '">' + skillData[selectedJob][i] + '</option>';
-                    thirdNode.innerHTML = thirdNode.innerHTML +
-                    '<option value="' + skillData[selectedJob][i] + '">' + skillData[selectedJob][i] + '</option>';
-        }
-        document.getElementById("nodestoneAdd").style.display = "table-cell" 
-        $("#prev1").attr("src","Images/"+ selectedJob + "/"+ skillData[selectedJob][0] + ".png");
-        $("#prev2").attr("src","Images/"+ selectedJob + "/"+ skillData[selectedJob][0] + ".png");
-        $("#prev3").attr("src","Images/"+ selectedJob + "/"+ skillData[selectedJob][0] + ".png");*/
     }
     else {
         $("#normalOperation").attr("name", "hiddenObj");
         $("#helpOperation").attr("name", "noOp");
         $("#optionOperation").attr("name", "noOp");
-        //document.getElementById("nodestoneAdd").style.display = "none";
     }
 }
 
@@ -268,17 +225,13 @@ function selectorChangeTri() {
             var newImg = document.createElement("img");
             newImg.setAttribute("src", "Images/" + selectedJob + "/" + skillData[selectedJob][i] + ".png");
             newCell.appendChild(newImg);
-            //var newText  = document.createTextNode(" "+ skillData[selectedJob][i]);
-            //newCell.appendChild(newText);
             newCell.setAttribute("name", skillData[selectedJob][i]);
-            //newCell.setAttribute("onclick", 'formulateTrios("'+skillData[selectedJob][i]+'")');
             for (var j = 0; j < 3; j++) {
                 var newText = document.createTextNode("");
                 var newCell = newRow.insertCell(-1);
                 newCell.appendChild(newText);
                 newCell.setAttribute("name", skillData[selectedJob][i] + "_slot_" + (j + 1));
                 newCell.setAttribute("class", "slot_" + (j + 1));
-                //newCell.addClass("segmentSelect"+(j+1));
                 newCell.setAttribute("onclick", 'selectSegment("' + skillData[selectedJob][i] + '",' + j + ')');
             }
         }
@@ -320,7 +273,6 @@ function formulateTrios(selectedOption) {
         nodeSlotData = 0;
     }
     var nodePositive = (Math.ceil(selectedFormulation * skillCopy / 3) * 3) - nodeSlotData;
-    //console.log(nodePositive);
     document.getElementsByName("skillCounter")[0].innerHTML = selectedSkills.length;
     if (selectedFormulation == 1) {
         document.getElementsByName("bestOutcome")[0].innerHTML = skillCopy + "(" + skillCopy + " slots for selected and " + skillCopy * 2 + " slots for any skill)";
@@ -432,7 +384,6 @@ function copyToCollection(selectName) {
 function disableDeletion(statusLock) {
     if (statusLock == true) {
         $("#nodeList").find("button[name='delete']").attr("disabled", true);
-        // $("#autoBuild").attr("disabled", true);
     }
     else if ($("#nodeCombo tbody tr").length == 0) {
         $("#nodeList").find("button[name='delete']").attr("disabled", false);
@@ -489,7 +440,6 @@ function computeNodeScoreAll() {
                 }
 
             }
-            //console.log(nScore)
             $("td:nth-last-child(3)", this).text(nScore);
             if (nScore == 0 && !$(this).hasClass("bg-info")) {
                 $(this).addClass("bg-danger");
@@ -723,8 +673,6 @@ function buildPerfectTri() {
             alert("You are currently equipped with more nodestones than the optimal.");
         }
         else if (results[0] != "NONE FOUND") {
-            //console.log(results);
-            //console.log(results[0]);
             autoButtonClick2(results[0]);
         }
         else {
@@ -758,8 +706,6 @@ function printCombination() {
 
     }
     if (results.length > 0) {
-        //console.log(results);
-        //console.log(results[0]);
         autoButtonClick(results[0]);
     }
     else if (setholder.length > k) {
@@ -768,7 +714,6 @@ function printCombination() {
     else {
         alert("No Optimal Nodestone Combination Found.");
     }
-    //console.log(results);
 }
 
 function comboMaker(currLev, startLev, maxLev, nodePool, basis) {
@@ -777,7 +722,6 @@ function comboMaker(currLev, startLev, maxLev, nodePool, basis) {
         if (currLev == maxLev) {
             var baseScore = constructScore();
             if (legalLeading(setholder) && legalScoring(setholder, baseScore)) {
-                //console.log(setholder.toString());
                 bigSetHolder.push(setholder.slice());
                 return bigSetHolder;
             }
@@ -792,7 +736,6 @@ function comboMaker(currLev, startLev, maxLev, nodePool, basis) {
         setholder.pop();
     }
     if (currLev == startLev) {
-        //console.log(bigSetHolder);
         return bigSetHolder;
     }
 }
@@ -815,7 +758,6 @@ function legalLeading(data) {
         }
     }
     if (flag == 0) {
-        // console.log(data);
         return true;
     }
     return false;
@@ -858,15 +800,9 @@ function legalScoring(testNodeSet, scoringSystem) {
         }
     }
     if (currPotential == 0) {
-        /*    console.log(testNodeSet[i]);
-        console.log(currPotential);*/
-        //return(testNodeSet[i]);
         return true;
     }
-    /*console.log(testNodeSet[i]);
-    console.log(currPotential);*/
     return false;
-    //return("None Found");
 };
 
 function autoButtonClick(nodeToPick){
@@ -880,10 +816,13 @@ function autoButtonClick(nodeToPick){
 function autoButtonClick2(nodeToPick) {
     for (var f = 0; f < nodeToPick.length; f++) {
         var pressThisButton = indexInArray(nodeToPick[f], nodestones);
-        console.log(pressThisButton);
         $("#nodeList tr[name='" + pressThisButton + "'] td:nth-child(4)").find('button').click();
     }
     alert("Nodestone Combination Found! The Nodes have been equipped for you.");
+};
+
+function autoButtonClick3() {
+        $("#nodeCombo td:nth-child(3)").find('button').click();
 };
 
 function indexInArray(selection, baseBoard){

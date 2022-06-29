@@ -45,7 +45,6 @@
               <div class="container-fluid border collapse show" id="section1">
                 <div class="row" id="skillPicker">
                   <div class="col-12 mt-2">
-                    </select>
                     <table class="table table-bordered" id="pickerNode">
                       <thead>
                         <tr>
@@ -60,7 +59,6 @@
                 </div>
               </div>
               <br/>
-              <!--TEST START-->
               <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section1p5')">
                 <ul class="navbar-nav nav-fill w-100">
                   <li class="nav-item active">
@@ -73,8 +71,7 @@
               </nav>
               <div class="container-fluid border collapse show" id="section1p5">
                 <div class="row" id="skillPicker2">
-                  <div class="col-12 mt-2">
-                    </select>
+                  <div class="col-12 mt-2 table-responsive">
                     <table class="table table-bordered" id="pickerTriNode">
                       <thead>
                         <tr>
@@ -130,7 +127,6 @@
                 </div>
               </div>
               <br/>
-              <!--TEST END-->
               <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section2')">
                 <ul class="navbar-nav nav-fill w-100">
                   <li class="nav-item active">
@@ -143,59 +139,6 @@
               </nav>
               <div class="container-fluid border collapse show" id="section2">
                 <div class="row">
-                  <!--
-                  <div id="leftCreator">
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col" colspan="3">Create Nodestone</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <strong>First Skill</strong>
-                            </td>
-                            <td>                       
-                                <select name="skillOne" id="skillOne" onchange=previewChange(1)>
-                                </select>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <strong>Second Skill</strong>
-                            </td>
-                            <td>                       
-                                <select name="skillTwo" id="skillTwo" onchange=previewChange(2)>
-                                </select>
-                                <td class="widthCreate">                       
-                                  <img src="Images/MapleDivider.png" name="firstSlice" id="prev1"/>
-                                  <img src="Images/MapleDivider.png" name="secondSlice" id="prev2"/>
-                                  <img src="Images/MapleDivider.png" name="thirdSlice" id="prev3"/>
-                                  <img src="Images/MapleDivider.png" name="divider"/>
-                                </td>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <strong>Third Skill</strong>
-                            </td>
-                            <td>                       
-                                <select name="skillThree" id="skillThree" onchange=previewChange(3)>
-                                </select>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                              <td colspan="3" id="nodestoneAdd" style="display:none;">
-                                <button type="button" class="btn btn-primary" onclick="addNodestone()">Add Nodestone</button>
-                              </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                  </div>
-                  -->
                   <div id="rightCreator">
                     <table class="table" id="nodeList" name="sortable">
                         <thead>
@@ -239,6 +182,20 @@
                     </table>
                   </div>
                   <div class="col-6" id="rightCombo">
+                    <table class="table" id="controlCenter">
+                      <thead>
+                        <tr>
+                          <th scope="col" colspan="3">Trinode Builder Options</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td scope="col"><button type="button" class="btn btn-primary" id="autoBuild" onclick="printCombination()">Auto Build [Sync]</button></td>
+                          <td scope="col"><button type="button" class="btn btn-primary" id="autoBuild" onclick="buildPerfectTri()">Auto Build [Async]</button></td>
+                          <td scope="col"><button type="button" class="btn btn-primary" id="autoBuild" onclick="autoButtonClick3()">Unequip All Trios</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
                     <table class="table" id="nodeStatistics1">
                       <thead>
                           <tr>
@@ -391,7 +348,7 @@
               </nav>
               <div class="container-fluid border collapse show" id="section4">
                 <div class="row">
-                  <div class="col-6" id="saveLoad">
+                  <div class="col-12" id="saveLoad">
                     <textarea id="saveLoadArea" rows="8"></textarea>
                     <br/>
                     <button type="button" class="btn btn-primary" onclick="genList()">Generate Nodelist</button>
@@ -446,8 +403,8 @@
               </div>
             </div>
             </br>
-            <button type="button" class="btn btn-primary" id="autoBuild" onclick="printCombination()">Auto Build</button>
-            <button type="button" class="btn btn-primary" id="autoBuild" onclick="buildPerfectTri()">Auto Build [Web Worker]</button>
+            <button type="button" class="btn btn-primary invisible" id="autoBuild" onclick="printCombination()">Auto Build</button>
+            <button type="button" class="btn btn-primary invisible" id="autoBuild" onclick="buildPerfectTri()">Auto Build [Web Worker]</button>
             <button type="button" class="btn btn-primary invisible" onclick="checkVar()">Check Variables</button>
         </div>
     </body>
