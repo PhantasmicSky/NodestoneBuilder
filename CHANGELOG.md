@@ -20,7 +20,7 @@
   - Heroes would need to subtract 1 to any skill value. This was due to Slash Blast being in the builder even though it is not implemented / long removed from the game. (ex. a trinode saved as 2,4,5 would become 1,3,4).
   - Marksmen would need to rebuild Node inventory due to many skills changing into other nodes.
   - Night Lords would need to convert 5 (Shadow Web) to either 6 (Dark Flare), 10 (Sudden Raid), 12 (Death Star). All skill values would then be subtracted by 2 due to Double Stab and Lucky Seven's removal then all values above 2 (after all the previous adjustments) would be subtracted by 1 to account for Shadow Web's removal. (ex. 2,5,10 (Shuriken Burst, Shadow Web, Sudden Raid) becomes 2,6,10 (Shadow Web became Dark Flare) then finally 0,3,7).
-  - Paladins would need to convert 3 (Blizzard Charge) to either 5 (Divine Judgement), 9 (Heaven's Hammer), or 10 (Smite Shield). All skill values would be subtracted by 1 to fix Slash Blast's removal. All skill values after that that has a value above 2 would be subtracted by 1 more to fix Blizzard Charge's Removal.
+  - Paladins would need to convert 3 (Blizzard Charge) to either 5 (Divine Judgement), 9 (Heaven's Hammer), or 10 (Smite Shield). All skill values would be subtracted by 1 to fix Slash Blast's removal. All skill values that have a value above 2 would be subtracted by 1 more to fix Blizzard Charge's Removal.
   - Shadowers would need to convert 2 (Steal) to either 7 (Dark Flare), 10 (Sudden Raid), or 11 (Shadow Veil) then subtract all skill values by 3 to account for Double Stab, Lucky Seven, and Steal's removal.
 
 ### Fixed
