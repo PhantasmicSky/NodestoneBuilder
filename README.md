@@ -25,7 +25,7 @@ The web application allows users to find and formulate their trinode sets.
 - MoXuan is Currently in Trad. Chinese until it comes out in GMS (If it will even release outside TMS/CMS).
 
 ## Notes
-- \* = Function not tested fully and might sometimes return "No Optimal Combination" even though there should be one. Nodes are also built using brute force and might take minutes if there are a lot of nodes to build prefect tri's from. Might also cause browser to lock-up. If that happens, please use the Async Solver to move the solving to a web worker. 
+- \* = Function not tested fully and might sometimes return "No Optimal Combination" even though there should be one (Mostly happens when less than 3 skills are selected or if you already have more trios equipped than the number of trios to make your perfect loadout). Nodes are also built using brute force and might take minutes if there are a lot of nodes to build prefect tri's from. Might also cause browser to lock-up. If that happens, please use the Async Solver to move the solving to a web worker. 
 - \* = While not fully tested, it is possible to equip some of the trios as the starting trios to build your perfect trios from (ex. You have a Lv 25 trio that you would want to incorporate, equip that trio first before pressing Auto-Build). When the pop-up for equipping a trio that has already been equipped shows up, just press OK until all the prompts disappear and it should equip the remaining trios needed to create your perfect trinode setup.
 
 ## Version Changes
