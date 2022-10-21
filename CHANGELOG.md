@@ -3,7 +3,7 @@
 ## [1.04] - 2022-07-25
 
 ### Added
-- Web worker auto build has been added. Use the "Auto Build \[Async\]" to delegate the brute force solver to a web worker and thus shouldn't display a "Not Responding" if the solver takes quite some time.
+- Web worker auto build has been added. Use the "Auto Build \[Async\]" to delegate the brute force solver to a web worker and shouldn't display a "Not Responding" if the solver takes quite some time.
 - \[2022-07-29\] Added an "Unequip all Trios" button to remove all the equipped tri-nodes. 
 
 ### Changed
