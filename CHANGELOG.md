@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.05] - 2022-11-15
+
+### Changed
+- Cygnus Knight Revamp Has been implemented.
+  - All jobs should change logic number to 5.
+  - Mihile and Dawn Warrior (Soul Master) should reconsider rebuilding from scratch. Other Cygnus Knights still map 1:1 and are unaffected.
+
+
 ## [1.04] - 2022-07-25
 
 ### Added
