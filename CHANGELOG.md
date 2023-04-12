@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.06] - 2023-04-12
+
+### Changed
+- Added 칼리 (Kalli) Skills.
+  - Skills and Job name will be in Korean until GMS release.
+
 ## [1.05] - 2022-11-15
 
 ### Changed

@@ -1,4 +1,4 @@
-# Maplestory Tri-Node Builder (Beta v1.05)
+# Maplestory Tri-Node Builder (Beta v1.06)
 
 ## Purpose
 The web application allows users to find and formulate their trinode sets.
