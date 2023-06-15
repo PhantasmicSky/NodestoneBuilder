@@ -1,5 +1,19 @@
 # Change Log
 
+## [1.07] - 2023-06-14
+
+### Added [2023-06-15]
+  - Added Hayato's new node loadout. Changed the existing Hayato to "Hayato (Old)". Will remove once MapleSEA gets the Hayato Node Changes.
+  - If you will use an old save string for Hayato, change the Job name to "Hayato (Old)". Hayatos are advised to rebuild node inventory.  
+
+### Changed
+  -Khali Skills are now in English. (If you have a collection for Khali, change 칼리 to Khali)
+  -All Jobs should change logic number to 6.
+
+### Fixed
+  -Blaze Wizard and Wind Archer Skill Images have been fixed.
+  -Some of Blaze Wizard's Skills were still using pre-revamp names and have been fixed.
+
 ## [1.06] - 2023-04-12
 
 ### Changed

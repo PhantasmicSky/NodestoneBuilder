@@ -41,7 +41,9 @@
 
         "Fire Poison Mage":["Flame Orb","Poison Breath","Ignite","Explosion","Poison Mist","Teleport Mastery","Flame Haze","Mist Eruption","Ifrit","Flame Sweep","Meteor Shower","Inferno Aura","Megiddo Flame"],
 
-        "Hayato":["Summer Rain","Hitokiri Hundred Strike","Sanrenzan","Blade Flash","Surging Blade","Shouryuusen","Jin Sanrenzan","Vapor Blade","Jin Blade Flash","Rising Slash","Falcon Dive","Fuu Sanrenzan","Fuu Blade Flash","Sweeping Sword","Whirlwind Cut","Dankuusen","Rai Sanrenzan","Rai Blade Flash","Tornado Blade","Sudden Strike","Shinsoku","Hitokiri Strike","Falcon's Honor"],
+        "Hayato":["Hitokiri Hundred Strike","Surging Blade","Vapor Blade","Sweeping Sword","Sanrenzan","Tornado Blade","Sudden Strike","Shinsoku","Hitokiri Strike","Falcon's Honor"],
+
+        "Hayato (Old)":["Summer Rain","Hitokiri Hundred Strike","Sanrenzan","Blade Flash","Surging Blade","Shouryuusen","Jin Sanrenzan","Vapor Blade","Jin Blade Flash","Rising Slash","Falcon Dive","Fuu Sanrenzan","Fuu Blade Flash","Sweeping Sword","Whirlwind Cut","Dankuusen","Rai Sanrenzan","Rai Blade Flash","Tornado Blade","Sudden Strike","Shinsoku","Hitokiri Strike","Falcon's Honor"],
 
         "Hero":["Final Attack","Brandish","Flash Blade","Intrepid Slash","Rush","Cry Valhalla","Beam Blade","Raging Blow","Puncture","Rising Rage"],
 
@@ -57,7 +59,7 @@
 
         "Kaiser":["Dragon Slash","Flame Surge","Impact Wave","Piercing Blaze","Tempest Blades","Wing Beat","Pressure Chain","Stone Dragon","Gigas Wave","Dragon Barrage","Blade Burst","Inferno Breath","Ancestral Prominence"],
 
-        "칼리":["아츠 크로스 컷","아츠 듀얼 엣지","보이드 러쉬","아츠 트리플 배쉬","레조네이트","헥스 차크람 스윕","아츠 플러리","보이드 블리츠","데스 블로섬"],
+        "Khali":["Arts Cross Cut","Arts Dual Edge","Void Rush","Arts Triple Bash","Resonate","Hex Chakram Sweep","Arts Flurry","Void Blitz","Death Blossom"],
 
         "Kanna":["Shikigami Haunting","Ghost Yaksha Boss","Kishin Shoukan","Nightghost Guide","Shikigami Charm","Exorcist's Charm","Tengu Strike","Yosuzume","Vanquisher's Charm","Orochi Unbound","Falling Sakura","Binding Tempest","Nine-Tailed Fury","Shikigami Doppelganger","Veritable Pandemonium"],
 
