@@ -146,11 +146,13 @@ function skillChange() {
         $("#normalOperation").attr("name", "noOp");
         $("#helpOperation").attr("name", "hiddenObj");
         $("#optionOperation").attr("name", "hiddenObj");
+        $("#nodePhotoLoader").attr("name", "noOp");
     }
     else {
         $("#normalOperation").attr("name", "hiddenObj");
         $("#helpOperation").attr("name", "noOp");
         $("#optionOperation").attr("name", "noOp");
+        $("#nodePhotoLoader").attr("name", "hiddenObj");
     }
 }
 
@@ -838,3 +840,36 @@ function indexInArray(selection, baseBoard){
     }
     return -1;
 }
+
+$(document).ready(function(e) {
+
+    $("#photoLoadContainer").bind("paste", function(e){
+ 
+        var items = (e.clipboardData || e.originalEvent.clipboardData).items;
+        console.log(JSON.stringify(items)); // will give you the mime types
+ 
+        for (index in items) 
+        {
+           var item = items[index];
+           if (item.kind === 'file') 
+           {
+              var blob = item.getAsFile();
+              var reader = new FileReader();
+ 
+              reader.onload = function(event){
+ 
+                  // show image in string 
+                  console.log(event.target.result);
+ 
+                  // make a clone in textareaid2 
+                  $("#uploadedPhotos").append("<img src='" + event.target.result + "' onClick='this.remove()'>");
+              }; // data url!
+              reader.readAsDataURL(blob);
+           } 
+           else
+          {
+             return true;
+          }
+       }
+    });   // end bind
+ });  // end ready
