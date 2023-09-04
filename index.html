@@ -382,6 +382,9 @@
                     <p>Click here and then use Ctrl-V to paste your snips or the image file. Click the photo remove it.</p>
                     <div class="col-12" id="uploadedPhotos"></div>
                   </div>
+                  <div class="col-12">
+                    <button type="button" class="btn btn-primary" id="photoRead" onclick="readPhotos()">Load via Photos</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -440,7 +443,7 @@
       // https://emscripten.org/docs/api_reference/module.html#Module.onRuntimeInitialized
       onRuntimeInitialized() {
       document.getElementById('openCVStatus').innerHTML = 'OpenCV has loaded.';
-      //loadSkillPuto();
+      preLoad();
       }
   };</script>
 </html>

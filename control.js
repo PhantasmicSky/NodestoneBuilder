@@ -10,7 +10,18 @@ var selectedSkills = [];
 var cannotLead = [];
 var nodeTally = {};
 var nodeCollection = [];
-
+var fractalA = [];
+var fractalB =[];
+var fractalC = [];
+var rectangleA;
+var rectangleB;
+var rectangleC;
+var templateSkill = document.createElement("img");
+templateSkill.src = "Images/MapleDivider.png";
+var maskSkill = document.createElement("img");
+maskSkill.src = "Images/mask.png";
+var templateCV;
+var maskVC;
 /**
  * Adds a new nodestone (created by the user)
  * Function for the new UI
@@ -154,6 +165,7 @@ function skillChange() {
         $("#optionOperation").attr("name", "noOp");
         $("#nodePhotoLoader").attr("name", "hiddenObj");
     }
+    loadFractals();
 }
 
 /**
@@ -846,7 +858,7 @@ $(document).ready(function(e) {
     $("#photoLoadContainer").bind("paste", function(e){
  
         var items = (e.clipboardData || e.originalEvent.clipboardData).items;
-        console.log(JSON.stringify(items)); // will give you the mime types
+      //  console.log(JSON.stringify(items)); // will give you the mime types
  
         for (index in items) 
         {
@@ -859,7 +871,7 @@ $(document).ready(function(e) {
               reader.onload = function(event){
  
                   // show image in string 
-                  console.log(event.target.result);
+                 // console.log(event.target.result);
  
                   // make a clone in textareaid2 
                   $("#uploadedPhotos").append("<img src='" + event.target.result + "' onClick='this.remove()'>");
@@ -873,3 +885,160 @@ $(document).ready(function(e) {
        }
     });   // end bind
  });  // end ready
+
+ function preLoad(){
+    rectangleA = new cv.Rect(0,0,16,32);
+    rectangleB = new cv.Rect(0,0,32,16);
+    rectangleC = new cv.Rect(16,0,16,32);
+    templateCV = cv.imread(templateSkill);
+    maskCV = cv.imread(maskSkill);
+ }
+
+
+
+ function loadFractals(){
+	for(var skillFrac = 0; skillFrac < skillData[selectedJob].length; skillFrac++){
+		var fullImage;
+		//var img4 = new Image();
+		//img4.crossOrigin = "Anonymous";
+		
+		//Test Promise
+		const loadImage = (url) => new Promise((resolve, reject) => {
+		const imgFull = new Image();
+		  imgFull.addEventListener('load', () => resolve(imgFull));
+		  imgFull.addEventListener('error', (err) => reject(err));
+          imgFull.crossOrigin = "anonymous";
+		  imgFull.src = url;
+		  imgFull.setAttribute("title", skillFrac);
+		});
+
+		loadImage("Images/"+selectedJob+"/"+skillData[selectedJob][skillFrac]+".png")
+		  .then(imgFull => {
+			fullImage = cv.imread(imgFull);
+			
+			//let cutPhoto = new cv.Mat();
+			//skillPuto.push(putoPao);
+			//skillPuto[img4.name] = putoPao;
+			//skillListB.push(img4.src.split("/").pop().split(".")[0].replace("%20"," "));
+			console.log(imgFull.title + "-" + skillData[selectedJob][imgFull.title]);
+			let cutPhotoA = fullImage.roi(rectangleA);
+			//skillPuto1.push(cutPhoto);
+			fractalA[imgFull.title] = cutPhotoA;
+			let cutPhotoB = fullImage.roi(rectangleB);
+			//skillPuto2.push(cutPhoto2);
+			fractalB[imgFull.title] = cutPhotoB;
+			let cutPhotoC = fullImage.roi(rectangleC);
+			//skillPuto3.push(cutPhoto3);
+			fractalC[imgFull.title] = cutPhotoC;
+			
+			/*var dcan = document.createElement("canvas");
+			cv.imshow(dcan, putoPao);
+			document.body.appendChild(dcan);*/
+			//let paoImage = 
+				})
+		  .catch(err => console.error(err));
+		
+		//console.log("PUTO!");
+		
+		
+		//null
+	}
+}
+
+function readPhotos(){
+    var uploadedChildren = document.getElementById('uploadedPhotos').children;
+    for (var chd = 0; chd < uploadedChildren.length; chd++) {
+        try{
+            var curPhoto = cv.imread(uploadedChildren[chd]);
+            let dst = new cv.Mat();
+            cv.matchTemplate(curPhoto, templateCV, dst, cv.TM_CCORR, maskCV);
+            cv.normalize(dst, dst, 0, 1, cv.NORM_MINMAX, -1, new cv.Mat() );
+
+            let color = new cv.Scalar(255, 0, 0, 255);
+
+            var newDst = [];
+            var start = 0;
+            var end = dst.cols;
+
+            for (var i = 0; i < dst.rows; i++) {
+
+                newDst[i] = [];
+                for (var k = 0; k < dst.cols; k++) {
+
+                    newDst[i][k] = dst.data32F[start];
+                    if(newDst[i][k] > 0.89){
+                    console.log(newDst[i][k]);}
+
+                    if (newDst[i][k] >0.89) {
+
+                      //  let maxPoint = {
+                      //      "x": k-1,
+                      //      "y": i
+                      //  }
+                      //  let point = new cv.Point(k + templateCV.cols-1, i + templateCV.rows);
+                      //  cv.rectangle(src, maxPoint, point, color, 1, cv.LINE_8, 0);
+                        let photo = new cv.Mat();
+                        let rectangleF = new cv.Rect(k-1,i,32,32);
+                        photo = curPhoto.roi(rectangleF);
+        
+                        var skillA = findMatch(0, photo);
+                        var skillB = findMatch(1, photo);
+                        var skillC = findMatch(2, photo);
+                        var stringing = skillData[selectedJob][skillA] + "\n" + skillData[selectedJob][skillB] + "\n" + skillData[selectedJob][skillC];
+                        alert(stringing);
+                    }
+                    start++;
+                }
+                start = end;
+                end = end + dst.cols;
+            }
+        }
+        catch(e){
+            console.log("WOOPS XD");
+            console.log("E("+ e.stack+"):"+ e);
+        }
+    }
+}
+
+function findMatch(fractalCut, fractalSource){
+    let photo2 = new cv.Mat();
+    let maxNum = 0;
+    let maxLoc = 0;
+    let resMat = new cv.Mat();
+    if(fractalCut == 0){
+        photo2 = fractalSource.roi(rectangleA);
+        for(var choice = 0; choice < skillData[selectedJob].length; choice++){
+            cv.matchTemplate(photo2, fractalA[choice], resMat, cv.TM_CCORR_NORMED, new cv.Mat());
+            if(cv.minMaxLoc(resMat).maxVal > maxNum){
+                maxNum = cv.minMaxLoc(resMat).maxVal;
+                maxLoc = choice;
+            }
+        }
+        return maxLoc;
+    }
+    else if(fractalCut == 1){
+        photo2 = fractalSource.roi(rectangleB);
+        for(var choice = 0; choice < skillData[selectedJob].length; choice++){
+            cv.matchTemplate(photo2, fractalB[choice], resMat, cv.TM_CCORR_NORMED, new cv.Mat());
+            if(cv.minMaxLoc(resMat).maxVal > maxNum){
+                maxNum = cv.minMaxLoc(resMat).maxVal;
+                maxLoc = choice;
+            }
+        }
+        return maxLoc;
+    }
+    else if(fractalCut == 2){
+        photo2 = fractalSource.roi(rectangleC);
+        for(var choice = 0; choice < skillData[selectedJob].length; choice++){
+            cv.matchTemplate(photo2, fractalC[choice], resMat, cv.TM_CCORR_NORMED, new cv.Mat());
+            if(cv.minMaxLoc(resMat).maxVal > maxNum){
+                maxNum = cv.minMaxLoc(resMat).maxVal;
+                maxLoc = choice;
+            }
+        }
+        return maxLoc;
+    }
+    else{
+        return 0;
+    }
+}
