@@ -22,6 +22,7 @@ var maskSkill = document.createElement("img");
 maskSkill.src = "Images/mask.png";
 var templateCV;
 var maskVC;
+var photoLoadCount = 0;
 /**
  * Adds a new nodestone (created by the user)
  * Function for the new UI
@@ -946,6 +947,7 @@ $(document).ready(function(e) {
 }
 
 function readPhotos(){
+    photoLoadCount = 0;
     var uploadedChildren = document.getElementById('uploadedPhotos').children;
     for (var chd = 0; chd < uploadedChildren.length; chd++) {
         try{
@@ -986,6 +988,7 @@ function readPhotos(){
                         var skillC = findMatch(2, photo);
                         var stringing = skillData[selectedJob][skillA] + "\n" + skillData[selectedJob][skillB] + "\n" + skillData[selectedJob][skillC];
                         alert(stringing);
+                        addNodestonePhoto(skillA, skillB, skillC);
                     }
                     start++;
                 }
@@ -997,6 +1000,7 @@ function readPhotos(){
             console.log("WOOPS XD");
             console.log("E("+ e.stack+"):"+ e);
         }
+        alert(photoLoadCount + " New Nodestones have been added");
     }
 }
 
@@ -1042,3 +1046,24 @@ function findMatch(fractalCut, fractalSource){
         return 0;
     }
 }
+
+function addNodestonePhoto(fa, fb, fc) {
+    var firstSkillP = skillData[selectedJob][fa];
+    var secondSkillP = skillData[selectedJob][fb];
+    var thirdSkillP = skillData[selectedJob][fc];
+    if ((firstSkillP != secondSkillP) && (secondSkillP != thirdSkillP) && (thirdSkillP != firstSkillP)) {
+        var currentNodestone = [firstSkillP, secondSkillP, thirdSkillP];
+        if (isAlreadyIn(nodestones, currentNodestone)) {
+            //alert("Node Combination Already Exists");
+        }
+        else {
+            nodestones.push(currentNodestone);
+            newNode(currentNodestone);
+            photoLoadCount++;
+        }
+
+    }
+    else {
+        //alert("A Skill Cannot Appear in a node more than once.");
+    }
+};
