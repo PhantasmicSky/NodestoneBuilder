@@ -13,6 +13,7 @@
 
 ### Fixed
   - Shikigami Haunting's Icon has been fixed so that it uses the icon of Shikigami Haunting 4.
+  - Khali's Void Blitz and Void Rush has been fixed to the correct icons (Old icons might have been from KMST).
 
 ## [1.07] - 2023-06-14
 
@@ -21,12 +22,12 @@
   - If you will use an old save string for Hayato, change the Job name to "Hayato (Old)". Hayatos are advised to rebuild node inventory.  
 
 ### Changed
-  -Khali Skills are now in English. (If you have a collection for Khali, change 칼리 to Khali)
-  -All Jobs should change logic number to 6.
+  - Khali Skills are now in English. (If you have a collection for Khali, change 칼리 to Khali)
+  - All Jobs should change logic number to 6.
 
 ### Fixed
-  -Blaze Wizard and Wind Archer Skill Images have been fixed.
-  -Some of Blaze Wizard's Skills were still using pre-revamp names and have been fixed.
+  - Blaze Wizard and Wind Archer Skill Images have been fixed.
+  - Some of Blaze Wizard's Skills were still using pre-revamp names and have been fixed.
 
 ## [1.06] - 2023-04-12
 
