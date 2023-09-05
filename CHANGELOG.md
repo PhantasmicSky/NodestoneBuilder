@@ -1,5 +1,19 @@
 # Change Log
 
+## [1.08] - 2023-09-06
+
+### Added
+  - Added the ability to load nodestones from ingame screenshots or snips.
+    - For best results, please only include actual tri-nodes in your snips. Having other nodes might cause false matches and would load in the wrong nodes.
+    - Some of the nodes might be falsely matched with another skill. Would likely compile cases for this. An example is Marksman's Snipe if in the 2nd Slot would get classified as High Speed Shot.
+  - Added Option to select how many copies of each skill you want (from 2 copies to 6 copies)
+
+### Changed
+  - Options tab has been removed as that was only for placeholder data.
+
+### Fixed
+  - Shikigami Haunting's Icon has been fixed so that it uses the icon of Shikigami Haunting 4.
+
 ## [1.07] - 2023-06-14
 
 ### Added [2023-06-15]
