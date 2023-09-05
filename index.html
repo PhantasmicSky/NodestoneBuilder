@@ -353,13 +353,12 @@
                 </ul>
               </nav>
               <div class="container-fluid border collapse show" id="section4">
-                <div class="row">
+                <div class="row" style="padding-bottom:15px">
                   <div class="col-12" id="saveLoad">
                     <textarea id="saveLoadArea" rows="8"></textarea>
                     <br/>
                     <button type="button" class="btn btn-primary" onclick="genList()">Generate Nodelist</button>
                     <button type="button" class="btn btn-primary" onclick="loadList()">Load Nodelist</button>
-                    <p> </p>
                   </div>
                 </div>
               </div>
@@ -377,19 +376,17 @@
                 </ul>
               </nav>
               <div class="container-fluid border collapse show" id="section45">
-                <div class="row">
+                <div class="row" style="padding-bottom:15px">
                   <div class="col-12" id="photoLoadContainer">
                     <p>Click here and then use Ctrl-V to paste your snips or the image file. Click the photo remove it.</p>
                     <div class="col-12" id="uploadedPhotos"></div>
-                  </div>
-                  <div class="col-12">
                     <button type="button" class="btn btn-primary" id="photoRead" onclick="readPhotos()">Load via Photos</button>
                   </div>
                 </div>
               </div>
             </div>
             <br/>
-            <div class="container" id="optionOperation" name="noOp">
+            <div class="container" id="optionOperation" name="hiddenObj">
               <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section5')">
                 <ul class="navbar-nav nav-fill w-100">
                   <li class="nav-item active">
@@ -402,7 +399,7 @@
               </nav>
               <div class="container-fluid border collapse show" id="section5">
                 <div class="row">
-                  <div class="col-12" id="saveLoad">
+                  <div class="col-12" id="optionsArea">
                     <table class="table table">
                       <tbody>
                         <tr>
@@ -442,7 +439,7 @@
       var Module = {
       // https://emscripten.org/docs/api_reference/module.html#Module.onRuntimeInitialized
       onRuntimeInitialized() {
-      document.getElementById('openCVStatus').innerHTML = 'OpenCV has loaded.';
+      document.getElementById('openCVStatus').remove();
       preLoad();
       }
   };</script>

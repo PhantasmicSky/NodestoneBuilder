@@ -10,6 +10,7 @@ var selectedSkills = [];
 var cannotLead = [];
 var nodeTally = {};
 var nodeCollection = [];
+var fullSkills = [];
 var fractalA = [];
 var fractalB =[];
 var fractalC = [];
@@ -20,8 +21,17 @@ var templateSkill = document.createElement("img");
 templateSkill.src = "Images/MapleDivider.png";
 var maskSkill = document.createElement("img");
 maskSkill.src = "Images/mask.png";
+var fractalAMask = document.createElement("img");
+fractalAMask.src = "Images/fractalATemplate.png";
+var fractalBMask = document.createElement("img");
+fractalBMask.src = "Images/fractalBTemplate.png";
+var fractalCMask = document.createElement("img");
+fractalCMask.src = "Images/fractalCTemplate.png";
 var templateCV;
 var maskVC;
+var fractalAMaskCV;
+var fractalBMaskCV;
+var fractalCMaskCV;
 var photoLoadCount = 0;
 /**
  * Adds a new nodestone (created by the user)
@@ -163,10 +173,11 @@ function skillChange() {
     else {
         $("#normalOperation").attr("name", "hiddenObj");
         $("#helpOperation").attr("name", "noOp");
-        $("#optionOperation").attr("name", "noOp");
+        $("#optionOperation").attr("name", "hiddenObj");
         $("#nodePhotoLoader").attr("name", "hiddenObj");
     }
     loadFractals();
+    removePhotoResiduals();
 }
 
 /**
@@ -742,7 +753,7 @@ function comboMaker(currLev, startLev, maxLev, nodePool, basis) {
             }
         }
         else if (bigSetHolder.length > 0) {
-            console.log(bigSetHolder);
+            //console.log(bigSetHolder);
             return bigSetHolder;
         }
         else {
@@ -845,7 +856,7 @@ function indexInArray(selection, baseBoard){
     selStr = selStr.replace(/"\[/g,"[");
     selStr = selStr.replace(/\]"/g,"]");
     selStr = selStr.replace(/\"/g,'"');
-    console.log(selStr);
+    //console.log(selStr);
     for (var g = 0; g < baseBoard.length; g++){
         if (selStr == JSON.stringify(baseBoard[g])){
             return g;
@@ -893,6 +904,9 @@ $(document).ready(function(e) {
     rectangleC = new cv.Rect(16,0,16,32);
     templateCV = cv.imread(templateSkill);
     maskCV = cv.imread(maskSkill);
+    fractalAMaskCV = cv.imread(fractalAMask);
+    fractalBMaskCV = cv.imread(fractalBMask);
+    fractalCMaskCV = cv.imread(fractalCMask);
  }
 
 
@@ -921,7 +935,8 @@ $(document).ready(function(e) {
 			//skillPuto.push(putoPao);
 			//skillPuto[img4.name] = putoPao;
 			//skillListB.push(img4.src.split("/").pop().split(".")[0].replace("%20"," "));
-			console.log(imgFull.title + "-" + skillData[selectedJob][imgFull.title]);
+			//console.log(imgFull.title + "-" + skillData[selectedJob][imgFull.title]);
+            fullSkills[imgFull.title] = fullImage;
 			let cutPhotoA = fullImage.roi(rectangleA);
 			//skillPuto1.push(cutPhoto);
 			fractalA[imgFull.title] = cutPhotoA;
@@ -968,8 +983,8 @@ function readPhotos(){
                 for (var k = 0; k < dst.cols; k++) {
 
                     newDst[i][k] = dst.data32F[start];
-                    if(newDst[i][k] > 0.89){
-                    console.log(newDst[i][k]);}
+                    /*if(newDst[i][k] > 0.89){
+                    console.log(newDst[i][k]);}*/
 
                     if (newDst[i][k] >0.89) {
 
@@ -983,9 +998,12 @@ function readPhotos(){
                         let rectangleF = new cv.Rect(k-1,i,32,32);
                         photo = curPhoto.roi(rectangleF);
         
-                        var skillA = findMatch(0, photo);
+                        /*var skillA = findMatch(0, photo);
                         var skillB = findMatch(1, photo);
-                        var skillC = findMatch(2, photo);
+                        var skillC = findMatch(2, photo);*/
+                        var skillA = findMatch2(0, photo, fractalAMaskCV);
+                        var skillB = findMatch2(1, photo, fractalBMaskCV);
+                        var skillC = findMatch2(2, photo, fractalCMaskCV);
                         var stringing = skillData[selectedJob][skillA] + "\n" + skillData[selectedJob][skillB] + "\n" + skillData[selectedJob][skillC];
                         alert(stringing);
                         addNodestonePhoto(skillA, skillB, skillC);
@@ -997,7 +1015,7 @@ function readPhotos(){
             }
         }
         catch(e){
-            console.log("WOOPS XD");
+            //console.log("WOOPS XD");
             console.log("E("+ e.stack+"):"+ e);
         }
         alert(photoLoadCount + " New Nodestones have been added");
@@ -1047,6 +1065,22 @@ function findMatch(fractalCut, fractalSource){
     }
 }
 
+function findMatch2(fractalCut, fractalSource, fractalMask){
+    //let photo2 = new cv.Mat();
+    let maxNum = 0;
+    let maxLoc = 0;
+    let resMat = new cv.Mat();
+    for(var choice = 0; choice < skillData[selectedJob].length; choice++){
+        cv.matchTemplate(fractalSource, fullSkills[choice], resMat, cv.TM_CCORR_NORMED, fractalMask);
+        //console.log(choice + "--"+cv.minMaxLoc(resMat).maxVal);
+        if(cv.minMaxLoc(resMat).maxVal > maxNum){
+            maxNum = cv.minMaxLoc(resMat).maxVal;
+            maxLoc = choice;
+        }
+    }
+    return maxLoc;
+}
+
 function addNodestonePhoto(fa, fb, fc) {
     var firstSkillP = skillData[selectedJob][fa];
     var secondSkillP = skillData[selectedJob][fb];
@@ -1066,4 +1100,8 @@ function addNodestonePhoto(fa, fb, fc) {
     else {
         //alert("A Skill Cannot Appear in a node more than once.");
     }
-};
+}
+
+function removePhotoResiduals(){
+    document.getElementById('uploadedPhotos').innerHTML="";
+}
