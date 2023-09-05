@@ -61,3 +61,8 @@ textarea{
 #pickerTriNode td:first-child, #pickerTriNode th:last-child, #pickerTriNode td:last-child{
         border-right: 1px solid #dee2e6;
 }
+
+.centralizer{
+        text-align: center;
+        vertical-align: middle;
+}

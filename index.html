@@ -200,6 +200,18 @@
                           <td scope="col"><button type="button" class="btn btn-primary" id="autoBuild" onclick="buildPerfectTri()">Auto Build [Async]</button></td>
                           <td scope="col"><button type="button" class="btn btn-primary" id="autoBuild" onclick="autoButtonClick3()">Unequip All Trios</button></td>
                         </tr>
+                        <tr>
+                          <td scope="col">Number of Copies per Skill</td>
+                          <td scope="col" colspan="2" class="centralizer">
+                            <select name="copyNumber" id="copyNumber" onchange="numberChange()">
+                              <option value=2>2</option>
+                              <option value=3>3</option>
+                              <option value=4>4</option>
+                              <option value=5>5</option>
+                              <option value=6>6</option>
+                            </select>
+                          </td>
+                        </tr>
                       </tbody>
                     </table>
                     <table class="table" id="nodeStatistics1">
@@ -379,7 +391,7 @@
                 <div class="row" style="padding-bottom:15px">
                   <div class="col-12" id="photoLoadContainer">
                     <p>Click here and then use Ctrl-V to paste your snips or the image file. Click the photo remove it.</p>
-                    <div class="col-12" id="uploadedPhotos"></div>
+                    <div class="col-12" id="uploadedPhotos" style="padding-bottom:15px"></div>
                     <button type="button" class="btn btn-primary" id="photoRead" onclick="readPhotos()">Load via Photos</button>
                   </div>
                 </div>
@@ -417,10 +429,10 @@
                             <strong>Number of Copies Per Skill (Beta - Computations not Confirmed)</strong>
                           </td>
                           <td>                       
-                              <select name="copyNumber" id="copyNumber" onchange="numberChange()">
+                            <!--  <select name="copyNumber" id="copyNumber" onchange="numberChange()">
                                 <option value="2">2 (Lv. 25 / Lv. 25)</option>
                                 <option value="3">3 (Lv. 16 / Lv. 17 / Lv. 17)</option>
-                              </select>
+                              </select> -->
                           </td>
                         </tr>
                       </tbody>

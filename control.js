@@ -18,15 +18,20 @@ var rectangleA;
 var rectangleB;
 var rectangleC;
 var templateSkill = document.createElement("img");
-templateSkill.src = "Images/MapleDivider.png";
+//templateSkill.src = "Images/MapleDivider.png";
+templateSkill.src = "Images/templateB.png";
 var maskSkill = document.createElement("img");
-maskSkill.src = "Images/mask.png";
+//maskSkill.src = "Images/mask.png";
+maskSkill.src = "Images/maskB.png";
 var fractalAMask = document.createElement("img");
-fractalAMask.src = "Images/fractalATemplate.png";
 var fractalBMask = document.createElement("img");
-fractalBMask.src = "Images/fractalBTemplate.png";
 var fractalCMask = document.createElement("img");
-fractalCMask.src = "Images/fractalCTemplate.png";
+/*fractalAMask.src = "Images/fractalATemplate.png";
+fractalBMask.src = "Images/fractalBTemplate.png";
+fractalCMask.src = "Images/fractalCTemplate.png";*/
+fractalAMask.src = "Images/fatrim.png";
+fractalBMask.src = "Images/fbtrim.png";
+fractalCMask.src = "Images/fctrim.png";
 var templateCV;
 var maskVC;
 var fractalAMaskCV;
@@ -192,7 +197,8 @@ function previewChange(changedPart) {
  * Changes the amount of copies a skill should have 
  */
 function numberChange() {
-    skillCopy = $("#copyNumber").val();
+    skillCopy = parseInt($("#copyNumber").val());
+    formulateTrios(-1, true);
 }
 
 /**
@@ -281,17 +287,19 @@ function selectSegment(skillName, segment) {
  * UI Logic for the 1st div.
  * Also in charge of computing for a node statistic (Best Outcome)
  */
-function formulateTrios(selectedOption) {
+function formulateTrios(selectedOption, skillCopyChange=false) {
     var nodeSlotData = 0;
-    if (isAlreadyIn(selectedSkills, selectedOption)) {
-        selectedSkills = selectedSkills.filter(function (value, index, arr) {
-            return value != selectedOption;
-        });
-        $("#skillOption1 td[name=\"" + selectedOption + "\"]").removeClass("bg-primary");
-    }
-    else {
-        selectedSkills.push(selectedOption);
-        $("#skillOption1 td[name=\"" + selectedOption + "\"").addClass("bg-primary");
+    if(!skillCopyChange){
+        if (isAlreadyIn(selectedSkills, selectedOption)) {
+            selectedSkills = selectedSkills.filter(function (value, index, arr) {
+                return value != selectedOption;
+            });
+            $("#skillOption1 td[name=\"" + selectedOption + "\"]").removeClass("bg-primary");
+        }
+        else {
+            selectedSkills.push(selectedOption);
+            $("#skillOption1 td[name=\"" + selectedOption + "\"").addClass("bg-primary");
+        }
     }
     var selectedFormulation = selectedSkills.length;
     nodeSlotData = 3 - (selectedFormulation * skillCopy % 3);
@@ -523,7 +531,7 @@ function updateNodeScore(subtractNode, conditions) {
                 if (skillCopy - nodeTally[skillData[selectedJob][k]] == skillCopy) {
                     newRow.classList.add("bg-success");
                 }
-                else if (skillCopy - nodeTally[skillData[selectedJob][k]] < skillCopy) {
+                else if (skillCopy - nodeTally[skillData[selectedJob][k]] < skillCopy && skillCopy - nodeTally[skillData[selectedJob][k]] > 0) {
                     newRow.classList.add("bg-warning");
                 }
                 else {
@@ -549,14 +557,23 @@ function computeAuxData() {
     document.getElementsByName("nodeUsage")[0].innerHTML = nodeCollection.length;
     var tally = 0;
     for (j = 0; j < selectedSkills.length; j++) {
-        if (nodeTally[selectedSkills[j]] == 1) {
-            tally = tally + 1;
+        var nodeTaken = 0;
+        nodeTaken = skillCopy - nodeTally[selectedSkills[j]];
+        if (nodeTaken < skillCopy) {
+            tally = tally + nodeTaken;
         }
-        else if (nodeTally[selectedSkills[j]] < 1) {
-            tally = tally + 2;
+        else {
+            tally = tally + skillCopy;
         }
+        //console.log("Tally is at: " + tally + " last node taken was: " + nodeTaken);
     }
-    document.getElementsByName("nodeEfficiency")[0].innerHTML = tally + "/" + (nodeCollection.length) * 3 + "(" + Math.round((tally / (nodeCollection.length * 3) * 100 + Number.EPSILON) * 100) / 100 + "% Efficiency)";
+    let efficiencyNumber = Math.round((tally / (nodeCollection.length * 3) * 100 + Number.EPSILON) * 100) / 100;
+    if(!isNaN(efficiencyNumber)){
+        document.getElementsByName("nodeEfficiency")[0].innerHTML = tally + "/" + (nodeCollection.length) * 3 + "(" + Math.round((tally / (nodeCollection.length * 3) * 100 + Number.EPSILON) * 100) / 100 + "% Efficiency)";
+    }
+    else{
+        document.getElementsByName("nodeEfficiency")[0].innerHTML = tally + "/" + (nodeCollection.length) * 3;
+    }
 }
 
 /**
@@ -640,9 +657,12 @@ function loadList() {
         $("#normalOperation").attr('name', 'noOp');
         $("#helpOperation").attr('name', 'hiddenObj');
         $("#optionOperation").attr('name', 'hiddenObj');
+        $("#nodePhotoLoader").attr('name', 'noOp');
         initializeTally();
         selectorChange();
         clearLeftoverData();
+        //loadFractals();
+        //removePhotoResiduals();
         for (i = 2; i < listLoader.length; i++) {
             var temp = listLoader[i].split(",");
             temp[0] = skillData[selectedJob][temp[0]];
@@ -995,7 +1015,7 @@ function readPhotos(){
                       //  let point = new cv.Point(k + templateCV.cols-1, i + templateCV.rows);
                       //  cv.rectangle(src, maxPoint, point, color, 1, cv.LINE_8, 0);
                         let photo = new cv.Mat();
-                        let rectangleF = new cv.Rect(k-1,i,32,32);
+                        let rectangleF = new cv.Rect(k,i,32,32);
                         photo = curPhoto.roi(rectangleF);
         
                         /*var skillA = findMatch(0, photo);
@@ -1004,8 +1024,8 @@ function readPhotos(){
                         var skillA = findMatch2(0, photo, fractalAMaskCV);
                         var skillB = findMatch2(1, photo, fractalBMaskCV);
                         var skillC = findMatch2(2, photo, fractalCMaskCV);
-                        var stringing = skillData[selectedJob][skillA] + "\n" + skillData[selectedJob][skillB] + "\n" + skillData[selectedJob][skillC];
-                        alert(stringing);
+                        //var stringing = skillData[selectedJob][skillA] + "\n" + skillData[selectedJob][skillB] + "\n" + skillData[selectedJob][skillC];
+                        //alert(stringing);
                         addNodestonePhoto(skillA, skillB, skillC);
                     }
                     start++;
