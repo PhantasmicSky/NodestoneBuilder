@@ -9,8 +9,8 @@ The web application allows users to find and formulate their trinode sets.
 - Real time feedback on the current state of the trinode set
 - Nodescore
   - To faciliate easier nodestone selection, a score of -1 to 6 is given as to how useful a specific trinode currently is given the already selected trinode. 
-  - A score of 1 is added for each skill in the trinode that is deemed a useful(selected by user). 
-  - Another score is added for each useful skill to the current pool of trinodes as long as adding the selected trinode would result in the skill appearing a total of 2 times or less in the current pool.
+  - A score of 1 is added for each skill in the trinode that is deemed as useful(selected by user). 
+  - Another score is added for each useful skill to the current pool of trinodes as long as adding the selected trinode would result in the skill appearing less than or equal to the number of copies per skill specified by the user.
 - Compute for number of Ideal nodes and current node efficiency
 - **[BETA]** Auto Build Function allows users to let the program try and build a perfect nodestone loadout using selected skills.*
 - **[BETA]** Load Nodestone from Photo Function now added which allows users to paste a snip of their ingame screen to extract nodes from.**
