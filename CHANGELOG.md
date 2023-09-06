@@ -5,7 +5,7 @@
 ### Added
   - Added the ability to load nodestones from ingame screenshots or snips.
     - For best results, please only include actual tri-nodes in your snips. Having other nodes might cause false matches and would load in the wrong nodes.
-    - Some of the nodes might be falsely matched with another skill. Would likely compile cases for this. An example is Marksman's Snipe if in the 2nd Slot would get classified as High Speed Shot.
+    - Some of the nodes might be falsely matched with another skill. While I have not personally experienced this issue after testing for around 12 jobs, it is a possibility but should be a very small one.
   - Added Option to select how many copies of each skill you want (from 2 copies to 6 copies)
   - Added Quick version notes summary upon visiting the page (Can be hidden until the next update by clicking "Close until next update")
 
