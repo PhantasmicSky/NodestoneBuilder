@@ -398,45 +398,36 @@
               </div>
             </div>
             <br/>
-            <div class="container" id="optionOperation" name="hiddenObj">
-              <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section5')">
-                <ul class="navbar-nav nav-fill w-100">
-                  <li class="nav-item active">
-                    <h3 style="text-align:left">Options</h3>
-                  </li>
-                  <li class="nav-item" style="text-align:right">
-                    <i class="bi bi-caret-up-square-fill" style="line-height: inherit;" id="section5Arrow"></i>
-                  </li>
-                </ul>
-              </nav>
-              <div class="container-fluid border collapse show" id="section5">
-                <div class="row">
-                  <div class="col-12" id="optionsArea">
-                    <table class="table table">
-                      <tbody>
-                        <tr>
-                          <td>
-                            <strong>Region/Language (Placeholder)</strong>
-                          </td>
-                          <td>                       
-                              <select name="language" id="language">
-                                <option value="EN1">[GMS] English</option>
-                              </select>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <strong>Number of Copies Per Skill (Beta - Computations not Confirmed)</strong>
-                          </td>
-                          <td>                       
-                            <!--  <select name="copyNumber" id="copyNumber" onchange="numberChange()">
-                                <option value="2">2 (Lv. 25 / Lv. 25)</option>
-                                <option value="3">3 (Lv. 16 / Lv. 17 / Lv. 17)</option>
-                              </select> -->
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+            <div class="modal fade" id="whatsNewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Version Changes [Version 1.08]</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <h2>New Feature</h2>
+                    <ul>
+                      <li>Nodestones can now be loaded from in game screenshots or snips. Just make sure that the image only contains trinodes to limit the number of false positives. Photo should also not be scaled.</li>
+                    </ul>
+                    <hr>
+                    <h2>Updated Feature</h2>
+                    <ul>
+                      <li>You can now specify how many copies of each skill you want in building your perfect trio setup.</li>
+                    </ul>
+                    <hr>
+                    <h2>Notable Changes</h2>
+                    <ul>
+
+                    </ul>
+                    <hr>
+                    <p>Visit the <a href="https://github.com/PhantasmicSky/NodestoneBuilder/blob/main/CHANGELOG.md">Change Log</a> to check out the full list of changes.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="modalCookie(false)">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="modalCookie(true)">Close until new update</button>
                   </div>
                 </div>
               </div>
