@@ -7,9 +7,12 @@
     - For best results, please only include actual tri-nodes in your snips. Having other nodes might cause false matches and would load in the wrong nodes.
     - Some of the nodes might be falsely matched with another skill. Would likely compile cases for this. An example is Marksman's Snipe if in the 2nd Slot would get classified as High Speed Shot.
   - Added Option to select how many copies of each skill you want (from 2 copies to 6 copies)
+  - Added Quick version notes summary upon visiting the page (Can be hidden until the next update by clicking "Close until next update")
 
 ### Changed
   - Options tab has been removed as that was only for placeholder data.
+  - Help section has now been updated to reflect all the recent changes.
+  - All jobs should change logic number to 8. If you are not a Marksman or you used Iron Arrow as the placeholder for Covering Fire, you should not need to change anything aside from the logic number to 8.
 
 ### Fixed
   - Kanna's Shikigami Haunting Icon has been fixed so that it uses the icon of Shikigami Haunting 4.
