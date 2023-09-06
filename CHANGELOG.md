@@ -12,8 +12,21 @@
   - Options tab has been removed as that was only for placeholder data.
 
 ### Fixed
-  - Shikigami Haunting's Icon has been fixed so that it uses the icon of Shikigami Haunting 4.
+  - Kanna's Shikigami Haunting Icon has been fixed so that it uses the icon of Shikigami Haunting 4.
   - Khali's Void Blitz and Void Rush has been fixed to the correct icons (Old icons might have been from KMST).
+  - Angelic Buster's Trinity Icon has been updated to the latest icon.
+  - Bishop's Big Bang Icon has been updated to the latest icon.
+  - Blaster's Magnum Launch has been updated to Rocket Rush and will now show the correct icon.
+  - Hoyoung's Ghost Flame skill has been renamed to Seeking Ghost Flame
+  - Ice Lightning Mage's Lightning Orb Icon has been fixed to the correct icon.
+  - Kinesis' Mind Break has been updated to Mind Quake and will now show the correct icon.
+  - Luminous' Morning Star and Armageddon(Unsure if it actually changed) skill icon has been updated to the latest icon.
+  - Marksman's Final Attack and Piercing Arrow Skill icons have been updated to the latest icons.
+  - Marksman's Iron Arrow has now been fixed to be Covering Fire and the icon has been updated to the correct icon.
+  - Phantom's Carte Mille has been renamed to Mille Cartes and the skill Icon should now match the one in game.
+  - Phantom's Carte Blanc has been renamed to Carte Noir and the skill Icon should now match the one in game.
+  - Xenon's Hypogram Field skill icon has been updated to the latest icon.
+  - Zero's Spin Cutter has been renamed to Blade Ring.
 
 ## [1.07] - 2023-06-14
 

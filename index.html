@@ -281,9 +281,9 @@
                 <h5>3. Create the tri-nodes you currently have.</h5>
                 <p>Create your tri-nodes by clicking the corresponding column beside the skill icon based on its location in your trinode (1 being the leading skill). Upon clicking "Add Nodestone", the created nodestone will be added to the list below.</p>
                 <div class="container mx-auto text-center">
-                  <img src="Images/step3p1b.PNG" class="img-fluid" alt="Recreate the tri-nodes you own">
+                  <img src="Images/step3.PNG" class="img-fluid" alt="Recreate the tri-nodes you own">
                 </div>
-                <h6>Created Nodestone Collection Legend</h6>
+                <h6><b><u>Created Nodestone Collection Legend</b></u></h6>
                 <div class="container mx-auto text-center">
                   <img src="Images/step32.PNG" class="img-fluid" alt="Nodestone Collection UI">
                 </div>
@@ -294,7 +294,7 @@
                   <li>Adds the tri-node to the "equipped" tri-nodes list</li>
                   <li>Deletes the tri-node from the list (Available only when there are no tri-nodes equipped)</li>
                 </ol>
-                <h6>Node Score</h6>
+                <h6><b><u>Node Score</b></u></h6>
                 <p>To facilitate the user in building their tri-node set, Each tri-node is given a score that updates based on the current nodestones equipped.</p>
                 <table class="table">
                   <thead>
@@ -326,13 +326,25 @@
                     </tr>
                   </tbody>
                 </table>
-                <p>Tip: You can click the header (Trinode Skills, and Node Score) to sort the nodes in alphabetical order (A->Z or Z->A) or to sort the nodes based on their current node score (ascending or descending)</p>
-                <h5>4. Check the Statistics</h5>
+                <p><i>Tip: You can click the header (Trinode Skills, and Node Score) to sort the nodes in alphabetical order (A->Z or Z->A) or to sort the nodes based on their current node score (ascending or descending)</i></p>
+                <h5>4. Equipped Nodes and Building your perfect trinode set</h5>
                 <p>You may unequip nodes by clicking the "Remove" button beside the currently equipped nodes</p>
                 <div class="container mx-auto text-center">
-                  <img src="Images/step41.PNG" class="img-fluid" alt="Check and Unequip your tri-nodes">
+                  <img src="Images/step4.PNG" class="img-fluid" alt="Check and Unequip your tri-nodes">
                 </div>
-                <h6>Node Statistics</h6>
+                <h6><b><u>Trinode Builder Options</u></b></h6>
+                <p>While manually equipping and unequipping trinodes is possible, you may want to try letting the program build the set of perfect trinodes for you.</p>
+                <div class="container mx-auto text-center">
+                  <img src="Images/step42.PNG" class="img-fluid" alt="Trinode Builder Options">
+                </div>
+                <ol>
+                  <li>Automatically builds perfect trinode set for you.</li>
+                  <li>Automatically builds perfect trinode set for you. Same as Auto Build [Sync] but this delegates the building task to a web worker which should avoid browsers to Not Respond if there are too many nodes to build from.</li>
+                  <li>Removes all equipped trinodes.</li>
+                  <li>You may customize how many copies of each skill you would want in your trinode set (2-6)</li>
+                </ol>
+                <p><i>Tip: If you have perfect trinodes you want to incorporate in the build, equip them first before clicking Auto Build. Just press Ok to the alerts saying that the trinode is already equipped.</i></p>
+                <h6><b><u>Node Statistics</b></u></h6>
                 <div class="container mx-auto text-center">
                   <img src="Images/step42.PNG" class="img-fluid" alt="Node Statistics UI">
                 </div>
@@ -340,16 +352,30 @@
                   <li>Shows how many skills were selected.</li>
                   <li>Gives an estimate of how many nodes it would take to most efficiently get 2 copies of each skill selected</li>
                   <li>Shows how many node slots are currently used</li>
-                  <li>Shows how many node "skill slots"(3 per node) is used efficiently (ie. The skill is selected and has 2 or less total copies in the equipped node slots)[Note: Only jobs that need "multiples of 3" amounts of boosted skills expect a 100% Node efficiency]</li>
+                  <li>Shows how many node "skill slots"(3 per node) is used efficiently (i.e. The skill is selected the total copies of that skill in the equipped node slots do not exceed the number you specified)[Note: Only jobs that need "multiples of 3" amounts of boosted skills expect a 100% Node efficiency]</li>
                   <li>Gives a breakdown of each skill and how many times it has already appeared in the equipped nodes.</li>
                 </ol>
-                <p>Tip: You can click the header (Skill, Selected, Occupied Slots) to sort them in order</p>
+                <p><i>Tip: You can click the header (Skill, Selected, Occupied Slots) to sort them in order</i></p>
                 <h5>5. Saving and Loading</h5>
                 <div class="container mx-auto text-center">
                   <img src="Images/step5.PNG" class="img-fluid" alt="Save and Load Nodelist">
                 </div>
                 <p>By clicking the "Generate Nodelist" button, you can generate a list of the nodestones you currently have. Be sure to save it somewhere.</p>
                 <p>By pasting the generated text and clicking the "Load List" button, your nodes will automatically be loaded in.</p>
+                <h5>6. Loading Nodestones via images or snips</h5>
+                <div class="container mx-auto text-center">
+                  <img src="Images/step6.PNG" class="img-fluid" alt="Load Nodes from Photos">
+                </div>
+                <p>You may now also load trinodes you have using in-game snips or images.</p>
+                <p>Just use the snipping tool or screenshot the nodestone inventory from in-game. Ideally make sure to not include any skill nodes in the snip (this might, in rare cases, lead to false trinode creation). The program processes the images from top left to bottom right so if any skill node results in a false trinode, they should either be up top or at the very end of the nodelist. Do note that duplicate trinodes (where A = A, B = B, and C = C) would only appear once.</p>
+                <p>Make sure that no filters are applied or that the image is scaled as this would affect the detection of trinodes in a photo.</p>
+                <p>You may paste multiple images before clicking "Load via Photos" and the program will process them one after the other.</p>
+                <p>If you want to remove a photo you uploaded, just click the photo you want to remove.</p>
+                <p>Locked Trinodes should not pose a problem. If you do notice some issues, please try unlocking the trinodes and snap another photo.</p>
+                <p>A sample uploaded snip is shown below.</p>
+                <div class="container mx-auto text-center">
+                  <img src="Images/step62.PNG" class="img-fluid" alt="Load Nodes from Photos">
+                </div>
               </div>
             </div>
             <br/>
@@ -390,7 +416,9 @@
               <div class="container-fluid border collapse show" id="section45">
                 <div class="row" style="padding-bottom:15px">
                   <div class="col-12" id="photoLoadContainer">
-                    <p>Click here and then use Ctrl-V to paste your snips or the image file. Click the photo remove it.</p>
+                    <p>Snip or Copy the photo containing your ingame trinode and then click here and use Ctrl-V to paste your snips or image file. You can load multiple photos.</p>
+                    <p>Ideally ensure that only trinode photos are present and not skill nodes as they may trigger false matches. Ensure that the photo is not scaled or filtered in any way.</p>
+                    <p>Click the photo to remove them.</p>
                     <div class="col-12" id="uploadedPhotos" style="padding-bottom:15px"></div>
                     <button type="button" class="btn btn-primary" id="photoRead" onclick="readPhotos()">Load via Photos</button>
                   </div>
@@ -398,7 +426,7 @@
               </div>
             </div>
             <br/>
-            <div class="modal fade" id="whatsNewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal fade" id="whatsNewModal" tabindex="-1" role="dialog" aria-labelledby="versionNotes" aria-hidden="true">
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -410,7 +438,7 @@
                   <div class="modal-body">
                     <h2>New Feature</h2>
                     <ul>
-                      <li>Nodestones can now be loaded from in game screenshots or snips. Just make sure that the image only contains trinodes to limit the number of false positives. Photo should also not be scaled.</li>
+                      <li>Nodestones can now be loaded from in game screenshots or snips. Just make sure that the image only contains trinodes to limit the number of false positives. Photo should also not be scaled or filtered.</li>
                     </ul>
                     <hr>
                     <h2>Updated Feature</h2>
@@ -420,10 +448,11 @@
                     <hr>
                     <h2>Notable Changes</h2>
                     <ul>
-                      <li>TBD (Fixes are on the way for 25 classes in regards to their skill images, skill name updates, and skill changes)</li>
+                      <li>Skill Names have been fixed for Blaster, Hoyoung, Kinesis, Marksman, Phantom, and Zero</li>
+                      <li>Skill Icons have been fixed for Kanna, Khali, Angelic Buster, Bishop, Ice Lightning Mage, Luminous, Xenon</li>
                     </ul>
                     <hr>
-                    <p>Visit the <a href="https://github.com/PhantasmicSky/NodestoneBuilder/blob/main/CHANGELOG.md">Change Log</a> to check out the full list of changes.</p>
+                    <p>Visit the <a href="https://github.com/PhantasmicSky/NodestoneBuilder/blob/main/CHANGELOG.md">Change Log</a> to check out the full and detailed list of changes.</p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="modalCookie(false)">Close</button>
@@ -433,6 +462,7 @@
               </div>
             </div>
             </br>
+            <button type="button" class="btn btn-primary" id="versionInfo" data-toggle="modal" data-target="#whatsNewModal">Version Notes</button>
             <button type="button" class="btn btn-primary invisible" id="autoBuild" onclick="printCombination()">Auto Build</button>
             <button type="button" class="btn btn-primary invisible" id="autoBuild" onclick="buildPerfectTri()">Auto Build [Web Worker]</button>
             <button type="button" class="btn btn-primary invisible" onclick="checkVar()">Check Variables</button>

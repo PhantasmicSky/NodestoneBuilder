@@ -37,6 +37,7 @@ If  there are no notes under the job, it means that it has not been tested yet.
 ### Ice Lightning Mage
 ### Illium
 ### Jett
+  - RIP Jett Can't Check
 ### Kain
 ### Kaiser
 ### Kanna
@@ -47,12 +48,13 @@ If  there are no notes under the job, it means that it has not been tested yet.
 ### Lara
 ### Luminous
 ### Marksman
-  - "Snipe" on the 2nd / B Slot / Top Slot gets detected as "High Speed Shot" instead.
+  - None so far
 ### Mechanic
 ### Mercedes
 ### Mihile
 ### Night Lord
 ### Night Walker
+  - None so far
 ### Paladin
 ### Pathfinder
 ### Phantom
@@ -60,6 +62,7 @@ If  there are no notes under the job, it means that it has not been tested yet.
   - None so far
 ### Shadower
 ### Thunder Breaker
+  - None so far
 ### Wild Hunter
 ### Wind Archer
   - None so far
