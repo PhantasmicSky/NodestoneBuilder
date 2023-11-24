@@ -30,6 +30,7 @@
   - Phantom's Carte Blanc has been renamed to Carte Noir and the skill Icon should now match the one in game.
   - Xenon's Hypogram Field skill icon has been updated to the latest icon.
   - Zero's Spin Cutter has been renamed to Blade Ring.
+  - [2023-11-24] Paladin's Divine Judgement Skill Icon has been fixed to match the current skill Icon. Loading skill nodes for Paladin using the Photo Function should now be fixed.
 
 ## [1.07] - 2023-06-14
 
