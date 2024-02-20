@@ -1,6 +1,10 @@
 # Change Log
 
-## [1.09] - 2024-02-20
+## [1.09] - 2024-02-21
+
+### Added
+  - Added a green flash when a new trio is added manually to give users feedback that the trio has been added succesfully.
+  - Lynn's boost skills have been added. The skill names wiill be in Traditional Chinese until it officially releases in GMS. Lynn's name will contain the TMS name as well just to indicate that the skills are in Traditional Chinese.
 
 ### Changed
   - Auto Build function has been improved. Before, the script waited for the whole set of nodestone trios to be built before it checked if the leading skill of each of the trios do not overlap with one another causing the scripts to brute force ALL combinations even though some could clearly be skipped. This should significantly reduce the solving time.

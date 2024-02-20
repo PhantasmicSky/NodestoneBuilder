@@ -19,6 +19,7 @@ var rectangleA;
 var rectangleB;
 var rectangleC;
 var templateSkill = document.createElement("img");
+const flashHeader = document.getElementById('pickerTriPreview');
 //templateSkill.src = "Images/MapleDivider.png";
 templateSkill.src = "Images/templateB.png";
 var maskSkill = document.createElement("img");
@@ -56,6 +57,7 @@ function addNodestone2() {
             alert("You have not selected three skills yet.");
         }
         else {
+            validFlash();
             nodestones.push(currentNodestone);
             newNode(formTrio);
         }
@@ -1227,4 +1229,10 @@ function getCookie(name) {
     
     // Return null if not found
     return null;
+}
+
+function validFlash(){
+    flashHeader.classList.remove('greenFlash'); // reset animation
+    void flashHeader.offsetWidth;
+    flashHeader.classList.add('greenFlash');
 }
