@@ -16,7 +16,7 @@
             <div class="row">
               <div class="col-12 mt-4" style="text-align:center">
                 <h1 style="text-align:center">Nodestone Builder</h1>
-                <h5 style="text-align:center">By AethericSky of GMS Reboot</h5>
+                <h5 style="text-align:center">By AethericSky of GMS Kronos</h5>
               </div>
               <div class="col-12 mt-4">
                 <table>
@@ -430,27 +430,29 @@
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitle">Version Changes [Version 1.08]</h5>
+                    <h5 class="modal-title" id="modalTitle">Version Changes [Version 1.09]</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
-                    <h2>New Feature</h2>
+                    <h2>New</h2>
                     <ul>
-                      <li>Nodestones can now be loaded from in game screenshots or snips. Just make sure that the image only contains trinodes to limit the number of false positives. Photo should also not be scaled or filtered.</li>
+                      <li>Nodestones can now be loaded from in game screenshots or snips. Just make sure that the image only contains trinodes to limit the number of false positives. Photo should also not be scaled or filtered.<br/><strong>NOTE: If load from image returns 0 nodes even though there should be at least 1, try reloading the page. With the way OpenCV is loaded in this page, the 1st visit per session usually results in a failed load which gets fixed upon reloading the page.</strong></li>
+                      <li>Added a green flash when a new trio is added manually to give users feedback that the trio has been added succesfully.</li>
+                      <li>Lynn's boost skills have been added. The skill names wiill be in Traditional Chinese until it officially releases in GMS.</li>
                     </ul>
                     <hr>
-                    <h2>Updated Features</h2>
+                    <h2>Update</h2>
                     <ul>
-                      <li>You can now specify how many copies of each skill you want in building your perfect trio setup.</li>
-                      <li>Help Section has now been updated to reflect all the recent changes.</li>
+                      <li>Improved Auto Build functionality so that it will only use nodes with a nodescore of 4 to 6.</li>
+                      <li>Improved Auto Build functionality so that it will solve less combinations of trios which should lead to faster results.</li>
+                      <li>Hayato (Old) [The one with 23 skills] has been removed.</li>
                     </ul>
                     <hr>
-                    <h2>Notable Changes</h2>
+                    <h2>Fix</h2>
                     <ul>
-                      <li>Skill Names have been fixed for Blaster, Hoyoung, Kinesis, Marksman, Phantom, and Zero</li>
-                      <li>Skill Icons have been fixed for Kanna, Khali, Angelic Buster, Bishop, Ice Lightning Mage, Luminous, Xenon, [2023-11-24]Paladin</li>
+                      <li>Fixed one of Mo Xuan's skill names.</li>
                     </ul>
                     <hr>
                     <p>Visit the <a href="https://github.com/PhantasmicSky/NodestoneBuilder/blob/main/CHANGELOG.md">Change Log</a> to check out the full and detailed list of changes.</p>
@@ -467,6 +469,10 @@
             <button type="button" class="btn btn-primary invisible" id="autoBuild" onclick="printCombination()">Auto Build</button>
             <button type="button" class="btn btn-primary invisible" id="autoBuild" onclick="buildPerfectTri()">Auto Build [Web Worker]</button>
             <button type="button" class="btn btn-primary invisible" onclick="checkVar()">Check Variables</button>
+            <hr/>
+            <div>
+              <p class="text-center"><em>Last Updated: 2024-02-21</em></p>
+            </div>
         </div>
     </body>
     <script type="text/javascript"> 

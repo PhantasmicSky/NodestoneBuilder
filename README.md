@@ -1,4 +1,4 @@
-# Maplestory Tri-Node Builder (Beta v1.08)
+# Maplestory Tri-Node Builder (Beta v1.09)
 
 ## Purpose
 The web application allows users to find and formulate their trinode sets.
@@ -17,6 +17,7 @@ The web application allows users to find and formulate their trinode sets.
 
 ## Things to do
 
+- Improve the Auto Build function more.
 - **[NOT SURE]** Remove Image Path Dependency on Names (Switch to SkillIDs for easier porting to other languages)
 - Add Support for other languages.
 
@@ -24,11 +25,12 @@ The web application allows users to find and formulate their trinode sets.
 
 - All jobs that are currently out in GMS (every Job except MoXuan) is supported.
 - MoXuan(墨玄) is Currently in Trad. Chinese until it comes out in GMS (If it will even release outside TMS/CMS).
+- Angelic Buster Revamp is not yet available.
 
 ## Notes
 - \* = Function not tested fully and might sometimes return "No Optimal Combination" even though there should be one (Mostly happens when less than 3 skills are selected or if you already have more trios equipped than the number of trios to make your perfect loadout). Nodes are also built using brute force and might take minutes if there are a lot of nodes to build prefect tri's from. Might also cause browser to lock-up. If that happens, please use the Async Solver to move the solving to a web worker. 
 - \* = While not fully tested, it is possible to equip some of the trios as the starting trios to build your perfect trios from (ex. If you have a Lv 25 trio that you would want to incorporate in the perfect trio build, equip that trio first before pressing Auto-Build). When the pop-up for equipping a trio that has already been equipped shows up, just press OK until all the prompts disappear and it should equip the remaining trios needed to create your perfect trinode setup.
-- \*\* = Function might not be 100% accurate. From limited tests, there does not seem to be any trinode that gets wrongly identified. However, tests were not that extensive. Do not use function for Old Hayato (the one with 23 boost nodes) as the 4 Blade Flashes are indistinguishable from one another unless it is on the 3rd Slot (Right Slot). The same case for the 4 Sanrenzans.
+- \*\* = Function might not be 100% accurate. From limited tests, there does not seem to be any trinode that gets wrongly identified. However, tests were not that extensive.
 
 ## Version Changes
 - Version Changes have been moved to the CHANGELOG file

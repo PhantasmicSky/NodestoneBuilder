@@ -43,8 +43,6 @@
 
         "Hayato":["Hitokiri Hundred Strike","Surging Blade","Vapor Blade","Sweeping Sword","Sanrenzan","Tornado Blade","Sudden Strike","Shinsoku","Hitokiri Strike","Falcon's Honor"],
 
-        "Hayato (Old)":["Summer Rain","Hitokiri Hundred Strike","Sanrenzan","Blade Flash","Surging Blade","Shouryuusen","Jin Sanrenzan","Vapor Blade","Jin Blade Flash","Rising Slash","Falcon Dive","Fuu Sanrenzan","Fuu Blade Flash","Sweeping Sword","Whirlwind Cut","Dankuusen","Rai Sanrenzan","Rai Blade Flash","Tornado Blade","Sudden Strike","Shinsoku","Hitokiri Strike","Falcon's Honor"],
-
         "Hero":["Final Attack","Brandish","Flash Blade","Intrepid Slash","Rush","Cry Valhalla","Beam Blade","Raging Blow","Puncture","Rising Rage"],
 
         "Hoyoung":["Humanity","Earth","Heaven","Evil-Sealing Gourd","Seeking Ghost Flame","Degeneration","Butterfly Dream","Star Vortex","Clone"],
@@ -101,5 +99,7 @@
 
         "Zero":["Moon Strike","Piercing Thrust","Flash Assault","Blade Ring","Rolling Cross","Rolling Assault","Wind Cutter","Wind Striker","Storm Break","Shadow Rain"],
 
-        "墨玄":["玄山 招式全開","神功 破碎拳","神功 旋風脚","神功 鐵山靠","神功 亂拳連激","神功 无影脚","密技 千斤錘","神功 大地崩裂","神功 移形換位","眞氣 焦熱破神擊"]
+        "琳恩 Lynn":["重創","啄","暗襲","粉碎大地","乘風","偷襲"],
+        
+        "墨玄":["玄山 招式全開","神功 破碎拳","神功 旋風脚","神功 鐵山靠","神功 亂拳連激","神功 无影脚","密技 千斤錘","神功 大地崩裂","神功 移形換位","絕技 超熱波神力"]
 }

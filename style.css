@@ -66,3 +66,19 @@ textarea{
         text-align: center;
         vertical-align: middle;
 }
+
+@keyframes greenShift {
+        0%   {background: none}
+        25%  {background: #408040}
+        50%  {background: green}
+        75%  {background: #408040}
+        100% {background: none}
+}
+
+.greenFlash{
+        animation-name: greenShift;
+        animation-duration: 0.5s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+}

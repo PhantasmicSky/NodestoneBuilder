@@ -1,5 +1,23 @@
 # Change Log
 
+## [1.09] - 2024-02-21
+
+### Added
+  - Added a green flash when a new trio is added manually to give users feedback that the trio has been added succesfully.
+  - Lynn's boost skills have been added. The skill names wiill be in Traditional Chinese until it officially releases in GMS. Lynn's name will contain the TMS name as well just to indicate that the skills are in Traditional Chinese. (琳恩 Lynn)
+
+### Changed
+  - Auto Build function has been improved. Before, the script waited for the whole set of nodestone trios to be built before it checked if the leading skill of each of the trios do not overlap with one another causing the scripts to brute force ALL combinations even though some could clearly be skipped. This should significantly reduce the solving time.
+  - Aside from this, auto build now will only use trios that have a node score of 4, 5, or 6 if the number of selected skills is not a multiple of three (Nodestone score of 4 or higher means that 2 useful skills are selected). While auto build will only use trios that have a node score of 6 if the number of selected skills is a multiple of three (Nodestone score of 6 means that ALL skills in the trio are selected).
+  - Loading Trios from Images' message has been improved to suggest refreshing if no trios were loaded.
+  - Hayato (Old) [The one with 23 skills] has been removed.
+
+### Fixed
+  - Fixed One of Mo Xuan's skill names. "眞氣 焦熱破神擊" -> "絕技 超熱波神力"
+
+### Known Issue
+  - When loading the webpage for the first time in a session, OpenCV fails to load even though the "OpenCV is loading" text disappears. This is usually fixed by just refreshing the page.
+
 ## [1.08] - 2023-09-06
 
 ### Added
