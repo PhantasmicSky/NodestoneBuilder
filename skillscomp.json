@@ -67,6 +67,8 @@
 
         "Luminous":["Flash Shower","Abyssal Drop","Sylvan Lance","Pressure Void","Spectral Light","Ray of Redemption","Moonlight Spear","Death Scythe","Reflection","Morning Star","Apocalypse","Ender","Armageddon"],
 
+        "Lynn":["Strike","Peck","Sneak Attack","Earth Pulverization","Sweep","Predator's Blow"],
+
         "Marksman":["Arrow Blow","Final Attack","Covering Fire","Bolt Burst","Piercing Arrow","Snipe","High Speed Shot"],
 
         "Mechanic":["ME-07 Drillhands","Gatling Gun","Rocket Booster","Heavy Gatling Gun","Homing Beacon","Robo Launcher RM7","Punch Launcher","Rock 'n Shock","Heavy Salvo","Support Unit H-EX","Giant Robot SG-88","Bots 'n Tots","Heavy Salvo Plus","Distortion Bomb"],
@@ -98,8 +100,6 @@
         "Xenon":["Beam Spline", "Pinpoint Salvo","Quicksilver","Ion Thrust","Combat Switch","Diagonal Chase","Gravity Pillar","Aegis System","Triangulation Boost","Beam Dance","Mecha Purge","Hypogram Field","Entangling Lash","Orbital Cataclysm"],
 
         "Zero":["Moon Strike","Piercing Thrust","Flash Assault","Blade Ring","Rolling Cross","Rolling Assault","Wind Cutter","Wind Striker","Storm Break","Shadow Rain"],
-
-        "琳恩 Lynn":["重創","啄","暗襲","粉碎大地","乘風","偷襲"],
         
         "墨玄":["玄山 招式全開","神功 破碎拳","神功 旋風脚","神功 鐵山靠","神功 亂拳連激","神功 无影脚","密技 千斤錘","神功 大地崩裂","神功 移形換位","絕技 超熱波神力"]
 }
