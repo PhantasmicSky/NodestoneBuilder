@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.10] - 2024-05-01
+
+### Changed
+  - Lynn's skills now use GMS' skill names (If you are building from v1.09, just remove the Traditional Chinese "琳恩 " in your save string before loading in)
+
+### Known Issue
+  - When loading the webpage for the first time in a session, Load Via Photos do not work. This is usually fixed by just refreshing the page. (Probably an effect of variables loading before OpenCV has fully loaded)
+
 ## [1.09] - 2024-02-21
 
 ### Added
