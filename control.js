@@ -1107,7 +1107,7 @@ function readPhotos(){
             //console.log("WOOPS XD");
             console.log("E("+ e.stack+"):"+ e);
         }
-        if (photolLoadCount != 0){        
+        if (photoLoadCount != 0){        
             alert("Currently, a total of " + photoLoadCount + " New Nodestones have been added");
         }
         else{
