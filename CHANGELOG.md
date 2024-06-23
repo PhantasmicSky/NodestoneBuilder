@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.11] - 2024-06-23
+
+### Changed
+  - Angelic Buster's Skill Images have been changed (Heavenly Crash is also removed) If loading a save string from v1.10 or below, shift 7,8,9,10,11 to 6,7,8,9,10 respectively.
+
+### Known Issue
+  - When loading the webpage for the first time in a session, Load Via Photos do not work. This is usually fixed by just refreshing the page. (Probably an effect of variables loading before OpenCV has fully loaded). (Probably won't be fixing this since this tool will be obsolete in 6 months)
+
 ## [1.10] - 2024-05-01
 
 ### Changed
