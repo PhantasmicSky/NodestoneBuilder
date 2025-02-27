@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.12] - 2025-02-28
+
+### Changed
+  - Aran and Shade Skill Images have been changed. If loading a save string from v1.10 or below, it is advised to create a new save string instead.
+
+### Known Issue
+  - When loading the webpage for the first time in a session, Load Via Photos do not work. This is usually fixed by just refreshing the page. (Probably an effect of variables loading before OpenCV has fully loaded). (Since the tool is now obsolete, this won't be fixed anymore considering that refreshing usually fixes it as well)
+
 ## [1.11] - 2024-06-23
 
 ### Changed
