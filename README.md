@@ -1,6 +1,6 @@
 # Maplestory Tri-Node Builder (v1.12)
 
-This tool has more or less been rendered obsolete with the introduction of allowing you to make your trinodes. Thank you for everyone who has used it through the years.
+This tool has more or less been rendered obsolete with the introduction of allowing you to make your trinodes. Thank you to everyone who has used it through the years.
 
 ## Purpose
 The web application allows users to find and formulate their trinode sets.
