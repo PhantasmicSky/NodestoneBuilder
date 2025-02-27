@@ -27,7 +27,6 @@ The web application allows users to find and formulate their trinode sets.
 
 - All jobs that are currently out in GMS (every Job except MoXuan) is supported.
 - MoXuan(墨玄) is Currently in Trad. Chinese until it comes out in GMS (If it will even release outside TMS/CMS).
-- Angelic Buster Revamp is not yet available.
 
 ## Notes
 - \* = Function not tested fully and might sometimes return "No Optimal Combination" even though there should be one (Mostly happens when less than 3 skills are selected or if you already have more trios equipped than the number of trios to make your perfect loadout). Nodes are also built using brute force and might take minutes if there are a lot of nodes to build prefect tri's from. Might also cause browser to lock-up. If that happens, please use the Async Solver to move the solving to a web worker. 
