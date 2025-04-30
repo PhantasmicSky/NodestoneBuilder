@@ -7,6 +7,8 @@
 
 ### Known Issue
   - When loading the webpage for the first time in a session, Load Via Photos do not work. This is usually fixed by just refreshing the page. (Probably an effect of variables loading before OpenCV has fully loaded). (Since the tool is now obsolete, this won't be fixed anymore considering that refreshing usually fixes it as well)
+  - Using "Auto Build [Sync]" sometimes returns "No optimal combinations found" even though the [Async] version finds a valid optimal combination. Please try using both when trying to auto build.
+  - Using the auto builder when only having 3 or less skills selected may lead to weird results. (Anyway, the ingame search should aid you if you only need to boost 1-3 skills.)
 
 ## [1.12] - 2025-02-28
 
