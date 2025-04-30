@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.13] - 2025-04-30
+
+### Changed
+  - Mo Xuan is now in English. If you used Mo Xuan's TMS version, better to just rebuild as the old Mo Xuan option is from before the revamp.
+
+### Known Issue
+  - When loading the webpage for the first time in a session, Load Via Photos do not work. This is usually fixed by just refreshing the page. (Probably an effect of variables loading before OpenCV has fully loaded). (Since the tool is now obsolete, this won't be fixed anymore considering that refreshing usually fixes it as well)
+
 ## [1.12] - 2025-02-28
 
 ### Changed

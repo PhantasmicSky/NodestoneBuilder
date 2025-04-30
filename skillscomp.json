@@ -77,6 +77,8 @@
 
         "Mihile":["Shining Pierce","Royal Guard","Radiant Driver","Four-Point Assault","Final Attack","Soul Release","Radiant Cross","Install Shield","Charging Light"],
 
+        "Mo Xuan":["Xuanshan Arts Tian","Divine Art Erupting Flame","Divine Art Swirling Tide","Divine Art Righteous Thunder","Divine Art Howling Storm","Secret Art Qi Disruption","Xuanshan Arts Di","Divine Art Tearing Wind","Secret Art Qi Projection","Soul Art Black Wind"],
+
         "Night Lord":["Shuriken Burst","Gust Charm","Assassin's Mark","Dark Flare","Triple Throw","Shuriken Challenge","Quad Star","Sudden Raid","Showdown","Death Star"],
 
         "Night Walker":["Lucky Seven","Shadow Bat","Triple Throw","Quad Star","Shadow Spark","Quintuple Star","Dark Omen","Shadow Stitch","Dominion"],
@@ -99,7 +101,5 @@
 
         "Xenon":["Beam Spline", "Pinpoint Salvo","Quicksilver","Ion Thrust","Combat Switch","Diagonal Chase","Gravity Pillar","Aegis System","Triangulation Boost","Beam Dance","Mecha Purge","Hypogram Field","Entangling Lash","Orbital Cataclysm"],
 
-        "Zero":["Moon Strike","Piercing Thrust","Flash Assault","Blade Ring","Rolling Cross","Rolling Assault","Wind Cutter","Wind Striker","Storm Break","Shadow Rain"],
-        
-        "墨玄":["玄山 招式全開","神功 破碎拳","神功 旋風脚","神功 鐵山靠","神功 亂拳連激","神功 无影脚","密技 千斤錘","神功 大地崩裂","神功 移形換位","絕技 超熱波神力"]
+        "Zero":["Moon Strike","Piercing Thrust","Flash Assault","Blade Ring","Rolling Cross","Rolling Assault","Wind Cutter","Wind Striker","Storm Break","Shadow Rain"]
 }

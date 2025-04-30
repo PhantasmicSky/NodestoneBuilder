@@ -1,4 +1,4 @@
-# Maplestory Tri-Node Builder (v1.12)
+# Maplestory Tri-Node Builder (v1.13)
 
 This tool has more or less been rendered obsolete with the introduction of allowing you to make your trinodes. Thank you to everyone who has used it through the years.
 
@@ -25,8 +25,7 @@ The web application allows users to find and formulate their trinode sets.
 
 ## Currently Supported Jobs
 
-- All jobs that are currently out in GMS (every Job except MoXuan) is supported.
-- MoXuan(墨玄) is Currently in Trad. Chinese until it comes out in GMS (If it will even release outside TMS/CMS).
+- All jobs in the game are supported.
 
 ## Notes
 - \* = Function not tested fully and might sometimes return "No Optimal Combination" even though there should be one (Mostly happens when less than 3 skills are selected or if you already have more trios equipped than the number of trios to make your perfect loadout). Nodes are also built using brute force and might take minutes if there are a lot of nodes to build prefect tri's from. Might also cause browser to lock-up. If that happens, please use the Async Solver to move the solving to a web worker. 
