@@ -30,12 +30,10 @@
         "j52":["s4146","s4147","s4149","s4150","s4151","s4152","s4153","s4154","s4155","s4156","s4157","s4158","s4159","s4160"],
         
         "j53":["s4161","s4162","s4163","s4164","s4165","s4166","s4169","s4170","s4172","s4173","s4174","s4175","s4176","s4177","s4178"],
-        
-        "j54":["Starline One","Blaster Barrage","Starline Two","Stellar Impact","Vortex Cross","Falling Stars","Starline Three","Cosmic Upheaval","Starforce Salvo","Backup Beatdown","Planet Buster","Singularity Shock"],
 
         "f1":"Cygnus Knights",
         
-        "j111":["Solar Slash","Cosmic Matter","Cosmic Shower","Bluster","Cosmic Burst","Impaling Rays","Equinox Slash","Blazing Assault"],
+        "j111":["s4182","s4183","s4185","s4186","s4187","s4188","s4189","s4479"],
 
         "j121":["Orbital Flame","Flame Bite","Flame Vortex","Orbital Explosion","Flame Tempest","Cinder Maelstrom","Blazing Extinction","Towering Inferno","Cataclysm","Phoenix Drive"],
         
@@ -43,7 +41,7 @@
         
         "j141":["Lucky Seven","Shadow Bat","Triple Throw","Quad Star","Shadow Spark","Quintuple Star","Dark Omen","Shadow Stitch","Dominion"],
         
-        "j151":["Lightning Punch","Flash","Shark Sweep","Tidal Crash","Ascension","Thunder","Gale","Annihilate","Thunderbolt","Deep Rising"],
+        "j151":["s4219","s4220","s4221","s4222","s4223","s4224","s4225","s4226","s4227"],
         
         "j511":["Shining Pierce","Royal Guard","Radiant Driver","Four-Point Assault","Final Attack","Soul Release","Radiant Cross","Install Shield","Charging Light"],
 
@@ -79,9 +77,9 @@
 
         "f4":"Sengoku",
 
-        "j411":["Hitokiri Hundred Strike","Surging Blade","Vapor Blade","Sweeping Sword","Sanrenzan","Tornado Blade","Sudden Strike","Shinsoku","Hitokiri Strike","Falcon's Honor"],
+        "j411":["s4482","s4485","s4488","s4494","s4497","s4499","s4500","s4501","s4502","s4503"],
         
-        "j421":["Shikigami Haunting","Ghost Yaksha Boss","Kishin Shoukan","Nightghost Guide","Shikigami Charm","Exorcist's Charm","Tengu Strike","Yosuzume","Vanquisher's Charm","Orochi Unbound","Falling Sakura","Binding Tempest","Nine-Tailed Fury","Shikigami Doppelganger","Veritable Pandemonium"],
+        "j421":["s4504","s4505","s4506","s4507","s4508","s4509","s4510","s4511","s4512","s4513","s4514","s4515","s4516","s4517","s4518"],
 
         "f6":"Nova",
 
@@ -95,17 +93,17 @@
 
         "f10":"Child of the Goddess",
         
-        "j1011":["Moon Strike","Piercing Thrust","Flash Assault","Blade Ring","Rolling Cross","Rolling Assault","Wind Cutter","Wind Striker","Storm Break","Shadow Rain"],
+        "j1011":["s4442","s4443","s4447","s4448","s4452","s4453","s4457","s4458","s4459","s4460"],
 
         "f11":"Jianghu",
 
-        "j1111":["Xuanshan Arts Tian","Divine Art Erupting Flame","Divine Art Swirling Tide","Divine Art Righteous Thunder","Divine Art Howling Storm","Secret Art Qi Disruption","Xuanshan Arts Di","Divine Art Tearing Wind","Secret Art Qi Projection","Soul Art Black Wind"],
+        "j1111":["s4607","s4608","s4609","s4610","s4611","s4612","s4613","s4614","s4615","s4616"],
 
-        "j1121":["Strike","Peck","Sneak Attack","Earth Pulverization","Sweep","Predator's Blow"],
+        "j1121":["s4634","s4635","s4636","s4637","s4638","s4639"],
 
         "f14":"Friends Story",
 
-        "j1421":["Psychic Force","Kinetic Crash","Kinetic Piledriver","Ultimate - Deep Impact","Psychic Drain","Psychic Grab","Ultimate - Trainwreck","Kinetic Combo","Mind Quake","Ultimate - B.P.M.","Mental Tempest","Mental Shock","Ultimate - Metal Press"],
+        "j1421":["s4461","s4462","s4463","s4464","s4465","s4466","s4467","s4468","s4469","s4470","s4471","s4472","s4473"],
 
         "f15":"Flora",
 
@@ -128,6 +126,8 @@
         "j1221":["Ray","Boom","Pole","Starlight","Stellar I - Antares","Stellar II - Algol","Stellar V - Fomalhaut", "Stellar VI - Izar","Stellar VII - Vega","Stellar IX - Canopus"],
 
         "f99":"Others",
+
+        "j54":["Starline One","Blaster Barrage","Starline Two","Stellar Impact","Vortex Cross","Falling Stars","Starline Three","Cosmic Upheaval","Starforce Salvo","Backup Beatdown","Planet Buster","Singularity Shock"],
         
         "j1122":["Paw Swipe","Deep Breath","Really Deep Breath","Li'l Fort","Fishy Slap","Table Flip","Leopard's Paw","Macho Dance","Thunder Dash","Three-Point Pounce","Party Time","Formation Attack","Tornado Flight","Friend Launcher","Fire Kitty!","Group Bear Blaster"]
 }
