@@ -40,6 +40,28 @@ var fractalAMaskCV;
 var fractalBMaskCV;
 var fractalCMaskCV;
 var photoLoadCount = 0;
+
+
+//function onOpenCvReady() {
+    //preLoad();
+    //
+    //document.getElementById('jobSelect').removeAttribute('disabled');
+//}
+
+/*var Module = {
+    onRuntimeInitialized: function() {
+      preLoad();
+      console.log("OpenCV.js is ready!");
+      try{
+        document.getElementById('openCVStatus').remove();
+      }
+      catch{
+
+      }
+    }
+};*/
+
+
 /**
  * Adds a new nodestone (created by the user)
  * Function for the new UI
@@ -807,7 +829,7 @@ var bigSetHolder = [];
 
 function printCombination() {
     var set = nodestones.slice();
-    set = setReduction(set);
+    //set = setReduction(set);
     //console.log(set.length);
     var k = Math.ceil(selectedSkills.length * skillCopy / 3);
     var results = [];
@@ -991,8 +1013,8 @@ $(document).ready(function(e) {
     rectangleA = new cv.Rect(0,0,16,32);
     rectangleB = new cv.Rect(0,0,32,16);
     rectangleC = new cv.Rect(16,0,16,32);
-    templateCV = cv.imread(templateSkill);
-    maskCV = cv.imread(maskSkill);
+    templateCV = new cv.imread(templateSkill);
+    maskCV = new cv.imread(maskSkill);
     fractalAMaskCV = cv.imread(fractalAMask);
     fractalBMaskCV = cv.imread(fractalBMask);
     fractalCMaskCV = cv.imread(fractalCMask);

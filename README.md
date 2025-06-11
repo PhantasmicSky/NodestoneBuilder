@@ -1,5 +1,5 @@
-# Maplestory Tri-Node Builder (v1.13)
-
+# Maplestory Tri-Node Builder (v1.14)
+This tool is being maintained for those who would still like to use it and for my exploration as well.
 This tool has more or less been rendered obsolete with the introduction of allowing you to make your trinodes. Thank you to everyone who has used it through the years.
 
 ## Purpose

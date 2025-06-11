@@ -1,13 +1,15 @@
 # Change Log
 
-## [1.13] - 2025-04-30
+## [1.13] - 2025-04-30 and 2025-06-11
 
 ### Changed
   - Mo Xuan is now in English. If you used Mo Xuan's TMS version, better to just rebuild as the old Mo Xuan option is from before the revamp.
+  - Reverted the Auto Build \[Sync\] Functionality to use the older version. \[2025-06-11\]
+  - Trying a new way of loading OpenCV. \[2025-06-11\]
 
 ### Known Issue
   - When loading the webpage for the first time in a session, Load Via Photos do not work. This is usually fixed by just refreshing the page. (Probably an effect of variables loading before OpenCV has fully loaded). (Since the tool is now obsolete, this won't be fixed anymore considering that refreshing usually fixes it as well)
-  - Using "Auto Build [Sync]" sometimes returns "No optimal combinations found" even though the [Async] version finds a valid optimal combination. Please try using both when trying to auto build.
+  - ~~Using "Auto Build \[Sync\]" sometimes returns "No optimal combinations found" even though the \[Async\] version finds a valid optimal combination. Please try using both when trying to auto build.~~ \[2025-06-11\]
   - Using the auto builder when only having 3 or less skills selected may lead to weird results. (Anyway, the ingame search should aid you if you only need to boost 1-3 skills.)
 
 ## [1.12] - 2025-02-28
