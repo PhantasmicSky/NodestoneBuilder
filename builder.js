@@ -8,13 +8,15 @@ var selectedSkills = "";
 var skillCopy = "";
 
 
-onmessage = function(e){
+onmessage = async function(e){
     var parsed = e.data.split("||| ");
     selectedJob = parsed[0];
     nodestones = JSON.parse(parsed[1]);
     nodeCollection = JSON.parse(parsed[2]);
     selectedSkills = JSON.parse(parsed[3]);
     skillCopy = parsed[4];
+    const res = await fetch('skillscomp.json');
+    skillData = await res.json();
     printCombination();
 }
 

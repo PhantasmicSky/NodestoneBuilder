@@ -16,16 +16,16 @@ The web application allows users to find and formulate their trinode sets.
 - Compute for number of Ideal nodes and current node efficiency
 - **[BETA]** Auto Build Function allows users to let the program try and build a perfect nodestone loadout using selected skills.*
 - **[BETA]** Load Nodestone from Photo Function now added which allows users to paste a snip of their ingame screen to extract nodes from.**
+- **[BETA]** Removed Image Path Dependency on Names and while not yet up, the framework to add translations to skill names is up.
 
 ## Things to do
 
 - Improve the Auto Build function more.
-- **[NOT SURE]** Remove Image Path Dependency on Names (Switch to SkillIDs for easier porting to other languages)
 - Add Support for other languages.
 
 ## Currently Supported Jobs
 
-- All jobs in the game are supported.
+- All jobs in the game are supported. Len (렌) will only be in Korean until it is released in GMS.
 
 ## Notes
 - \* = Function not tested fully and might sometimes return "No Optimal Combination" even though there should be one (Mostly happens when less than 3 skills are selected or if you already have more trios equipped than the number of trios to make your perfect loadout). Nodes are also built using brute force and might take minutes if there are a lot of nodes to build prefect tri's from. Might also cause browser to lock-up. If that happens, please use the Async Solver to move the solving to a web worker. 

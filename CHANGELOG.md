@@ -1,4 +1,19 @@
 # Change Log
+## [1.14] - 2025-06-12
+
+### Added
+  - Sia is now available.
+  - Len (렌) is available in Korean.
+  - The Server select for Localization is available but is not really doing much at the moment. At the moment it is just there as a demo converting job and faction names to Korean and changes Dawn Warrior to Soul Master and some Hayato skill changes when MSEA is selected. (It is quite a lot of skill text to extract and copy to the translation file and I also don't have the client for some servers so this may be a long term project or if someone is interested do message me.)
+
+### Fixed
+  - Fixed the extra / removed boost skills still being available to be selected. An example is Xenon but some jobs also had their skill orders reorganized just to fit the order they appear in the game files such as Dawn Warrior. 
+
+### Changed
+  - Skill Images & Build Logic has been decoupled from Skill Names. In line with this, please rebuild your nodestones as old save strings will not work. I expect many more changes to happen to the skill string in future updates.
+
+### Known Issue
+  - Using the auto builder when only having 3 or less skills selected may lead to weird results. (Anyway, the ingame search should aid you if you only need to boost 1-3 skills.)
 
 ## [1.13] - 2025-04-30 and 2025-06-11
 

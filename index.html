@@ -256,6 +256,35 @@
                 </div>
               </div>
             </div>
+            <div class="container" id="optionOperation" name="noOp">
+              <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section295')">
+                <ul class="navbar-nav nav-fill w-100">
+                  <li class="nav-item active">
+                    <h3 style="text-align:left">Option</h3>
+                  </li>
+                  <li class="nav-item" style="text-align:right">
+                    <i class="bi bi-caret-up-square-fill" style="line-height: inherit;" id="section295Arrow"></i>
+                  </li>
+                </ul>
+              </nav>
+              <div class="container-fluid border collapse show" id="section295">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Select Server: </th>
+                      <th><select name="languageSelect" id="languageSelect" onchange="languageChange()" autocomplete="off">
+                        <option value="gms-en" select="selected">GMS - English</option>
+                        <option value="msea-en">MSEA - English</option>
+                        <option value="kms-kr">KMS - 한국</option>
+                      </th>
+                      </select>
+                    </tr>
+                  </thead>
+                </table>
+                <em>Select the server to base the language of the skills from.</em>
+              </div>
+            </div>
+            <br/>
             <div class="container" id="helpOperation" name="noOp">
               <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section35')">
                 <ul class="navbar-nav nav-fill w-100">
@@ -432,7 +461,7 @@
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitle">Version Changes [Version 1.13]</h5>
+                    <h5 class="modal-title" id="modalTitle">Version Changes [Version 1.14]</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -445,18 +474,26 @@
                     <hr>
                     <h2>New</h2>
                     <ul>
-                      <li>NONE</li>
+                      <li>Sia is now available.</li>
+                      <li>Len (렌) is available in Korean.</li>
+                      <li>Server Select Localization DEMO is live.</li>
                     </ul>
                     <hr>
                     <h2>Update</h2>
                     <ul>
-                      <li>Mo Xuan is now supported.</li>
+                      <li>Updated jobs that recently had changes in their available boost nodes.</li>
+                      <li>Skill Images and Building Logic have now been decoupled from the actual English Skill Names and is now ready for localization.</li>
                     </ul>
                     <hr>
                     <h2>Fix</h2>
                     <ul>
                       <li>Auto Build Functionality has been reverted to the old version.</li>
-                      <li>Trying a new way to load in OpenCV</li>
+                      <li>Trying a new way to load in OpenCV.</li>
+                    </ul>
+                    <hr>
+                    <h2>Note</h2>
+                    <ul>
+                      <li>Due to the decoupling update, please rebuild your nodestones as old save strings will not work. I expect many more changes to happen to the skill string in future updates.</li>
                     </ul>
                     <hr>
                     <p>Visit the <a href="https://github.com/PhantasmicSky/NodestoneBuilder/blob/main/CHANGELOG.md">Change Log</a> to check out the full and detailed list of changes.</p>
@@ -475,7 +512,7 @@
             <button type="button" class="btn btn-primary invisible" onclick="checkVar()">Check Variables</button>
             <hr/>
             <div>
-              <p class="text-center"><em>Last Updated: 2025-06-11</em></p>
+              <p class="text-center"><em>Last Updated: 2025-06-12</em></p>
             </div>
         </div>
     </body>
