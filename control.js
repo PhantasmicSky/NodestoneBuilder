@@ -241,15 +241,20 @@ function searchLocalization(locKey){
         return tempString;
     }
     else{
+        //Try GMS's Localization
         tempString = localization["gms-en"][locKey];
         if(tempString !== undefined){
             return tempString;
         }
-        else{
-            tempString = localization["kms-kr"][locKey];
-            if(tempString !== undefined){
-                return tempString;
-            }
+        //Try KMS's Localization
+        tempString = localization["kms-kr"][locKey];
+        if(tempString !== undefined){
+            return tempString;
+        }
+        //Try MSEA's Localization
+        tempString = localization["msea-en"][locKey];
+        if(tempString !== undefined){
+            return tempString;
         }
         return "-N/A-";
     }

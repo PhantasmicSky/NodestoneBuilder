@@ -4,7 +4,12 @@
 ### Added
   - Sia is now available.
   - Len (렌) is available in Korean.
-  - The Server select for Localization is available but is not really doing much at the moment. At the moment it is just there as a demo converting job and faction names to Korean and changes Dawn Warrior to Soul Master and some Hayato skill changes when MSEA is selected. (It is quite a lot of skill text to extract and copy to the translation file and I also don't have the client for some servers so this may be a long term project or if someone is interested do message me.)
+  - The Server select for Localization is available ~~but is not really doing much at the moment. At the moment it is just there as a demo converting job and faction names to Korean and changes Dawn Warrior to Soul Master and some Hayato skill changes when MSEA is selected.~~ Currently working for MSEA and 3 KMS Classes \[2025-06-25\] (It is quite a lot of skill text to extract and copy to the translation file and I also don't have the client for some servers so this may be a long term project or if someone is interested do message me.)
+  - MSEA Skill Names are now fully available along with differences in class names. \[2025-06-25\]
+  - Korean Skill Names for Thunder Breaker (스트라이커) and Adele (아델) are now available \[2025-06-25\]
+  - Fixed Xenon's photos (old photos might be using the Hover icon which is why it was so bright) \[2025-06-25\]
+  - Fixed the issue with Xenon's skills Combat Switch and Diagonal Chase. \[2025-06-25\]
+  - Added Zen (for memories) \[2025-06-25\]
 
 ### Fixed
   - Fixed the extra / removed boost skills still being available to be selected. An example is Xenon but some jobs also had their skill orders reorganized just to fit the order they appear in the game files such as Dawn Warrior. 
