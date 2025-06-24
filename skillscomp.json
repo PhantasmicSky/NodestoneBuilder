@@ -1,105 +1,135 @@
 {
-        "Adele":["Blade of Will","Magic Dispatch","Skewering","Impale","Aether Forge","Eviscerate","Reign of Destruction","Cleave","Hunting Decree","Aether Bloom"],
+        "f0":"Explorer",
+        
+        "j11":["s4001","s4002","s4003","s4004","s4005","s4006","s4007","s4008","s4009","s4010"],
 
-        "Angelic Buster":["Soul Buster","Star Bubble","Lovely Sting","Pink Pummel","Soul Seeker","Star Crash","Celestial Roar","Trinity","Finale Ribbon","Soul Resonance","Supreme Supernova"],
+        "j12":["s4020","s4021","s4023","s4024","s4025","s4026","s4027","s4028","s4029"],
 
-        "Aran":["Smash Swing","Final Charge","Final Attack","Final Toss","Judgment Draw","Adrenaline Rush","Beyond Blade","Glacial Prison","Finisher - Hunter's Prey","Hyper Finisher - Last Stand"],
+        "j13":["s4030","s4032","s4033","s4034","s4035","s4036","s4037","s4038"],
 
-        "Ark":["Overcharge Drive","Ominous Nightmare","Scarlet Charge Drive","Unstoppable Impulse","Impending Death","Gust Charge Drive","Abyssal Charge Drive","Endless Agony"],
+        "j21":["s4040","s4041","s4042","s4043","s4044","s4045","s4046","s4047","s4048","s4049","s4050","s4051","s4180"],
+        
+        "j22":["s4052","s4053","s4054","s4055","s4056","s4057","s4058","s4059","s4060","s4061","s4062"],
+        
+        "j23":["s4063","s4064","s4065","s4066","s4067","s4068","s4069","s4070"],
+        
+        "j31":["s4072","s4073","s4074","s4075","s4076","s4077","s4078","s4080","s4081","s4082"],
+        
+        "j32":["s4083","s4086","s4087","s4089","s4090","s4091","s4092"],
 
-        "Battle Mage":["Triple Blow","Condemnation","Quad Blow","Dark Chain","Quintuple Blow","Battle Burst","Dark Shock","Finishing Blow","Dark Genesis","Sweeping Staff"],
+        "j33":["s4571","s4572","s4573","s4574","s4575","s4576","s4577","s4578","s4579"],
+        
+        "j41":["s4095","s4096","s4097","s4099","s4100","s4102","s4103","s4104","s4105","s4106"],
+        
+        "j42":["s4108","s4109","s4110","s4112","s4113","s4114","s4115","s4116","s4117"],
+        
+        "j43":["s4118","s4119","s4120","s4121","s4122","s4124","s4125","s4126","s4127","s4128","s4129","s4130","s4131","s4132","s4133"],
+        
+        "j51":["s4136","s4137","s4138","s4139","s4141","s4142","s4143","s4144"],
+        
+        "j52":["s4146","s4147","s4149","s4150","s4151","s4152","s4153","s4154","s4155","s4156","s4157","s4158","s4159","s4160"],
+        
+        "j53":["s4161","s4162","s4163","s4164","s4165","s4166","s4169","s4170","s4172","s4173","s4174","s4175","s4176","s4177","s4178"],
 
-        "Beast Tamer":["Paw Swipe","Deep Breath","Really Deep Breath","Li'l Fort","Fishy Slap","Table Flip","Leopard's Paw","Macho Dance","Thunder Dash","Three-Point Pounce","Party Time","Formation Attack","Tornado Flight","Friend Launcher","Fire Kitty!","Group Bear Blaster"],
+        "f1":"Cygnus Knights",
+        
+        "j111":["s4182","s4183","s4185","s4186","s4187","s4188","s4189","s4479"],
 
-        "Bishop":["Heal","Holy Arrow","Shining Ray","Big Bang","Bahamut","Angel Ray","Genesis","Heaven's Door"],
+        "j121":["s4190","s4191","s4192","s4193","s4194","s4195","s4196","s4197","s4198","s4199"],
+        
+        "j131":["s4200","s4201","s4202","s4203","s4204","s4205","s4206","s4207","s4208","s4209"],
+        
+        "j141":["s4210","s4211","s4212","s4213","s4214","s4215","s4216","s4217","s4218"],
+        
+        "j151":["s4219","s4220","s4221","s4222","s4223","s4224","s4225","s4226","s4227"],
+        
+        "j511":["s4229","s4230","s4231","s4232","s4233","s4234","s4235","s4236","s4474"],
 
-        "Blaster":["Magnum Punch","Revolving Cannon","Bunker Buster Explosion","Detonate","Double Blast","Hammer Smash","Rocket Rush","Shotgun Punch","Muzzle Flash","Ballistic Hurricane","Revolving Blast","Hyper Magnum"],
+        "f2":"Heroes",
+        
+        "j211":["s4238","s4239","s4240","s4241","s4243","s4245","s4246","s4247","s4248","s4249"],
+        
+        "j221":["s4250","s4251","s4252","s4253","s4255","s4256","s4259","s4260","s4261","s4266","s4267","s4268"],
+        
+        "j231":["s4269","s4271","s4274","s4275","s4276","s4279","s4280","s4281","s4282","s4284"],
+        
+        "j241":["s4285","s4286","s4287","s4288","s4289","s4290","s4291","s4292","s4293","s4294","s4475","s4476","s4477","s4478"],
 
-        "Blaze Wizard":["Orbital Flame","Flame Bite","Flame Vortex","Orbital Explosion","Flame Tempest","Cinder Maelstrom","Blazing Extinction","Towering Inferno","Cataclysm","Phoenix Drive"],
+        "j251":["s4308","s4309","s4311","s4312","s4313","s4315","s4316","s4317","s4318","s4319","s4320","s4321","s4322"],
 
-        "Bowmaster":["Arrow Blow","Final Attack","Wind Arrow","Phoenix","Covering Fire","Arrow Blaster","Hurricane","Arrow Stream","Quiver Cartridge","Gritty Gust"],
+        "j271":["s4295","s4297","s4298","s4299","s4300","s4301","s4302","s4303","s4304","s4305","s4306","s4307"],
 
-        "Buccaneer":["Sea Serpent Burst","Static Thumper","Turning Kick","Corkscrew Blow","Sea Serpent's Rage","Octopunch","Nautilus Strike","Hook Bomber"],
+        "f3":"Resistance",
+        
+        "j311":["s4388","s4389","s4390","s4391","s4392","s4393","s4394","s4395","s4396","s4397","s4398","s4399","s4400","s4401","s4402","s4403"],
+        
+        "j312":["s4404","s4405","s4406","s4407","s4408","s4409","s4410","s4411","s4412","s4413","s4414","s4480"],
 
-        "Cadena":["Reign of Chains","Summon Scimitar","Summon Daggers","Summon Shotgun","Summon Brick","Beatdown","Summon Spiked Bat","Veteran Shadowdealer"],        
+        "j321":["s4323","s4324","s4325","s4326","s4327","s4328","s4329","s4330","s4331","s4332"],
+        
+        "j331":["s4333","s4334","s4336","s4337","s4339","s4342","s4343","s4344","s4345","s4347"],
 
-        "Cannoneer":["Cannon Blaster","Cannon Strike","Blast Back","Scatter Shot","Barrel Bomb","Cannon Spike","Cannon Jump","Barrel Roulette","Monkey Fury","Cannon Bazooka","Nautilus Strike","Anchors Away","Monkey Militia","Cannon Barrage","Rolling Rainbow"],
+        "j351":["s4348","s4349","s4350","s4351","s4352","s4353","s4354","s4355","s4356","s4357","s4358","s4359","s4360","s4361"],
 
-        "Corsair":["Rapid Blast","Recoil Shot","Scurvy Summons","Blunderbuster","Blackboot Bill","Siege Bomber","Rapid Fire","Nautilus Strike","Brain Scrambler","Eight-Legs Easton","Majestic Presence","Broadside","Parrotargetting","Ugly Bomb"],
+        "j361":["s4362","s4363","s4364","s4365","s4366","s4368","s4370","s4371","s4372","s4373","s4374","s4375"],
+        
+        "j371":["s4376","s4377","s4378","s4379","s4380","s4381","s4382","s4383","s4384","s4385","s4386","s4387"],
 
-        "Dark Knight":["Final Attack","Spear Sweep","La Mancha Spear","Rush","Evil Eye","Dark Impale","Gungnir's Descent","Nightshade Explosion"],
+        "f4":"Sengoku",
 
-        "Dawn Warrior":["Solar Slash","Cosmic Matter","Cosmic Shower","Bluster","Cosmic Burst","Impaling Rays","Equinox Slash","Blazing Assault"],
+        "j411":["s4482","s4485","s4488","s4494","s4497","s4499","s4500","s4501","s4502","s4503"],
+        
+        "j421":["s4504","s4505","s4506","s4507","s4508","s4509","s4510","s4511","s4512","s4513","s4514","s4515","s4516","s4517","s4518"],
 
-        "Demon Avenger":["Exceed Double Slash","Exceed Demon Strike","Bat Swarm","Exceed Lunar Slash","Vitality Veil","Shield Charge","Exceed Execution","Nether Shield","Nether Slice","Blood Prison","Thousand Swords","Infernal Exceed"],
+        "f6":"Nova",
 
-        "Demon Slayer":["Grim Scythe","Demon Lash","Soul Eater","Dark Thrust","Chaos Lock","Vengeance","Judgment","Vortex of Doom","Raven Storm","Carrion Breath","Infernal Concussion","Demon Impact","Demon Cry","Dark Metamorphosis","Binding Darkness","Cerberus Chomp"],
+        "j611":["s4415","s4416","s4417","s4418","s4419","s4420","s4421","s4422","s4423","s4424","s4425","s4426","s4427"],
 
-        "Dual Blade":["Bandit Slash","Tornado Spin","Fatal Blow","Slash Storm","Flashbang","Blade Ascension","Flying Assaulter","Bloody Storm","Chains of Hell","Final Cut","Blade Fury","Phantom Blow","Sudden Raid","Asura's Anger","Blade Clone"],
+        "j631":["s4599","s4600","s4601","s4602","s4603","s4604","s4605","s4606"],
 
-        "Evan":["Mana Burst","Dragon Spark","Wind Circle","Dragon Flash","Thunder Circle","Dragon Dive","Magic Debris","Earth Circle","Dragon Breath","Dark Fog","Dragon Master","Summon Onyx Dragon"],
+        "j641":["s4547","s4548","s4549","s4550","s4551","s4552","s4553","s4554"],   
 
-        "Fire Poison Mage":["Flame Orb","Poison Breath","Ignite","Explosion","Poison Mist","Teleport Mastery","Flame Haze","Mist Eruption","Ifrit","Flame Sweep","Meteor Shower","Inferno Aura","Megiddo Flame"],
+        "j651":["s4428","s4429","s4430","s4431","s4432","s4433","s4435","s4436","s4437","s4438","s4439"],
 
-        "Hayato":["Hitokiri Hundred Strike","Surging Blade","Vapor Blade","Sweeping Sword","Sanrenzan","Tornado Blade","Sudden Strike","Shinsoku","Hitokiri Strike","Falcon's Honor"],
+        "f10":"Child of the Goddess",
+        
+        "j1011":["s4442","s4443","s4447","s4448","s4452","s4453","s4457","s4458","s4459","s4460"],
 
-        "Hero":["Final Attack","Brandish","Flash Blade","Intrepid Slash","Rush","Cry Valhalla","Beam Blade","Raging Blow","Puncture","Rising Rage"],
+        "f11":"Jianghu",
 
-        "Hoyoung":["Humanity","Earth","Heaven","Evil-Sealing Gourd","Seeking Ghost Flame","Degeneration","Butterfly Dream","Star Vortex","Clone"],
+        "j1121":["s4634","s4635","s4636","s4637","s4638","s4639"],
 
-        "Ice Lightning Mage":["Thunder Bolt","Cold Beam","Chilling Step","Ice Strike","Frost Ward","Thunder Sphere","Elquines","Chain Lightning","Blizzard","Frozen Orb","Lightning Orb"],
+        "j1151":["s4607","s4608","s4609","s4610","s4611","s4612","s4613","s4614","s4615","s4616"],
 
-        "Illium":["Radiant Javelin II","Umbral Brand III","Reaction - Destruction II","Machina","Vortex Wings","Longinus Spear","Longinus Zone","Deus"],
+        "f14":"Friends Story",
 
-        "Jett":["Starline One","Blaster Barrage","Starline Two","Stellar Impact","Vortex Cross","Falling Stars","Starline Three","Cosmic Upheaval","Starforce Salvo","Backup Beatdown","Planet Buster","Singularity Shock"],
+        "j1421":["s4461","s4462","s4463","s4464","s4465","s4466","s4467","s4468","s4469","s4470","s4471","s4472","s4473"],
 
-        "Kain":["Strike Arrow","Scattering Shot","Dragon Fang","Shaft Break","Phantom Blade","Death's Blessing","Falling Dust","Chain Sickle"],
+        "f15":"Flora",
 
-        "Kaiser":["Dragon Slash","Flame Surge","Impact Wave","Piercing Blaze","Tempest Blades","Wing Beat","Pressure Chain","Stone Dragon","Gigas Wave","Dragon Barrage","Blade Burst","Inferno Breath","Ancestral Prominence"],
+        "j1511":["s4589","s4590","s4591","s4592","s4593","s4594","s4595","s4596","s4597","s4598"],
+        
+        "j1521":["s4555","s4556","s4557","s4558","s4559","s4560","s4561","s4562"],
 
-        "Khali":["Arts Cross Cut","Arts Dual Edge","Void Rush","Arts Triple Bash","Resonate","Hex Chakram Sweep","Arts Flurry","Void Blitz","Death Blossom"],
+        "j1541":["s4625","s4626","s4627","s4628","s4629","s4630","s4631","s4632","s4633"],
 
-        "Kanna":["Shikigami Haunting","Ghost Yaksha Boss","Kishin Shoukan","Nightghost Guide","Shikigami Charm","Exorcist's Charm","Tengu Strike","Yosuzume","Vanquisher's Charm","Orochi Unbound","Falling Sakura","Binding Tempest","Nine-Tailed Fury","Shikigami Doppelganger","Veritable Pandemonium"],
+        "j1551":["s4563","s4564","s4565","s4566","s4567","s4568","s4569","s4570"],
 
-        "Kinesis":["Psychic Force","Kinetic Crash","Kinetic Piledriver","Ultimate - Deep Impact","Psychic Drain","Psychic Grab","Ultimate - Trainwreck","Kinetic Combo","Mind Quake","Ultimate - B.P.M.","Mental Tempest","Mental Shock","Ultimate - Metal Press"],
+        "f16":"Anima",
 
-        "Lara":["Essence Sprinkle","Wakeup Call","Mountain Kid","Mountain Seeds","Dragon Vein Eruption","Dragon Vein Absorption","Vine Coil","Dragon Vein Traces"],
+        "j1611":["s4650","s4651","s4652","s4653","s4654","s4655","s4656","s4657","s4658"],
+        
+        "j1621":["s4617","s4618","s4619","s4620","s4621","s4622","s4623","s4624"],
 
-        "Luminous":["Flash Shower","Abyssal Drop","Sylvan Lance","Pressure Void","Spectral Light","Ray of Redemption","Moonlight Spear","Death Scythe","Reflection","Morning Star","Apocalypse","Ender","Armageddon"],
+        "j1641":["s4580","s4581","s4582","s4583","s4584","s4585","s4586","s4587","s4588"],
 
-        "Lynn":["Strike","Peck","Sneak Attack","Earth Pulverization","Sweep","Predator's Blow"],
+        "f18":"Shine",
+        
+        "j1821":["s4640","s4641","s4642","s4643","s4644","s4645","s4646", "s4647","s4648","s4649"],
 
-        "Marksman":["Arrow Blow","Final Attack","Covering Fire","Bolt Burst","Piercing Arrow","Snipe","High Speed Shot"],
+        "f99":"Others",
 
-        "Mechanic":["ME-07 Drillhands","Gatling Gun","Rocket Booster","Heavy Gatling Gun","Homing Beacon","Robo Launcher RM7","Punch Launcher","Rock 'n Shock","Heavy Salvo","Support Unit H-EX","Giant Robot SG-88","Bots 'n Tots","Heavy Salvo Plus","Distortion Bomb"],
-
-        "Mercedes":["Swift Dual Shot","Rising Rush","Stunning Strikes","Leaf Tornado","Unicorn Spike","Elemental Knights","Ishtar's Ring","Spikes Royale","Lightning Edge","Wrath of Enil"],
-
-        "Mihile":["Shining Pierce","Royal Guard","Radiant Driver","Four-Point Assault","Final Attack","Soul Release","Radiant Cross","Install Shield","Charging Light"],
-
-        "Mo Xuan":["Xuanshan Arts Tian","Divine Art Erupting Flame","Divine Art Swirling Tide","Divine Art Righteous Thunder","Divine Art Howling Storm","Secret Art Qi Disruption","Xuanshan Arts Di","Divine Art Tearing Wind","Secret Art Qi Projection","Soul Art Black Wind"],
-
-        "Night Lord":["Shuriken Burst","Gust Charm","Assassin's Mark","Dark Flare","Triple Throw","Shuriken Challenge","Quad Star","Sudden Raid","Showdown","Death Star"],
-
-        "Night Walker":["Lucky Seven","Shadow Bat","Triple Throw","Quad Star","Shadow Spark","Quintuple Star","Dark Omen","Shadow Stitch","Dominion"],
-
-        "Paladin":["Final Attack","Divine Swing","Close Combat","Divine Judgment","Rush","Divine Charge","Blast","Heaven's Hammer","Smite Shield"],
-
-        "Pathfinder":["Cardinal Deluge","Cardinal Burst","Cardinal Torrent","Shadow Raven","Swarm Shot","Triple Impact","Glyph of Impalement","Combo Assault","Ancient Astra"],
-
-        "Phantom":["Double Entendre","Calling Card","Mille Cartes","Carte Noir","Blason Fantome","Rapier Wit","Mille Aiguilles","Penombre","Tempest","Rose Carte Finale","Impeccable Memory I","Impeccable Memory II","Impeccable Memory III","Impeccable Memory IV"],
-
-        "Shade":["Flash Fist","Ground Pound","Blade Imp","Fox Spirits","Shockwave Punch","Spirit Frenzy","Spirit Trap","Spirit Redemption","Bomb Punch","Spirit Claw","Death Mark","Soul Splitter","Spirit Incarnation"],
-
-        "Shadower":["Savage Blow","Phase Dash","Meso Explosion","Midnight Carnival","Dark Flare","Assassinate","Cruel Stab","Sudden Raid","Shadow Veil"],
-
-        "Thunder Breaker":["Lightning Punch","Flash","Shark Sweep","Tidal Crash","Ascension","Thunder","Gale","Annihilate","Thunderbolt","Deep Rising"],
-
-        "Wild Hunter":["Double Shot","Summon Jaguar","Swipe","Final Attack","Dash 'n Slash","White Heat Rush","Enduring Fire","Hunting Assistant Unit","Sonic Roar","Wild Arrow Blast","Drill Salvo","Exploding Arrows"],
-
-        "Wind Archer":["Breeze Arrow","Fairy Spiral","Gust Shot","Trifling Wind","Sentient Arrow","Pinpoint Pierce","Song of Heaven","Spiraling Vortex","Monsoon","Storm Bringer"],
-
-        "Xenon":["Beam Spline", "Pinpoint Salvo","Quicksilver","Ion Thrust","Combat Switch","Diagonal Chase","Gravity Pillar","Aegis System","Triangulation Boost","Beam Dance","Mecha Purge","Hypogram Field","Entangling Lash","Orbital Cataclysm"],
-
-        "Zero":["Moon Strike","Piercing Thrust","Flash Assault","Blade Ring","Rolling Cross","Rolling Assault","Wind Cutter","Wind Striker","Storm Break","Shadow Rain"]
+        "j54":["s4519","s4520","s4521","s4522","s4523","s4524","s4525","s4526","s4527","s4528","s4529","s4530"],
+        
+        "j1122":["s4531","s4532","s4533","s4534","s4535","s4536","s4537","s4538","s4539","s4540","s4541","s4542","s4543","s4544","s4545","s4546"]
 }

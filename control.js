@@ -1,6 +1,8 @@
 var skillData = {"Adele":["Blade of Will","Magic Dispatch","Skewering","Impale","Aether Forge","Eviscerate","Reign of Destruction","Cleave","Hunting Decree","Aether Bloom"],"Angelic Buster":["Soul Buster","Star Bubble","Lovely Sting","Pink Pummel","Soul Seeker","Star Crash","Celestial Roar","Trinity","Finale Ribbon","Soul Resonance","Supreme Supernova"],"Aran":["Smash Swing","Final Charge","Final Attack","Final Toss","Judgment Draw","Adrenaline Rush","Beyond Blade","Glacial Prison","Finisher - Hunter's Prey","Hyper Finisher - Last Stand"],"Ark":["Overcharge Drive","Ominous Nightmare","Scarlet Charge Drive","Unstoppable Impulse","Impending Death","Gust Charge Drive","Abyssal Charge Drive","Endless Agony"],"Battle Mage":["Triple Blow","Condemnation","Quad Blow","Dark Chain","Quintuple Blow","Battle Burst","Dark Shock","Finishing Blow","Dark Genesis","Sweeping Staff"],"Beast Tamer":["Paw Swipe","Deep Breath","Really Deep Breath","Li'l Fort","Fishy Slap","Table Flip","Leopard's Paw","Macho Dance","Thunder Dash","Three-Point Pounce","Party Time","Formation Attack","Tornado Flight","Friend Launcher","Fire Kitty!","Group Bear Blaster"],"Bishop":["Heal","Holy Arrow","Shining Ray","Big Bang","Bahamut","Angel Ray","Genesis","Heaven's Door"],"Blaster":["Magnum Punch","Revolving Cannon","Bunker Buster Explosion","Detonate","Double Blast","Hammer Smash","Rocket Rush","Shotgun Punch","Muzzle Flash","Ballistic Hurricane","Revolving Blast","Hyper Magnum"],"Blaze Wizard":["Orbital Flame","Flame Bite","Flame Vortex","Orbital Explosion","Flame Tempest","Cinder Maelstrom","Blazing Extinction","Towering Inferno","Cataclysm","Phoenix Drive"],"Bowmaster":["Arrow Blow","Final Attack","Wind Arrow","Phoenix","Covering Fire","Arrow Blaster","Hurricane","Arrow Stream","Quiver Cartridge","Gritty Gust"],"Buccaneer":["Sea Serpent Burst","Static Thumper","Turning Kick","Corkscrew Blow","Sea Serpent's Rage","Octopunch","Nautilus Strike","Hook Bomber"],"Cadena":["Reign of Chains","Summon Scimitar","Summon Daggers","Summon Shotgun","Summon Brick","Beatdown","Summon Spiked Bat","Veteran Shadowdealer"],"Cannoneer":["Cannon Blaster","Cannon Strike","Blast Back","Scatter Shot","Barrel Bomb","Cannon Spike","Cannon Jump","Barrel Roulette","Monkey Fury","Cannon Bazooka","Nautilus Strike","Anchors Away","Monkey Militia","Cannon Barrage","Rolling Rainbow"],"Corsair":["Rapid Blast","Recoil Shot","Scurvy Summons","Blunderbuster","Blackboot Bill","Siege Bomber","Rapid Fire","Nautilus Strike","Brain Scrambler","Eight-Legs Easton","Majestic Presence","Broadside","Parrotargetting","Ugly Bomb"],"Dark Knight":["Final Attack","Spear Sweep","La Mancha Spear","Rush","Evil Eye","Dark Impale","Gungnir's Descent","Nightshade Explosion"],"Dawn Warrior":["Solar Slash","Cosmic Matter","Cosmic Shower","Bluster","Cosmic Burst","Impaling Rays","Equinox Slash","Blazing Assault"],"Demon Avenger":["Exceed Double Slash","Exceed Demon Strike","Bat Swarm","Exceed Lunar Slash","Vitality Veil","Shield Charge","Exceed Execution","Nether Shield","Nether Slice","Blood Prison","Thousand Swords","Infernal Exceed"],"Demon Slayer":["Grim Scythe","Demon Lash","Soul Eater","Dark Thrust","Chaos Lock","Vengeance","Judgment","Vortex of Doom","Raven Storm","Carrion Breath","Infernal Concussion","Demon Impact","Demon Cry","Dark Metamorphosis","Binding Darkness","Cerberus Chomp"],"Dual Blade":["Bandit Slash","Tornado Spin","Fatal Blow","Slash Storm","Flashbang","Blade Ascension","Flying Assaulter","Bloody Storm","Chains of Hell","Final Cut","Blade Fury","Phantom Blow","Sudden Raid","Asura's Anger","Blade Clone"],"Evan":["Mana Burst","Dragon Spark","Wind Circle","Dragon Flash","Thunder Circle","Dragon Dive","Magic Debris","Earth Circle","Dragon Breath","Dark Fog","Dragon Master","Summon Onyx Dragon"],"Fire Poison Mage":["Flame Orb","Poison Breath","Ignite","Explosion","Poison Mist","Teleport Mastery","Flame Haze","Mist Eruption","Ifrit","Flame Sweep","Meteor Shower","Inferno Aura","Megiddo Flame"],"Hayato":["Hitokiri Hundred Strike","Surging Blade","Vapor Blade","Sweeping Sword","Sanrenzan","Tornado Blade","Sudden Strike","Shinsoku","Hitokiri Strike","Falcon's Honor"],"Hero":["Final Attack","Brandish","Flash Blade","Intrepid Slash","Rush","Cry Valhalla","Beam Blade","Raging Blow","Puncture","Rising Rage"],"Hoyoung":["Humanity","Earth","Heaven","Evil-Sealing Gourd","Seeking Ghost Flame","Degeneration","Butterfly Dream","Star Vortex","Clone"],"Ice Lightning Mage":["Thunder Bolt","Cold Beam","Chilling Step","Ice Strike","Frost Ward","Thunder Sphere","Elquines","Chain Lightning","Blizzard","Frozen Orb","Lightning Orb"],"Illium":["Radiant Javelin II","Umbral Brand III","Reaction - Destruction II","Machina","Vortex Wings","Longinus Spear","Longinus Zone","Deus"],"Jett":["Starline One","Blaster Barrage","Starline Two","Stellar Impact","Vortex Cross","Falling Stars","Starline Three","Cosmic Upheaval","Starforce Salvo","Backup Beatdown","Planet Buster","Singularity Shock"],"Kain":["Strike Arrow","Scattering Shot","Dragon Fang","Shaft Break","Phantom Blade","Death's Blessing","Falling Dust","Chain Sickle"],"Kaiser":["Dragon Slash","Flame Surge","Impact Wave","Piercing Blaze","Tempest Blades","Wing Beat","Pressure Chain","Stone Dragon","Gigas Wave","Dragon Barrage","Blade Burst","Inferno Breath","Ancestral Prominence"],"Khali":["Arts Cross Cut","Arts Dual Edge","Void Rush","Arts Triple Bash","Resonate","Hex Chakram Sweep","Arts Flurry","Void Blitz","Death Blossom"],"Kanna":["Shikigami Haunting","Ghost Yaksha Boss","Kishin Shoukan","Nightghost Guide","Shikigami Charm","Exorcist's Charm","Tengu Strike","Yosuzume","Vanquisher's Charm","Orochi Unbound","Falling Sakura","Binding Tempest","Nine-Tailed Fury","Shikigami Doppelganger","Veritable Pandemonium"],"Kinesis":["Psychic Force","Kinetic Crash","Kinetic Piledriver","Ultimate - Deep Impact","Psychic Drain","Psychic Grab","Ultimate - Trainwreck","Kinetic Combo","Mind Quake","Ultimate - B.P.M.","Mental Tempest","Mental Shock","Ultimate - Metal Press"],"Lara":["Essence Sprinkle","Wakeup Call","Mountain Kid","Mountain Seeds","Dragon Vein Eruption","Dragon Vein Absorption","Vine Coil","Dragon Vein Traces"],"Luminous":["Flash Shower","Abyssal Drop","Sylvan Lance","Pressure Void","Spectral Light","Ray of Redemption","Moonlight Spear","Death Scythe","Reflection","Morning Star","Apocalypse","Ender","Armageddon"],"Lynn":["Strike","Peck","Sneak Attack","Earth Pulverization","Sweep","Predator's Blow"],"Marksman":["Arrow Blow","Final Attack","Covering Fire","Bolt Burst","Piercing Arrow","Snipe","High Speed Shot"],"Mechanic":["ME-07 Drillhands","Gatling Gun","Rocket Booster","Heavy Gatling Gun","Homing Beacon","Robo Launcher RM7","Punch Launcher","Rock 'n Shock","Heavy Salvo","Support Unit H-EX","Giant Robot SG-88","Bots 'n Tots","Heavy Salvo Plus","Distortion Bomb"],"Mercedes":["Swift Dual Shot","Rising Rush","Stunning Strikes","Leaf Tornado","Unicorn Spike","Elemental Knights","Ishtar's Ring","Spikes Royale","Lightning Edge","Wrath of Enil"],"Mihile":["Shining Pierce","Royal Guard","Radiant Driver","Four-Point Assault","Final Attack","Soul Release","Radiant Cross","Install Shield","Charging Light"],"Mo Xuan":["Xuanshan Arts Tian","Divine Art Erupting Flame","Divine Art Swirling Tide","Divine Art Righteous Thunder","Divine Art Howling Storm","Secret Art Qi Disruption","Xuanshan Arts Di","Divine Art Tearing Wind","Secret Art Qi Projection","Soul Art Black Wind"],"Night Lord":["Shuriken Burst","Gust Charm","Assassin's Mark","Dark Flare","Triple Throw","Shuriken Challenge","Quad Star","Sudden Raid","Showdown","Death Star"],"Night Walker":["Lucky Seven","Shadow Bat","Triple Throw","Quad Star","Shadow Spark","Quintuple Star","Dark Omen","Shadow Stitch","Dominion"],"Paladin":["Final Attack","Divine Swing","Close Combat","Divine Judgment","Rush","Divine Charge","Blast","Heaven's Hammer","Smite Shield"],"Pathfinder":["Cardinal Deluge","Cardinal Burst","Cardinal Torrent","Shadow Raven","Swarm Shot","Triple Impact","Glyph of Impalement","Combo Assault","Ancient Astra"],"Phantom":["Double Entendre","Calling Card","Mille Cartes","Carte Noir","Blason Fantome","Rapier Wit","Mille Aiguilles","Penombre","Tempest","Rose Carte Finale","Impeccable Memory I","Impeccable Memory II","Impeccable Memory III","Impeccable Memory IV"],"Shade":["Flash Fist","Ground Pound","Blade Imp","Fox Spirits","Shockwave Punch","Spirit Frenzy","Spirit Trap","Spirit Redemption","Bomb Punch","Spirit Claw","Death Mark","Soul Splitter","Spirit Incarnation"],"Shadower":["Savage Blow","Phase Dash","Meso Explosion","Midnight Carnival","Dark Flare","Assassinate","Cruel Stab","Sudden Raid","Shadow Veil"],"Thunder Breaker":["Lightning Punch","Flash","Shark Sweep","Tidal Crash","Ascension","Thunder","Gale","Annihilate","Thunderbolt","Deep Rising"],"Wild Hunter":["Double Shot","Summon Jaguar","Swipe","Final Attack","Dash 'n Slash","White Heat Rush","Enduring Fire","Hunting Assistant Unit","Sonic Roar","Wild Arrow Blast","Drill Salvo","Exploding Arrows"],"Wind Archer":["Breeze Arrow","Fairy Spiral","Gust Shot","Trifling Wind","Sentient Arrow","Pinpoint Pierce","Song of Heaven","Spiraling Vortex","Monsoon","Storm Bringer"],"Xenon":["Beam Spline","Pinpoint Salvo","Quicksilver","Ion Thrust","Combat Switch","Diagonal Chase","Gravity Pillar","Aegis System","Triangulation Boost","Beam Dance","Mecha Purge","Hypogram Field","Entangling Lash","Orbital Cataclysm"],"Zero":["Moon Strike","Piercing Thrust","Flash Assault","Blade Ring","Rolling Cross","Rolling Assault","Wind Cutter","Wind Striker","Storm Break","Shadow Rain"]};
-var logicNumber = 9;
-var appVer = 12;
+var localization;
+var selectedLocalization = "gms-en";
+var logicNumber = 10;
+var appVer = 14;
 var skillCopy = 2;
 var selectorChangeId = ["#skillOne", "#skillTwo", "#skillThree"];
 var formTrio = ["SKILL1", "SKILL2", "SKILL3"];
@@ -111,7 +113,7 @@ function newNode(nodeSet) {
     var newCell = newRow.insertCell(0);
     newCell.setAttribute("name", "imageName");
     var newLiner = document.createElement("br");
-    var newText = document.createTextNode(nodeSet[0] + "\n" + nodeSet[1] + "\n" + nodeSet[2]);
+    var newText = document.createTextNode(searchLocalization(nodeSet[0]) + "\n" + searchLocalization(nodeSet[1]) + "\n" + searchLocalization(nodeSet[2]));
     newCell.appendChild(newText);
     var newCell = newRow.insertCell(1);
     newCell.setAttribute("name", "imageCell");
@@ -180,7 +182,7 @@ function newNode(nodeSet) {
  * Originally was supposed to load all skill data from a JSON file.
  * Current use is to load all supported jobs in the "Select Job:" dropdown
  */
-function loadJSON() {
+/*function loadJSON() {
     for (jobs in skillData) {
         var jobSelection = document.getElementById("jobSelect");
         jobSelection.innerHTML = jobSelection.innerHTML +
@@ -191,6 +193,65 @@ function loadJSON() {
     //console.log(document.cookie);
     if(nsvCookie != appVer || nsmCookie != "false"){
         $("#whatsNewModal").modal();
+    }
+}*/
+
+async function loadJSON() {
+    const res = await fetch('skillscomp.json');
+    skillData = await res.json();
+
+    const loc = await fetch("translation.json");
+    localization = await loc.json();
+
+    //Load the Job Selection
+    let startOp = true;
+    var jobSelection = document.getElementById("jobSelect");
+    for (jobs in skillData) {
+        if(jobs[0] == "j"){
+            jobSelection.innerHTML = jobSelection.innerHTML +
+                '<option value="' + jobs + '">' + searchLocalization(jobs) + '</option>';
+        }
+        else{
+            if(!startOp){
+                jobSelection.innerHTML = jobSelection.innerHTML + '</optgroup>';
+                startOp = false;
+            }
+            jobSelection.innerHTML = jobSelection.innerHTML + '<optgroup label="' + searchLocalization(jobs)+'" name="'+jobs+'">';
+        }
+    }
+    jobSelection.innerHTML = jobSelection.innerHTML + "</optgroup>";
+
+    //Load Modal if new view
+    let nsmCookie = getCookie("nodeStoneShowModal");
+    let nsvCookie = getCookie("nodeStoneVersion");
+    //console.log(document.cookie);
+    if(nsvCookie != appVer || nsmCookie != "false"){
+        $("#whatsNewModal").modal();
+    }
+  }
+
+/**
+ * 
+ * Searches for the Localization String
+ * 
+ */
+function searchLocalization(locKey){
+    let tempString = localization[selectedLocalization][locKey];
+    if(tempString !== undefined){
+        return tempString;
+    }
+    else{
+        tempString = localization["gms-en"][locKey];
+        if(tempString !== undefined){
+            return tempString;
+        }
+        else{
+            tempString = localization["kms-kr"][locKey];
+            if(tempString !== undefined){
+                return tempString;
+            }
+        }
+        return "-N/A-";
     }
 }
 
@@ -205,12 +266,14 @@ function skillChange() {
     clearLeftoverData();
     if (selectedJob.length > 0) {
         $("#normalOperation").attr("name", "noOp");
+        $("#optionOperation").attr("name", "hiddenObj");
         $("#helpOperation").attr("name", "hiddenObj");
         //$("#optionOperation").attr("name", "hiddenObj");
         $("#nodePhotoLoader").attr("name", "noOp");
     }
     else {
         $("#normalOperation").attr("name", "hiddenObj");
+        $("#optionOperation").attr("name", "noOp");
         $("#helpOperation").attr("name", "noOp");
         //$("#optionOperation").attr("name", "hiddenObj");
         $("#nodePhotoLoader").attr("name", "hiddenObj");
@@ -219,6 +282,31 @@ function skillChange() {
         loadFractals();
     }
     removePhotoResiduals();
+}
+
+/**
+ * Changes the language used by the skills.
+ * If the skill/job doesn't exist in a specific server, the fallback will be of the ff. priority: Chosen Language -> GMS - English -> KMS - Korean
+ */
+function languageChange() {
+    selectedLocalization = $("#languageSelect").val();
+    //Retranslate job options
+     var jobSelections = document.getElementById('jobSelect');
+     for(let i = 0; i < jobSelections.options.length; i++) {
+        if(jobSelections.options[i].value != ""){
+            jobSelections.options[i].text = searchLocalization(jobSelections.options[i].value);
+        }
+        else{
+            jobSelections.options[i].text = searchLocalization("selJob");
+        }
+     }
+
+    var children = jobSelections.children;
+    for (let i = 0; i < children.length; i++) {
+        if(children[i].tagName == "OPTGROUP"){
+            children[i].label = searchLocalization(children[i].getAttribute("name"));
+        }
+    }
 }
 
 /**
@@ -261,7 +349,7 @@ function selectorChange() {
             var newImg = document.createElement("img");
             newImg.setAttribute("src", "Images/" + selectedJob + "/" + skillData[selectedJob][i] + ".png");
             newCell.appendChild(newImg);
-            var newText = document.createTextNode(" " + skillData[selectedJob][i]);
+            var newText = document.createTextNode(" " + searchLocalization(skillData[selectedJob][i]));
             newCell.appendChild(newText);
             newCell.setAttribute("name", skillData[selectedJob][i]);
             newCell.setAttribute("onclick", 'formulateTrios("' + skillData[selectedJob][i] + '")');
@@ -315,7 +403,7 @@ function selectSegment(skillName, segment) {
     $('td.slot_' + (segment + 1) + '[name="' + skillName + '_slot_' + (segment + 1) + '"]').addClass("bg-primary");
     $('td.slot_' + (segment + 1) + ':not(td[name="' + skillName + '_slot_' + (segment + 1) + '"])').removeClass("bg-primary");
     $('#prev' + (segment + 1) + 'a').attr("src", "Images/" + selectedJob + "/" + skillName + ".png");
-    $('#textSel' + (segment + 1)).text(skillName);
+    $('#textSel' + (segment + 1)).text(searchLocalization(skillName));
 
 }
 
@@ -409,7 +497,7 @@ function copyToCollection(selectName) {
     var newCell = newRow.insertCell(0);
     newCell.setAttribute("name", "imageName");
     var newLiner = document.createElement("br");
-    var newText = document.createTextNode(nodestones[selectName][0] + "\n" + nodestones[selectName][1] + "\n" + nodestones[selectName][2]);
+    var newText = document.createTextNode(searchLocalization(nodestones[selectName][0]) + "\n" + searchLocalization(nodestones[selectName][1]) + "\n" + searchLocalization(nodestones[selectName][2]));
     newCell.appendChild(newText);
     var newCell = newRow.insertCell(1);
     newCell.setAttribute("name", "imageCell");
@@ -591,7 +679,7 @@ function updateNodeScore(subtractNode, conditions) {
             var newImg = document.createElement("img");
             newImg.setAttribute("src", "Images/" + selectedJob + "/" + skillData[selectedJob][k] + ".png");
             newCell.appendChild(newImg);
-            var newText = document.createTextNode(" " + skillData[selectedJob][k]);
+            var newText = document.createTextNode(" " + searchLocalization(skillData[selectedJob][k]));
             newCell.appendChild(newText);
             var newCell = newRow.insertCell(1);
             if (isAlreadyIn(selectedSkills, skillData[selectedJob][k])) {
@@ -886,12 +974,13 @@ function legalLeading(data) {
     var leads = [];
     var flag = 0;
     for (var i = 0; i < data.length; i++) {
-        if (isAlreadyIn(leads, data[i][0])) {
+        //if (isAlreadyIn(leads, data[i][0])) {
+        if(isAlreadyIn(leads,data[i])){
             flag = 1;
             break;
         }
         else {
-            leads.push(data[i][0]);
+            leads.push(data[i]);
         }
     }
     if (flag == 0) {
@@ -1065,7 +1154,6 @@ $(document).ready(function(e) {
 				})
 		  .catch(err => console.error(err));
 		
-		//console.log("PUTO!");
 		
 		
 		//null
