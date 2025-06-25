@@ -246,13 +246,13 @@ function searchLocalization(locKey){
         if(tempString !== undefined){
             return tempString;
         }
-        //Try KMS's Localization
-        tempString = localization["kms-kr"][locKey];
+        //Try MSEA's Localization
+        tempString = localization["msea-en"][locKey];
         if(tempString !== undefined){
             return tempString;
         }
-        //Try MSEA's Localization
-        tempString = localization["msea-en"][locKey];
+        //Try KMS's Localization
+        tempString = localization["kms-kr"][locKey];
         if(tempString !== undefined){
             return tempString;
         }
