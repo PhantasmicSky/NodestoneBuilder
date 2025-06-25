@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Julius\\Documents\\NodestoneBuilder\\",
+  "WorkspaceRootPath": "C:\\Users\\blake\\OneDrive\\Documents\\NodestoneBuilder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Julius\\Documents\\NodestoneBuilder\\index.html||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\blake\\OneDrive\\Documents\\NodestoneBuilder\\control.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:control.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Julius\\Documents\\NodestoneBuilder\\builder.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:builder.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\blake\\OneDrive\\Documents\\NodestoneBuilder\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Julius\\Documents\\NodestoneBuilder\\control.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:control.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\blake\\OneDrive\\Documents\\NodestoneBuilder\\builder.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:builder.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "builder.js",
+              "DocumentMoniker": "C:\\Users\\blake\\OneDrive\\Documents\\NodestoneBuilder\\builder.js",
+              "RelativeDocumentMoniker": "builder.js",
+              "ToolTip": "C:\\Users\\blake\\OneDrive\\Documents\\NodestoneBuilder\\builder.js",
+              "RelativeToolTip": "builder.js",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAIwIcAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-24T02:08:04.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\Julius\\Documents\\NodestoneBuilder\\index.html",
-              "RelativeDocumentMoniker": "index.html",
-              "ToolTip": "C:\\Users\\Julius\\Documents\\NodestoneBuilder\\index.html",
-              "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANwBAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-04-30T08:00:39.792Z",
+              "Title": "control.js",
+              "DocumentMoniker": "C:\\Users\\blake\\OneDrive\\Documents\\NodestoneBuilder\\control.js",
+              "RelativeDocumentMoniker": "control.js",
+              "ToolTip": "C:\\Users\\blake\\OneDrive\\Documents\\NodestoneBuilder\\control.js",
+              "RelativeToolTip": "control.js",
+              "ViewState": "AQIAABQDAAAAAAAAAAAowB0DAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-24T02:00:01.678Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "builder.js",
-              "DocumentMoniker": "C:\\Users\\Julius\\Documents\\NodestoneBuilder\\builder.js",
-              "RelativeDocumentMoniker": "builder.js",
-              "ToolTip": "C:\\Users\\Julius\\Documents\\NodestoneBuilder\\builder.js",
-              "RelativeToolTip": "builder.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABsJQAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-30T07:59:50.249Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "control.js",
-              "DocumentMoniker": "C:\\Users\\Julius\\Documents\\NodestoneBuilder\\control.js",
-              "RelativeDocumentMoniker": "control.js",
-              "ToolTip": "C:\\Users\\Julius\\Documents\\NodestoneBuilder\\control.js",
-              "RelativeToolTip": "control.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABtJQAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-30T07:59:33.489Z",
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\blake\\OneDrive\\Documents\\NodestoneBuilder\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\blake\\OneDrive\\Documents\\NodestoneBuilder\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AQIAANEBAAAAAAAAAAAAAOUBAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-24T01:59:07.102Z",
               "EditorCaption": ""
             }
           ]
