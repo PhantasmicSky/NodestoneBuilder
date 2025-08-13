@@ -10,6 +10,7 @@
   - Added Zen (for memories) \[2025-06-25\]
 
 ### Fixed
+  - Fixed the Auto Build (Sync) Functionality \[2025-08-13\] 
   - Fixed the extra / removed boost skills still being available to be selected. An example is Xenon but some jobs also had their skill orders reorganized just to fit the order they appear in the game files such as Dawn Warrior. 
   - Fixed Xenon's photos (old photos might be using the Hover icon which is why it was so bright) \[2025-06-25\]
   - Fixed the issue with Xenon's skills Combat Switch and Diagonal Chase. \[2025-06-25\]

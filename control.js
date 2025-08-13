@@ -820,6 +820,7 @@ function loadList() {
         selectedJob = listLoader[1];
         $("#normalOperation").attr('name', 'noOp');
         $("#helpOperation").attr('name', 'hiddenObj');
+        $("#optionOperation").attr("name", "hiddenObj");
         //$("#optionOperation").attr('name', 'hiddenObj');
         $("#nodePhotoLoader").attr('name', 'noOp');
         initializeTally();
