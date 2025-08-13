@@ -921,6 +921,7 @@ var setholder = [];
 var bigSetHolder = [];
 
 function printCombination() {
+    console.log("BUILDING");
     var set = nodestones.slice();
     //set = setReduction(set);
     //console.log(set.length);
@@ -934,6 +935,10 @@ function printCombination() {
 
     }
     if (results.length > 0) {
+        console.log("buildResults");
+        console.log(results[0]);
+        console.log(results);
+        console.log("buildResultsEND");
         autoButtonClick(results[0]);
     }
     else if (setholder.length > k) {
@@ -947,7 +952,8 @@ function printCombination() {
 function comboMaker(currLev, startLev, maxLev, nodePool, basis) {
     for (var i = basis + 1; i < nodePool.length - maxLev + currLev; i++) {
         setholder.push(nodePool[i]);
-        if(legalLeading(nodePool[i])){
+        //if(legalLeading(nodePool[i])){
+        if(legalLeading(setholder)){
             if (currLev == maxLev) {
                 var baseScore = constructScore();
                 if (legalLeading(setholder) && legalScoring(setholder, baseScore)) {
@@ -979,13 +985,14 @@ function legalLeading(data) {
     var leads = [];
     var flag = 0;
     for (var i = 0; i < data.length; i++) {
-        //if (isAlreadyIn(leads, data[i][0])) {
-        if(isAlreadyIn(leads,data[i])){
+        if (isAlreadyIn(leads, data[i][0])) {
+        //if(isAlreadyIn(leads,data[i])){
             flag = 1;
             break;
         }
         else {
-            leads.push(data[i]);
+            leads.push(data[i][0]);
+            //leads.push(data[i]);
         }
     }
     if (flag == 0) {
