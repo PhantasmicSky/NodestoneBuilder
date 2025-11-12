@@ -1,4 +1,15 @@
 # Change Log
+## [1.15] - 2025-11-11
+
+### Changed
+  - Len is now available in MSEA English. (Until GMS releases skill names, both "GMS - English" and "MSEA - English" will use the MSEA translations for skill names)
+  - More jobs are now supported in the "KMS - 한국어" option. Only Overseas only jobs and Resistance classes are left in English.
+
+### Known Issue
+  - Using the auto builder when only having 3 or less skills selected may lead to weird results. (Anyway, the ingame search should aid you if you only need to boost 1-3 skills.)
+  - From KMS's POV Luminous' Twilight Nova is still using the old icon (can't really do much since all servers except KMS is still using the old icon) KMS screenshots may not work with Luminous (not tested but most likely will fail)
+  - From KMS's POV some removed skills such as from Shade is still present.
+
 ## [1.14] - 2025-06-12
 
 ### Added
