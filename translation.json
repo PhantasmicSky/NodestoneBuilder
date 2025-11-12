@@ -588,6 +588,15 @@
         "s4569":"Abyssal Charge Drive/Unbridled Chaos",
         "s4570":"Creeping Terror/Blissful Restraint/Endless Agony",
         "j1611":"Ren",
+        "s4650":"Plum Blossom Sword: Slice",
+        "s4651":"Plum Blossom Sword: Strike",
+        "s4652":"Imugi Spirit Sword: Spirit Strike",
+        "s4653":"Plum Blossom Sword: Slash",
+        "s4654":"Second Plum Blossom Sword: Raining Blossoms",
+        "s4655":"Final Imugi Spirit sword: Burrowing Earth/Final Imugi Spirit Sword: Ravenous Spirit/Final Imugi Spirit Sword: Years Uncounted",
+        "s4656":"Plum Blossom Sword: Storm",
+        "s4657":"Third Plum Blossom Sword: Riotous Heart",
+        "s4658":"Second Imugi Spirit Sword: Serpent’s Fang/Fourth Plum Blossom Sword: Unbowed Blade",
         "j1621":"Lara",
         "s4617":"Essence Sprinkle",
         "s4618":"Wakeup Call",
@@ -899,7 +908,7 @@
         "s4654":"Plum Blossom Sword 2nd Form: Deadly Petals",
         "s4655":"Lost Soul Sword Supreme Skill: Earth Splitter/Lost Soul Sword Supreme Skill: Ruin Burst/Lost Soul Sword Supreme Skill: Boundless Devastation",
         "s4656":"Plum Blossom Sword Base Form: First Slash",
-        "s4657":"Plum Blossom Sword 3rd Form: One-Strike Artful Blade",
+        "s4657":"Plum Blossom Sword 3rd Form: Artful Blade",
         "s4658":"Lost Soul Sword 2nd Form: Chain Attack/Plum Blossom Sword 4th Form: Soul Ward"
     },
     "kms-kr":{
@@ -1464,6 +1473,16 @@
         "s4656":"매화검 본초 : 선참",
         "s4657":"매화검 3초식 : 예인",
         "s4658":"망혼검 2초식 : 연참/매화검 4초식 : 영인",
+        "s4640":"레이",
+        "s4641":"붐",
+        "s4642":"폴",
+        "s4643":"스타라이트",
+        "s4644":"스텔라 I - 토끼 자리",
+        "s4645":"스텔라 II - 도마뱀 자리",
+        "s4646":"스텔라 V - 뿔고둥 자리", 
+        "s4647":"스텔라 VI - 그림자 가면 자리",
+        "s4648":"스텔라 VII - 독수리 자리",
+        "s4649":"스텔라 IX - 모험의 닻 자리",
         "selJob":"직업 선택"
     }
 }
