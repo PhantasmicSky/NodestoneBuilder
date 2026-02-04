@@ -1,4 +1,16 @@
 # Change Log
+## [1.16] - 2026-02-04
+We are nearly in the end game. Once Kinesis Remaster comes out, the tool is good as dead.
+### Changed
+  - Len is now available in GMS English. (Did not adjust for the shortened names that GMS uses for the nodes so enjoy UX hell for Ren)
+  - Hayato and Kanna Revamp are now available in GMS English.
+
+### Known Issue
+  - Using the auto builder when only having 3 or less skills selected may lead to weird results. (Anyway, the ingame search should aid you if you only need to boost 1-3 skills.)
+  - From KMS's POV Luminous' Twilight Nova is still using the old icon (can't really do much since all servers except KMS is still using the old icon) KMS screenshots may not work with Luminous (not tested but most likely will fail)
+  - From KMS's POV some removed skills such as from Shade is still present.
+  - Due to how language options were applied and how MSEA won't get the revamp till April, the names for Hayato and Kanna's skills when using MSEA English will use the names from the old skills and a mix of GMS's names.
+
 ## [1.15] - 2025-11-11
 
 ### Changed

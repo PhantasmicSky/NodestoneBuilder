@@ -1,6 +1,7 @@
-# Maplestory Tri-Node Builder (v1.15)
+# Maplestory Tri-Node Builder (v1.16)
 This tool is being maintained for those who would still like to use it and for my exploration as well.
 This tool has more or less been rendered obsolete with the introduction of allowing you to make your trinodes. Thank you to everyone who has used it through the years.
+With the release of the V-Matrix Revamp during the Crown Update, this tool will be good as obsolete. Will do updates till then.
 
 ## Purpose
 The web application allows users to find and formulate their trinode sets.
