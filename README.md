@@ -1,4 +1,4 @@
-# Maplestory Tri-Node Builder (v1.16)
+# Maplestory Tri-Node Builder (v1.17)
 This tool is being maintained for those who would still like to use it and for my exploration as well.
 This tool has more or less been rendered obsolete with the introduction of allowing you to make your trinodes. Thank you to everyone who has used it through the years.
 With the release of the V-Matrix Revamp during the Crown Update, this tool will be good as obsolete. Will do updates till then.
@@ -27,7 +27,6 @@ The web application allows users to find and formulate their trinode sets.
 ## Currently Supported Jobs
 
 - All jobs in the game are supported.
-- KMS changes from 1.2.407 and beyond (including Wild Hunter Remaster) is not yet supported.
 
 ## Notes
 - \* = Function not tested fully and might sometimes return "No Optimal Combination" even though there should be one (Mostly happens when less than 3 skills are selected or if you already have more trios equipped than the number of trios to make your perfect loadout). Nodes are also built using brute force and might take minutes if there are a lot of nodes to build prefect tri's from. Might also cause browser to lock-up. If that happens, please use the Async Solver to move the solving to a web worker. 

@@ -2,7 +2,7 @@ var skillData = {"Adele":["Blade of Will","Magic Dispatch","Skewering","Impale",
 var localization;
 var selectedLocalization = "gms-en";
 var logicNumber = 10;
-var appVer = 14;
+var appVer = 17;
 var skillCopy = 2;
 var selectorChangeId = ["#skillOne", "#skillTwo", "#skillThree"];
 var formTrio = ["SKILL1", "SKILL2", "SKILL3"];
